@@ -1,0 +1,7 @@
+https://nodejs.org/api/http.html#http_http_request_options_callback
+https://nodejs.org/api/http.html#http_http_get_options_callback
+
+
+
+http://www.ebi.ac.uk/gwas/beta/rest/docs/api
+http://www.ebi.ac.uk/gwas/beta/rest/docs/sample-scripts

@@ -15,10 +15,13 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  // GWAS Catalog REST API
+  /* // GWAS Catalog REST API
   route.testApi(req.body.gwas_api, res)
   // GTEX REST API
-  route.testApi(req.body.gtex_api, res)
+  route.testApi(req.body.gtex_api, res) */
+  if (req.body.rs) {
+    route.searchRs(req.body.rs, res)
+  }
 })
 
 app.get('/test', (req, res) => {

@@ -5,8 +5,9 @@
     <title>Bioinfo</title>
     
     <body>
-      <h1>Here the response of the <%= name %> API</h1>
-      <label><%= data %></label>
+      <% if (data) { %>
+      <label><%= data %></label> 
+     <% } %>
     </body>
   </head>
 </html>

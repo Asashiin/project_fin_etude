@@ -5,3 +5,13 @@ https://nodejs.org/api/http.html#http_http_get_options_callback
 
 http://www.ebi.ac.uk/gwas/beta/rest/docs/api
 http://www.ebi.ac.uk/gwas/beta/rest/docs/sample-scripts
+
+
+https://visionmedia.github.io/superagent/
+
+Utilisateur -> rentre un fichier avec plusieurs rs 
+Nous -> on fait les recherches dans la base (possibilité de faire un fichier csv)
+
+
+
+//Adresse qui fonctionne : grch37.rest.ensembl.org/variation/human/rs3997925

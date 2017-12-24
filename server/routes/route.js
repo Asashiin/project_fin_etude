@@ -37,11 +37,7 @@ async function searchRs(rs, res) {
     const gwAsso = await superagent.get('www.ebi.ac.uk/gwas/beta/rest/api/associations/search/findByRsId?rsId=' + rs).set('Accept','application/json')    
     let geneList = []
     let geneNameList = []    
-    let asso = {
-      snp : ''
-      , pvalue : ''
-      , location : ''
-    }
+    let asso = {}
     for (let i in gwAsso.body._embedded.associations){    
       asso.snp = gwAsso.body._embedded.associations[i].loci[0].strongestRiskAlleles[0].riskAlleleName
       asso.pvalue = gwAsso.body._embedded.associations[i].pvalue     

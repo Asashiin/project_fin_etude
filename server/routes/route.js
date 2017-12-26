@@ -33,21 +33,36 @@ async function testApi(api, res) {
 // Reseach function with RS id given by the user
 async function searchAssociationsByTraits(trait, res) {
   const gw = await superagent.get('https://www.ebi.ac.uk/gwas/beta/rest/api/associations/search/findByEfoTrait?efoTrait=' + trait).set('Accept', 'application/json')
-  let asso = {}
+  let assoSnp = []
+  let assoPvalue = []
   let reportedGeneList = []
   let mappedGeneList = []
-  //boucle useless pour l'instant
+  let locationEachRs = []
+  let geneNameList = []
   for (let i in gw.body._embedded.associations) {
-    asso.snp = gw.body._embedded.associations[i].loci[0].strongestRiskAlleles[0].riskAlleleName
-    asso.pvalue = gw.body._embedded.associations[i].pvalue
+    assoSnp.push(gw.body._embedded.associations[i].loci[0].strongestRiskAlleles[0].riskAlleleName)
+    assoPvalue.push(gw.body._embedded.associations[i].pvalue)
   }
+  console.log('snp' + assoSnp[0])
+  /* for (let i in assoSnp) {
+    console.log('test' + i)
+    try {
+      const gtLoc = await superagent.get(gtex + assoSnp[i]).set('Accept', 'application/json')
+      if (gtloc.body.error) {
+        locationEachRs.push('NAN' + express)
+      }
+    } catch (e) {
+      console.log('ERROR')
+    }
+    // console.log('3' + locationEachRs[0])
+  }
+  console.log('1' + assoSnp[0])
+  console.log('2' + assoSnp[3])
+  console.log('3' + locationEachRs[0])
+  */
   let result = {
-    snp: asso.snp,
-    pvalue: asso.pvalue,
-    /* location: gw.body.mappings[0].location,
-              region: gw.body.mappings[0].seq_region_name,
-              reportedGenes: reportedGeneList,
-              mappedGenes: mappedGeneList */
+    snp: assoSnp,
+    pvalue: assoPvalue
   }
   res.render('association', {
     dataAsso: result

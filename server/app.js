@@ -23,9 +23,8 @@ app.post('/', (req, res) => {
   }
 })
 app.post('/asso', (req, res) => {
-  console.log("test routeeee" + req.body.trait)
   if (req.body.trait) {
-    console.log("test route" + req.body.trait)
+    console.log("test route, trait : " + req.body.trait)
     route.searchAssociationsByTraits(req.body.trait, res)
   }
 })

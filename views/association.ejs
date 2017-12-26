@@ -18,14 +18,22 @@
         </thead>
         <tbody>
           <td>
-            <%= dataAsso.snp %>
+            <% for(let i in dataAsso.snp){ %>
+              <p>
+                <%=dataAsso.snp[i]%>
+              </p>
+              <% } %>
           </td>
           <td>
-            <%= dataAsso.pvalue %>
+            <% for(let i in dataAsso.pvalue){ %>
+              <p>
+                <%=dataAsso.pvalue[i]%>
+              </p>
+              <% } %>
           </td>
         </tbody>
       </table>
-      <% }%>
+      <% } %>
   </body>
 </head>
 

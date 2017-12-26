@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang='fr'>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bioinfo</title>
+
+  <body>
+    <% if (dataAsso) { %>
+      <table>
+        <thead>
+          <th>SNP</th>
+          <th>Pvalue</th>
+          <th>Location</th>
+          <th>Region</th>
+          <th>Reported_Gene</th>
+          <th>Mapped_Gene</th>
+        </thead>
+        <tbody>
+          <td>
+            <%= dataAsso.snp %>
+          </td>
+          <td>
+            <%= dataAsso.pvalue %>
+          </td>
+        </tbody>
+      </table>
+      <% }%>
+  </body>
+</head>
+
+</html>

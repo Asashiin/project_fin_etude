@@ -28,6 +28,12 @@ app.post('/asso', (req, res) => {
     route.searchAssociationsByTraits(req.body.trait, res)
   }
 })
+app.post('/location', (req, res) => {
+  if (req.body.location) {
+    console.log("test route, location : " + req.body.location)
+    route.searchSnpByLocation(req.body.location, res)
+  }
+})
 app.get('/test', (req, res) => {
   res.render('test')
 })

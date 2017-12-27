@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang='fr'>
+
+<head>
+  <meta charset="utf-8">
+  <title>Bioinfo</title>
+
+  <body>
+    <% if (dataLoc) { %>
+      <table>
+        <thead>
+          <th>SNP</th>
+        </thead>
+        <tbody>
+          <td>
+            <% for(let i in dataLoc.snp){ %>
+              <p>
+                <%=dataLoc.snp[i]%>
+              </p>
+              <% } %>
+          </td>
+        </tbody>
+      </table>
+      <% } %>
+  </body>
+</head>
+
+</html>

@@ -30,7 +30,21 @@ async function testApi(api, res) {
     })
   }
 }
-// Reseach function with RS id given by the user
+//search liste snp by location
+async function searchSnpByLocation(location, res) {
+  const gw = await superagent.get('https://www.ebi.ac.uk/gwas/beta/rest/api/snpLocation/' + location).set('Accept', 'application/json')
+  let snpList = []
+  for (let i in gw.body._embedded.singleNucleotidePolymorphisms) {
+    snpList.push(gw.body._embedded.singleNucleotidePolymorphisms[i].rsId)
+  }
+  console.log('snp0' + snpList[0])
+  let result = {
+    snp: snpList
+  }
+  res.render('location', {
+    dataLoc: result
+  })
+}
 async function searchAssociationsByTraits(trait, res) {
   const gw = await superagent.get('https://www.ebi.ac.uk/gwas/beta/rest/api/associations/search/findByEfoTrait?efoTrait=' + trait).set('Accept', 'application/json')
   let assoSnp = []
@@ -68,6 +82,7 @@ async function searchAssociationsByTraits(trait, res) {
     dataAsso: result
   })
 }
+// Reseach function with RS id given by the user
 async function searchRs(rs, res) {
   const gt = await superagent.get(gtex + rs).set('Accept', 'application/json')
   const gw = await superagent.get(gwas + rs).set('Accept', 'application/json')
@@ -109,3 +124,4 @@ async function searchRs(rs, res) {
 module.exports.testApi = testApi
 module.exports.searchRs = searchRs
 module.exports.searchAssociationsByTraits = searchAssociationsByTraits
+module.exports.searchSnpByLocation = searchSnpByLocation

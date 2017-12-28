@@ -51,7 +51,7 @@ async function searchRs(rs, res) {
     assoSnp: asso.snp,
     assopValue: asso.pvalue
   }
-  res.render('result', {
+  res.render('snpInfo', {
     data: result
   })
 }

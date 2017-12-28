@@ -1,3 +1,5 @@
+var express = require('express')
+var router = express.Router()
 const superagent = require('superagent')
 const gtex = 'rest.ensembl.org/variation/human/'
 const gwas = 'www.ebi.ac.uk/gwas/beta/rest/api/singleNucleotidePolymorphisms/'
@@ -125,3 +127,4 @@ module.exports.testApi = testApi
 module.exports.searchRs = searchRs
 module.exports.searchAssociationsByTraits = searchAssociationsByTraits
 module.exports.searchSnpByLocation = searchSnpByLocation
+module.exports = router

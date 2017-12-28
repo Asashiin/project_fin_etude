@@ -1,0 +1,11 @@
+recupéré plus d'info sur les gene et HGVS name depuis :
+
+http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=12:95867290-95868290;v=rs6538678;vdb=variation;vf=3650069
+
+--> peut etre réduit à un appel api sur le rs_id seulement
+
+
+
+API ncbi :  https://api.ncbi.nlm.nih.gov/variation/v0/beta/refsnp/6538678
+
+documentation :https://www.ncbi.nlm.nih.gov/snp/docs/refsnp_report/helpdoc/

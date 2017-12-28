@@ -2,85 +2,93 @@
 <html lang='fr'>
 
 <head>
-    <meta charset="utf-8">
-    <title>Bioinfo</title>
+  <meta charset="utf-8">
+  <title>Bioinfo</title>
 
-    <body>
-        <% if (data) { %>
-            <table>
-                <thead>
-                    <th>Name</th>
-                    <th>Location</th>
-                    <th>Start</th>
-                    <th>End</th>
-                    <th>Sequence_Region</th>
-                    <th>Allele</th>
-                    <th>AssoSNP</th>
-                    <th>AssoPvalue</th>              
-                </thead>
-                <tbody>
-                    <td>
-                        <%= data.name %>
-                    </td>
-                    <td>
-                        <%= data.location %>
-                    </td>
-                    <td>
-                        <%= data.start %>
-                    </td>
-                    <td>
-                        <%= data.end %>
-                    </td>
-                    <td>
-                        <%= data.seq %>
-                    </td>
-                    <td>
-                        <%= data.allele %>
-                    </td>
-                    <td>
-                        <%= data.assoSnp %>
-                    </td>
-                    <td>
-                        <%= data.assopValue%>
-                    </td>
-                  
-                </tbody>
-            </table>
-            <h2>Liste de tous les variants</h2>
-            <%
+  <body>
+    <% if (data) { %>
+      <table>
+        <thead>
+          <th>Name</th>
+          <th>Location</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Sequence_Region</th>
+          <th>Allele</th>
+          <th>AssoSNP</th>
+          <th>AssoPvalue</th>
+        </thead>
+        <tbody>
+          <td>
+            <%= data.name %>
+          </td>
+          <td>
+            <%= data.location %>
+          </td>
+          <td>
+            <%= data.start %>
+          </td>
+          <td>
+            <%= data.end %>
+          </td>
+          <td>
+            <%= data.seq %>
+          </td>
+          <td>
+            <%= data.allele %>
+          </td>
+          <td>
+            <%= data.assoSnp %>
+          </td>
+          <td>
+            <%= data.assopValue%>
+          </td>
+        </tbody>
+      </table>
+      <h2>Liste de tous les variants</h2>
+      <%
         for (let i in data.variant) {
       %>
-                <label>
-                    <%= data.variant[i] %>
-                </label>
-                <br/>
-                <%
+        <label>
+          <%= data.variant[i] %>
+        </label>
+        <br/>
+        <%
         }
       %>
-                    <h2>Liste de tous les genes</h2>
-                    <%
+          <table>
+            <thead>
+              <th>Emsembl ID Gene</th>
+              <th>Gene Name</th>
+              <tbody>
+                <td>
+                  <%
         for (let i in data.genes) {
       %>
-                        <label>
-                            <%= data.genes[i] %>
-                        </label>
-                        <br/>
-                        <%
+                    <label>
+                      <%= data.genes[i] %>
+                    </label>
+                    <br/>
+                    <%
         }
       %>
-                            <h2>Nom des genes</h2>
-                            <%
+                </td>
+                <td>
+                  <%
         for (let i in data.genesName) {
       %>
-                                <label>
-                                    <%= data.genesName[i] %>
-                                </label>
-                                <br/>
-                                <%
+                    <label>
+                      <%= data.genesName[i] %>
+                    </label>
+                    <br/>
+                    <%
         }
       %>
-                                    <% }%>
-    </body>
+                </td>
+              </tbody>
+          </table>
+          <% }%>
+  </body>
 </head>
 
 </html>

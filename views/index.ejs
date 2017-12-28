@@ -9,15 +9,13 @@
     <h1>Welcome to the version 0.1</h1>
     <h2>Here some test to check if we can retrieve some data from the different APIs</h2>
     <form id="form-test" method="post" action="/snpInfo">
-      <!--  <button name="gwas_api" value="gwas_api" id="gwas">GWAS_API</button>
-        <button name="gtex_api" value="gtex_api" id="gtex">GTEX_API</button> -->
       <br/>
       <input type="text" name="rs" class="rs" />
       <input type="submit" id="submit" class="submit" value="Research" /> </form>
-    <form id="form_asso" method="post" action="/asso">
+    <form id="form_asso" method="post" action="/association">
       <input type="text" name="trait" class="trait" />
       <input type="submit" id="submit_trait" class="submit_trait" value="Research_trait" /> </form>
-    <form id="form_asso" method="post" action="/location">
+    <form id="form_loc" method="post" action="/location">
       <input type="text" name="location" class="location" />
       <input type="submit" id="submit_location" class="submit_location" value="Research_location" /> </form>
   </body>

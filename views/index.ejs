@@ -4,21 +4,35 @@
 <head>
   <meta charset="utf-8">
   <title>Bioinfo</title>
+  <link rel="stylesheet" href="../public/Stylesheet/style.css">
+  <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
+  <style>
+    body {
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      text-align: left;
+      background-color: #FFF;
+    }
 
-  <body>
-    <h1>Welcome to the version 0.1</h1>
-    <h2>Here some test to check if we can retrieve some data from the different APIs</h2>
-    <form id="form-test" method="post" action="/snpInfo">
-      <br/>
-      <input type="text" name="rs" class="rs" />
-      <input type="submit" id="submit" class="submit" value="Research" /> </form>
-    <form id="form_asso" method="post" action="/association">
-      <input type="text" name="trait" class="trait" />
-      <input type="submit" id="submit_trait" class="submit_trait" value="Research_trait" /> </form>
-    <form id="form_loc" method="post" action="/location">
-      <input type="text" name="location" class="location" />
-      <input type="submit" id="submit_location" class="submit_location" value="Research_location" /> </form>
-  </body>
+  </style>
 </head>
 
-</html>
+<body>
+  <h1>Welcome to the version 0.1</h1>
+  <h2>Here some research bar to check if we can retrieve some data from the different APIs from SNP, Traits and Location</h2>
+  <div id="button_search">
+    <form id="form_snpInfo" method="post" action="/snpInfo">
+      <br/>
+      <input type="search" name="rs" pattern="^[Rr][Ss]\d+$" placeholder="Search for rs" id="rs" class="rs" />
+      <input type="submit" id="submit" class="submit" value="Research" /> </form> <span id="string-msg">Exemple :   rs333</span>
+    <form id="form_asso" method="post" action="/association">
+      <input type="text" placeholder="Search for trait" name="trait" class="trait" />
+      <input type="submit" id="submit_trait" class="submit_trait" value="Research_trait" /> </form> <span id="string-msg">Exemple :  breast carcinoma</span>
+    <form id="form_loc" method="post" action="/location">
+      <input type="text" placeholder="Search for location" name="location" class="location" />
+      <input type="submit" id="submit_location" class="submit_location" value="Research_location" /> </form> <span id="string-msg">Exemple :  10:95000000-96000000</span> </div>
+  <!-- <div id="7lz86f" class="SeqViewerApp" data-autoload>
+    <a href="?embedded=true&id=NC_000008.11&tracks=[key:sequence_track,name:Sequence,display_name:Sequence,id:STD1,category:Sequence,annots:Sequence,ShowLabel:false,shown:true,order:1][key:gene_model_track,name:Genes,display_name:Genes,id:STD12,category:Genes,annots:Unnamed,Options:MergeAll,SNPs:false,CDSProductFeats:false,NtRuler:true,AaRuler:true,HighlightMode:2,shown:true,order:12][key:alignment_track,name:Alignments---Gnomon Alignments,display_name:Gnomon Alignments,id:STD14,category:Alignments,annots:Gnomon Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:14][key:alignment_track,name:Alignments---NG Alignments,display_name:NG Alignments,id:STD15,category:Alignments,annots:NG Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:15][key:alignment_track,name:Alignments---Refseq Alignments,display_name:Refseq Alignments,id:STD16,category:Alignments,annots:Refseq Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:16][key:alignment_track,name:Alignments---Scaffold-to-Chromosome Alignments,display_name:Scaffold-to-Chromosome Alignments,id:STD17,category:Alignments,annots:Scaffold-to-Chromosome Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:17][key:feature_track,name:STS Markers,display_name:STS Markers,id:STD18,subkey:STS,category:Features,subcategory:STS Markers,annots:STS,Layout:Adaptive,LinkedFeat:Packed,shown:true,order:18]&assm_context=GCF_000001405.37&v=1:145138636&c=0000FF&select=null&slim=0&appname=no_appname"></a>
+  </div> -->
+</body>

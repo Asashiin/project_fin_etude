@@ -9,3 +9,5 @@ http://www.ensembl.org/Homo_sapiens/Variation/Explore?r=12:95867290-95868290;v=r
 API ncbi :  https://api.ncbi.nlm.nih.gov/variation/v0/beta/refsnp/6538678
 
 documentation :https://www.ncbi.nlm.nih.gov/snp/docs/refsnp_report/helpdoc/
+
+    NC_000012.11:g.96261568A>G

@@ -3,7 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Bioinfo</title>
+  <title>SNP_INFO</title>
+  <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
   <style>
     #header {
       height: 60px;
@@ -12,6 +13,7 @@
       overflow: hidden;
       max-width: 100%;
       background-size: cover;
+      width: 100%;
     }
     
     p {
@@ -20,12 +22,74 @@
       color: #f1f1f1;
     }
     
+    body {
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      text-align: left;
+      background-color: #FFF;
+    }
+    
     #RsIdbox {
       color: #fff;
-      background-color: #205493;
-      width: auto;
+      background-color: #5f5f5f;
+      width: 140px;
       margin: 1em 0 0 0;
       display: inline-block;
+      font-style: normal;
+      font-size: 30px;
+      color: #f1f1f1;
+      padding: 0 1em 0 1em;
+    }
+    
+    #info_base,
+    #info_var_gen {
+      border-collapse: separate;
+      border-spacing: 15px 8px;
+    }
+    /*#info_var_gen tr:nth-child(even) {
+      background-color: #fff;
+    }*/
+    
+    #info_rs {
+      background-color: #e1f3f8;
+      border-left: 3px solid #205493;
+      overflow: hidden;
+    }
+    
+    #variant {
+      padding: 0 1em 0 1em;
+    }
+    
+    #nom_col,
+    #tabl_var_thead {
+      font-style: normal;
+      font-size: 18px;
+      padding: 0 3rem;
+    }
+    
+    #seq_div {
+      padding: 0 1em 0 1em;
+      display: inline-block;
+      margin-top: 25px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 25px;
+    }
+    
+    #genomic_region {
+      font-style: normal;
+      font-size: 30px;
+      color: #fff;
+      background-color: #5f5f5f;
+      width: 220px;
+      margin: 1em 0 0 0;
+      display: inline-block;
+      font-style: normal;
+      font-size: 30px;
+      color: #f1f1f1;
+      padding: 0 1em 0 1em;
+      margin-bottom: 25px;
     }
 
   </style>
@@ -41,83 +105,102 @@
     <div id="RsIdbox">
       <%= data.name %>
     </div>
-    <table>
-      <thead>
-        <th>Location</th>
-        <th>Start</th>
-        <th>End</th>
-        <th>Sequence_Region</th>
-        <th>Allele</th>
-        <th>AssoSNP</th>
-        <th>AssoPvalue</th>
-      </thead>
-      <tbody>
-        <td>
-          <%= data.location %>
-        </td>
-        <td>
-          <%= data.start %>
-        </td>
-        <td>
-          <%= data.end %>
-        </td>
-        <td>
-          <%= data.seq %>
-        </td>
-        <td>
-          <%= data.allele %>
-        </td>
-        <td>
-          <%= data.assoSnp %>
-        </td>
-        <td>
-          <%= data.assopValue%>
-        </td>
-      </tbody>
-    </table>
-    <h2>Liste de tous les variants</h2>
-    <%
+    <div id="info_rs">
+      <table id="info_base">
+        <thead id="nom_col">
+          <th>Location</th>
+          <th>Start</th>
+          <th>End</th>
+          <th>Sequence_Region</th>
+          <th>Allele</th>
+          <th>AssoSNP</th>
+          <th>AssoPvalue</th>
+        </thead>
+        <tbody>
+          <td>
+            <%= data.location %>
+          </td>
+          <td>
+            <%= data.start %>
+          </td>
+          <td>
+            <%= data.end %>
+          </td>
+          <td>
+            <%= data.seq %>
+          </td>
+          <td>
+            <%= data.allele %>
+          </td>
+          <td>
+            <%= data.assoSnp %>
+          </td>
+          <td>
+            <%= data.assopValue%>
+          </td>
+        </tbody>
+      </table>
+      <div id="variant">
+        <h2>Liste de tous les variants</h2>
+        <%
         for (let i in data.variant) {
       %>
-      <label>
-        <%= data.variant[i] %>
-      </label>
-      <br/>
-      <%
+          <label>
+            <%= data.variant[i] %>
+          </label>
+          <br/>
+          <%
         }
       %>
-        <table>
-          <thead>
-            <th>Emsembl ID Gene</th>
-            <th>Gene Name</th>
-            <tbody>
-              <td>
-                <%
+      </div>
+      <table id="info_var_gen">
+        <thead id="tabl_var_thead">
+          <th>Emsembl ID Gene</th>
+          <th>Gene Name</th>
+          <tbody>
+            <td>
+              <%
         for (let i in data.genes) {
       %>
-                  <label>
-                    <%= data.genes[i] %>
-                  </label>
-                  <br/>
-                  <%
+                <label>
+                  <%= data.genes[i] %>
+                </label>
+                <br/>
+                <%
         }
       %>
-              </td>
-              <td>
-                <%
+            </td>
+            <td>
+              <%
         for (let i in data.genesName) {
       %>
-                  <label>
-                    <%= data.genesName[i] %>
-                  </label>
-                  <br/>
-                  <%
+                <label>
+                  <%= data.genesName[i] %>
+                </label>
+                <br/>
+                <%
         }
       %>
-              </td>
-            </tbody>
-        </table>
-        <% }%>
+            </td>
+          </tbody>
+      </table>
+      <% }%>
+    </div>
+    <div id="sequence">
+      <div id="seq_div"> <span id="genomic_region"> Genomic Region</span>
+        <br>
+        <label for="seq_selection">Choisir placement GRCH</label>
+        <select id="seq_sel">
+          <option value="option1" selected="selected"> Option 1 </option>
+          <option value="option2" selected="selected">Option 2 </option>
+        </select>
+      </div>
+      <div id="sequence_viewer_graph">
+        <div id="7lz86f" class="SeqViewerApp" data-autoload>
+          <a href="?embedded=true&id=NC_000012.12&tracks=[key:sequence_track,name:Sequence,display_name:Sequence,id:STD1,category:Sequence,annots:Sequence,ShowLabel:false,shown:true,order:1][key:gene_model_track,name:Genes,display_name:Genes,id:STD12,category:Genes,annots:Unnamed,Options:MergeAll,SNPs:false,CDSProductFeats:false,NtRuler:true,AaRuler:true,HighlightMode:2,shown:true,order:12][key:alignment_track,name:Alignments---Gnomon Alignments,display_name:Gnomon Alignments,id:STD14,category:Alignments,annots:Gnomon Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:14][key:alignment_track,name:Alignments---NG Alignments,display_name:NG Alignments,id:STD15,category:Alignments,annots:NG Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:15][key:alignment_track,name:Alignments---Refseq Alignments,display_name:Refseq Alignments,id:STD16,category:Alignments,annots:Refseq Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:16][key:alignment_track,name:Alignments---Scaffold-to-Chromosome Alignments,display_name:Scaffold-to-Chromosome Alignments,id:STD17,category:Alignments,annots:Scaffold-to-Chromosome Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:17][key:feature_track,name:STS Markers,display_name:STS Markers,id:STD18,subkey:STS,category:Features,subcategory:STS Markers,annots:STS,Layout:Adaptive,LinkedFeat:Packed,shown:true,order:18]&assm_context=GCF_000001405.37&v=1:145138636&c=0000FF&select=null&slim=0&appname=no_appname"></a>
+        </div>
+      </div>
+    </div>
 </body>
 
 </html>

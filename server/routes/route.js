@@ -1,9 +1,9 @@
+/*
 var express = require('express')
 var router = express.Router()
 const superagent = require('superagent')
 const gtex = 'rest.ensembl.org/variation/human/'
 const gwas = 'www.ebi.ac.uk/gwas/beta/rest/api/singleNucleotidePolymorphisms/'
-/*
 async function testApi(api, res) {
   if (api === 'gwas_api') {
     // Return some information about the API (just for testing)
@@ -32,6 +32,7 @@ async function testApi(api, res) {
       name: 'GTEX'
     })
   }
-}*/
-//module.exports.testApi = testApi
+}
+// module.exports.testApi = testApi
 module.exports = router
+*/

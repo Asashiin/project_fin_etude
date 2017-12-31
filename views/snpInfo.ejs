@@ -4,91 +4,120 @@
 <head>
   <meta charset="utf-8">
   <title>Bioinfo</title>
+  <style>
+    #header {
+      height: 60px;
+      background-color: #5f5f5f;
+      padding: 0 3rem;
+      overflow: hidden;
+      max-width: 100%;
+      background-size: cover;
+    }
+    
+    p {
+      font-style: normal;
+      font-size: 20px;
+      color: #f1f1f1;
+    }
+    
+    #RsIdbox {
+      color: #fff;
+      background-color: #205493;
+      width: auto;
+      margin: 1em 0 0 0;
+      display: inline-block;
+    }
 
-  <body>
-    <% if (data) { %>
-      <table>
-        <thead>
-          <th>Name</th>
-          <th>Location</th>
-          <th>Start</th>
-          <th>End</th>
-          <th>Sequence_Region</th>
-          <th>Allele</th>
-          <th>AssoSNP</th>
-          <th>AssoPvalue</th>
-        </thead>
-        <tbody>
-          <td>
-            <%= data.name %>
-          </td>
-          <td>
-            <%= data.location %>
-          </td>
-          <td>
-            <%= data.start %>
-          </td>
-          <td>
-            <%= data.end %>
-          </td>
-          <td>
-            <%= data.seq %>
-          </td>
-          <td>
-            <%= data.allele %>
-          </td>
-          <td>
-            <%= data.assoSnp %>
-          </td>
-          <td>
-            <%= data.assopValue%>
-          </td>
-        </tbody>
-      </table>
-      <h2>Liste de tous les variants</h2>
-      <%
+  </style>
+</head>
+
+<body>
+  <header id="header" class="header" role="banner">
+    <div class="banner_div">
+      <p> Info SNP par recherche RsId</p>
+    </div>
+  </header>
+  <% if (data) { %>
+    <div id="RsIdbox">
+      <%= data.name %>
+    </div>
+    <table>
+      <thead>
+        <th>Location</th>
+        <th>Start</th>
+        <th>End</th>
+        <th>Sequence_Region</th>
+        <th>Allele</th>
+        <th>AssoSNP</th>
+        <th>AssoPvalue</th>
+      </thead>
+      <tbody>
+        <td>
+          <%= data.location %>
+        </td>
+        <td>
+          <%= data.start %>
+        </td>
+        <td>
+          <%= data.end %>
+        </td>
+        <td>
+          <%= data.seq %>
+        </td>
+        <td>
+          <%= data.allele %>
+        </td>
+        <td>
+          <%= data.assoSnp %>
+        </td>
+        <td>
+          <%= data.assopValue%>
+        </td>
+      </tbody>
+    </table>
+    <h2>Liste de tous les variants</h2>
+    <%
         for (let i in data.variant) {
       %>
-        <label>
-          <%= data.variant[i] %>
-        </label>
-        <br/>
-        <%
+      <label>
+        <%= data.variant[i] %>
+      </label>
+      <br/>
+      <%
         }
       %>
-          <table>
-            <thead>
-              <th>Emsembl ID Gene</th>
-              <th>Gene Name</th>
-              <tbody>
-                <td>
-                  <%
+        <table>
+          <thead>
+            <th>Emsembl ID Gene</th>
+            <th>Gene Name</th>
+            <tbody>
+              <td>
+                <%
         for (let i in data.genes) {
       %>
-                    <label>
-                      <%= data.genes[i] %>
-                    </label>
-                    <br/>
-                    <%
+                  <label>
+                    <%= data.genes[i] %>
+                  </label>
+                  <br/>
+                  <%
         }
       %>
-                </td>
-                <td>
-                  <%
+              </td>
+              <td>
+                <%
         for (let i in data.genesName) {
       %>
-                    <label>
-                      <%= data.genesName[i] %>
-                    </label>
-                    <br/>
-                    <%
+                  <label>
+                    <%= data.genesName[i] %>
+                  </label>
+                  <br/>
+                  <%
         }
       %>
-                </td>
-              </tbody>
-          </table>
-          <% }%>
-  </body>
-</head>
+              </td>
+            </tbody>
+        </table>
+        <% }%>
+</body>
 
 </html>

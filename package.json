@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "standard && nodemon server/app.js",
     "start": "nodemon server/app.js"
   },
   "author": "",
@@ -14,6 +14,7 @@
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "nodemon": "^1.14.3",
-    "superagent": "^3.8.2"
+    "superagent": "^3.8.2",
+    "standart": "*"
   }
 }

@@ -12,9 +12,10 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
+    "excel4node": "^1.3.2",
     "express": "^4.16.2",
     "nodemon": "^1.14.3",
-    "superagent": "^3.8.2",
-    "standart": "*"
+    "standart": "*",
+    "superagent": "^3.8.2"
   }
 }

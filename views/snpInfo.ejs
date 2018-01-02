@@ -5,14 +5,14 @@
   <meta charset="utf-8">
   <title>SNP_INFO</title>
   <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src='/JavaScript/snpInfoJS.js'></script>
   <style>
     #header {
-      height: 60px;
+      height: 90px;
       background-color: #5f5f5f;
       padding: 0 3rem;
       overflow: hidden;
-      max-width: 100%;
-      background-size: cover;
       width: 100%;
     }
     
@@ -28,6 +28,7 @@
       width: 1200px;
       text-align: left;
       background-color: #FFF;
+      overflow: hidden;
     }
     
     #RsIdbox {
@@ -99,6 +100,9 @@
   <header id="header" class="header" role="banner">
     <div class="banner_div">
       <p> Info SNP par recherche RsId</p>
+    </div>
+    <div id="buttonDiv">
+      <button id="xclBut" onclick="saveData()">Save Data Format Excel</button>
     </div>
   </header>
   <% if (data) { %>
@@ -201,6 +205,26 @@
         </div>
       </div>
     </div>
+    <script>
+      function saveData() {
+        console.log("test saveData")
+        $.ajax({
+          type: 'POST',
+          url: 'snpInfo/dlExcel',
+          contentType: 'application/json',
+          data: {
+            'test': "test"
+          },
+          success: function(data, textStatus, request) {
+            console.log("test saveData succes")
+            /* var download_id = data['id'];
+              // Could also use the link-click method.
+              window.location = '/path/to/download?id=' + download_id; */
+          }
+        });
+      }
+
+    </script>
 </body>
 
 </html>

@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>SNP_INFO</title>
+  <link href="/">
   <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src='/JavaScript/snpInfoJS.js'></script>
@@ -207,16 +208,17 @@
     </div>
     <script>
       function saveData() {
-        console.log("test saveData")
+        console.log("test saveData client side")
         $.ajax({
           type: 'POST',
-          url: 'snpInfo/dlExcel',
+          url: '/snpInfo/dlExcel',
           contentType: 'application/json',
           data: {
-            'test': "test"
+            test: "test AJAX"
           },
           success: function(data, textStatus, request) {
             console.log("test saveData succes")
+            console.log('ajaxdata' + data)
             /* var download_id = data['id'];
               // Could also use the link-click method.
               window.location = '/path/to/download?id=' + download_id; */

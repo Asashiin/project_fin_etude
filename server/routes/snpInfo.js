@@ -18,8 +18,8 @@ router.get('/dlExcel', (req, res) => {
   console.log(req.test + '1')
   console.log("test export Excel")
 })*/
-router.post('/dlExcel', (req, res) => {
-  console.log(req.data)
+router.post('/dlExcel', (req, res) => {  
+  console.log('test data' + req.data)
   console.log("test export Excel")
 })
 module.exports = router

@@ -101,9 +101,6 @@
     <div class="banner_div">
       <p> Info SNP par recherche RsId</p>
     </div>
-    <div id="buttonDiv">
-      <button id="xclBut" onclick="saveData()">Save Data Format Excel</button>
-    </div>
   </header>
   <% if (data) { %>
     <div id="RsIdbox">
@@ -205,26 +202,6 @@
         </div>
       </div>
     </div>
-    <script>
-      function saveData() {
-        console.log("test saveData")
-        $.ajax({
-          type: 'POST',
-          url: 'snpInfo/dlExcel',
-          contentType: 'application/json',
-          data: {
-            'test': "test"
-          },
-          success: function(data, textStatus, request) {
-            console.log("test saveData succes")
-            /* var download_id = data['id'];
-              // Could also use the link-click method.
-              window.location = '/path/to/download?id=' + download_id; */
-          }
-        });
-      }
-
-    </script>
 </body>
 
 </html>

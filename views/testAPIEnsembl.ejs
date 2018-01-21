@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang='fr'>
+
+<head>
+  <meta charset="utf-8">
+  <title>Test API Ensembl</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
+  <style>
+    #header {
+      height: 90px;
+      background-color: #5f5f5f;
+      padding: 0 3rem;
+      overflow: hidden;
+      width: 100%;
+    }
+    
+    p {
+      font-style: normal;
+      font-size: 25px;
+      color: #205493;
+    }
+    
+    body {
+      margin-left: auto;
+      margin-right: auto;
+      width: 1200px;
+      text-align: left;
+      background-color: #FFF;
+      overflow: hidden;
+    }
+    
+    #RsIdbox {
+      color: #fff;
+      background-color: #5f5f5f;
+      margin: 1em 0 0 0;
+      display: inline-block;
+      font-style: normal;
+      font-size: 42px;
+      color: #f1f1f1;
+      padding: 0 1em 0 1em;
+    }
+    
+    #info_base {
+      border-collapse: separate;
+      border-spacing: 15px 8px;
+    }
+    /*#info_var_gen tr:nth-child(even) {
+      background-color: #fff;
+    }*/
+    
+    #inner-content {
+      background-color: #e1f3f8;
+      overflow: hidden;
+    }
+    
+    #variant {
+      padding: 0 1em 0 1em;
+    }
+    
+    #info_base .th {
+      font-style: normal;
+      font-size: 20px;
+      padding: 0 3rem;
+    }
+    
+    #contentEnsembl,
+    #contentGtext,
+    #contentGwas {
+      width: 300px;
+      display: table-cell;
+      border-left: 3px solid #205493;
+      padding: 0 2em 0 2em;
+      overflow: hidden;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id='content'>
+    <% if (data) { %>
+      <div id="RsIdbox">
+        <%= data.name %>
+          <form action='/fileup' methode='post' enctype="multipart/form-data">
+            <input type='file' name='filetoupload'>
+            <br/>
+            <input type='submit' value='valider'> </form>
+      </div>
+      <div id='inner-content'>
+        <div id='contentEnsembl'>
+          <p>Ensembl Information</p>
+          <div id="info_rs">
+            <table id="info_base">
+              <tr>
+                <th>Consequence</th>
+                <td>
+                  <%= data.conseq %>
+                </td>
+              </tr>
+              <tr>
+                <th>Allele</th>
+                <td>
+                  <%= data.allele %>
+                </td>
+              </tr>
+              <tr>
+                <th>MAF</th>
+                <td>
+                  <%= data.maf %>
+                </td>
+              </tr>
+              <tr>
+                <th>Ancestral</th>
+                <td>
+                  <%= data.ancestral %>
+                </td>
+              </tr>
+              <tr>
+                <th>Location</th>
+                <td>
+                  <%= data.location %>
+                </td>
+              </tr>
+              <tr>
+                <th>VCF</th>
+              </tr>
+              <tr>
+                <th>Start</th>
+                <td>
+                  <%= data.start %>
+                </td>
+              </tr>
+              <tr>
+                <th>End</th>
+                <td>
+                  <%= data.end %>
+                </td>
+              </tr>
+              <tr>
+                <th>Sequence_Region</th>
+                <td>
+                  <%= data.seq %>
+                </td>
+              </tr>
+              <tr>
+                <th>Clinical Significance</th>
+                <td>
+                  <%= data.clinicSigni %>
+                </td>
+              </tr>
+              <tr>
+                <th>Variant</th>
+                <td>
+                  <%
+        for (let i in data.variant) {
+      %>
+                    <%= data.variant[i] %>
+                      <br/>
+                      <%
+        }
+      %>
+                </td>
+              </tr>
+              <tbody> </tbody>
+            </table>
+            <% }%>
+          </div>
+        </div>
+        <div id='contentGtext'>
+          <p>GTEX Information</p>
+          <div id="info_rs">
+            <p>test 2 </p>
+          </div>
+        </div>
+        <div id='contentGwas'>
+          <p>GWAS Information</p>
+          <div id="info_rs">
+            <p>test 3</p>
+          </div>
+        </div>
+      </div>
+  </div>
+</body>
+
+</html>

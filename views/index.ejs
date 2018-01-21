@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Bioinfo</title>
-  <link rel="stylesheet" href="../public/Stylesheet/style.css">
+  <!--<link rel="stylesheet" href="../public/Stylesheet/style.css">-->
   <style>
     body {
       margin-left: auto;
@@ -144,6 +144,9 @@
       <br/>
       <input type="search" name="rs" pattern="^[Rr][Ss]\d+$" placeholder="Search for rs" id="rs" class="rs" />
       <input type="submit" id="submit_id" class="submit" value="Research" /> </form> <span id="string-msg">Exemple :   rs333</span>
+    <form id="form_snpInfo" method="post" action="/testAPIEnsembl">
+      <input type="search" name="rs" placeholder="Search for rs" id="rs" class="rs" />
+      <input type="submit" id="submit_id" class="submit" value="Research" /> </form> <span id="string-msg">Exemple :   rs699</span>
     <form id="form_asso" method="post" action="/association">
       <input type="text" placeholder="Search for trait" name="trait" id="trait" />
       <input type="submit" id="submit_trait" class="submit_trait" value="Research_trait" /> </form> <span id="string-msg">Exemple :  breast carcinoma</span>

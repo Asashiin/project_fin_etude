@@ -15,3 +15,30 @@ Nous -> on fait les recherches dans la base (possibilité de faire un fichier cs
 
 
 //Adresse qui fonctionne : grch37.rest.ensembl.org/variation/human/rs3997925
+
+
+Ancien code
+<td>
+              <%
+        for (let i in data.genes) {
+      %>
+                <label>
+                  <%= data.genes[i] %>
+                </label>
+                <br/>
+                <%
+        }
+      %>
+            </td>
+            <td>
+              <%
+        for (let i in data.genesName) {
+      %>
+                <label>
+                  <%= data.genesName[i] %>
+                </label>
+                <br/>
+                <%
+        }
+      %>
+            </td>

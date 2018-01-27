@@ -154,35 +154,23 @@
         }
       %>
       </div>
+      <h2>Concernant GTEX </h2>
       <table id="info_var_gen">
         <thead id="tabl_var_thead">
-          <th>Emsembl ID Gene</th>
-          <th>Gene Name</th>
+          <th>Genecode Id</th>
+          <th>Gene Symbol</th>
+          <th>Variant Id</th>
+          <th>SNP</th>
           <tbody>
-            <td>
-              <%
-        for (let i in data.genes) {
-      %>
-                <label>
-                  <%= data.genes[i] %>
-                </label>
-                <br/>
-                <%
-        }
-      %>
-            </td>
-            <td>
-              <%
-        for (let i in data.genesName) {
-      %>
-                <label>
-                  <%= data.genesName[i] %>
-                </label>
-                <br/>
-                <%
-        }
-      %>
-            </td>
+            <% for (let i in data.gtexvalue) {
+              %>
+            <td><%= data.gtexvalue[i].geneid%></td>
+            <td><%= data.gtexvalue[i].symbol%></td>
+            <td><%= data.gtexvalue[i].variantid%></td>
+            <td><%= data.gtexvalue[i].snp%></td>
+            <%
+            }
+            %>
           </tbody>
       </table>
       <% }%>

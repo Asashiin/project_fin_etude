@@ -1,7 +1,7 @@
 var express = require('express')
 const jsonFunc = require('jsonFunc')
 var router = express.Router()
-var excel = require('excel4node');
+var excel = require('excel4node')
 router.get('/', (req, res) => {
   // res.render('result')
 })

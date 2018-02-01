@@ -154,36 +154,26 @@
         }
       %>
       </div>
+      <h2>Concernant GTEX </h2>
       <table id="info_var_gen">
         <thead id="tabl_var_thead">
-          <th>Emsembl ID Gene</th>
-          <th>Gene Name</th>
-          <tbody>
-            <td>
-              <%
-        for (let i in data.genes) {
-      %>
-                <label>
-                  <%= data.genes[i] %>
-                </label>
-                <br/>
-                <%
-        }
-      %>
-            </td>
-            <td>
-              <%
-        for (let i in data.genesName) {
-      %>
-                <label>
-                  <%= data.genesName[i] %>
-                </label>
-                <br/>
-                <%
-        }
-      %>
-            </td>
-          </tbody>
+          <th>Genecode Id</th>
+          <th>Gene Symbol</th>
+          <th>Variant Id</th>
+          <th>SNP</th>
+        </thead>
+        <tbody>
+            <% for (let i in data.gtexvalue) {
+              %><tr>
+            <td><%= data.gtexvalue[i].geneid%></td>
+            <td><%= data.gtexvalue[i].symbol%></td>
+            <td><%= data.gtexvalue[i].variantid%></td>
+            <td><%= data.gtexvalue[i].snp%></td>
+          </tr>
+            <%
+            }
+            %>
+        </tbody>
       </table>
       <% }%>
     </div>
@@ -197,9 +187,9 @@
         </select>
       </div>
       <div id="sequence_viewer_graph">
-        <div id="7lz86f" class="SeqViewerApp" data-autoload>
+        <!-- <div id="7lz86f" class="SeqViewerApp" data-autoload>
           <a href="?embedded=true&id=NC_000012.12&tracks=[key:sequence_track,name:Sequence,display_name:Sequence,id:STD1,category:Sequence,annots:Sequence,ShowLabel:false,shown:true,order:1][key:gene_model_track,name:Genes,display_name:Genes,id:STD12,category:Genes,annots:Unnamed,Options:MergeAll,SNPs:false,CDSProductFeats:false,NtRuler:true,AaRuler:true,HighlightMode:2,shown:true,order:12][key:alignment_track,name:Alignments---Gnomon Alignments,display_name:Gnomon Alignments,id:STD14,category:Alignments,annots:Gnomon Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:14][key:alignment_track,name:Alignments---NG Alignments,display_name:NG Alignments,id:STD15,category:Alignments,annots:NG Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:15][key:alignment_track,name:Alignments---Refseq Alignments,display_name:Refseq Alignments,id:STD16,category:Alignments,annots:Refseq Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:16][key:alignment_track,name:Alignments---Scaffold-to-Chromosome Alignments,display_name:Scaffold-to-Chromosome Alignments,id:STD17,category:Alignments,annots:Scaffold-to-Chromosome Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:17][key:feature_track,name:STS Markers,display_name:STS Markers,id:STD18,subkey:STS,category:Features,subcategory:STS Markers,annots:STS,Layout:Adaptive,LinkedFeat:Packed,shown:true,order:18]&assm_context=GCF_000001405.37&v=1:145138636&c=0000FF&select=null&slim=0&appname=no_appname"></a>
-        </div>
+        </div>-->
       </div>
     </div>
 </body>

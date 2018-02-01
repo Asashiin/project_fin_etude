@@ -10,7 +10,17 @@ router.post('/', (req, res) => {
   if (req.body.rs) {
     // console.log('test route' + req.body.rs)
     jsonFunc.searchRs(req.body.rs, res)
-    jsonFunc.searchRSNcbi(req.body.rs, res)
+      .then((result) => {
+        if (typeof result === 'string') {
+          console.log(result)
+          res.render('index')
+        } else {
+          res.render('snpInfo', {
+            data: result
+          })
+        }
+      })
+    // jsonFunc.searchRSNcbi(req.body.rs, res)
   }
 })
 /* router.get('/dlExcel', (req, res) => {

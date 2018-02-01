@@ -19,12 +19,11 @@ router.post('/', (req, res) => {
       res.render('testAPIEnsembl', {
         data: result
       })
-      console.log(result.name);
+      console.log(result.name)
       datal.push(result)
       console.log('test' + JSON.stringify(datal))
-      excel.writeFichier(JSON.stringify(datal))
+      excel.writeFichier(JSON.stringify(result))
     })
-    listRS.push(excel.readFichier())
   }
 })
 module.exports = router

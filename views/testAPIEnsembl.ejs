@@ -45,9 +45,6 @@
       border-collapse: separate;
       border-spacing: 15px 8px;
     }
-    /*#info_var_gen tr:nth-child(even) {
-      background-color: #fff;
-    }*/
     
     #inner-content {
       background-color: #e1f3f8;
@@ -82,7 +79,7 @@
     <% if (data) { %>
       <div id="RsIdbox">
         <%= data.name %>
-          <form action='/fileup' methode='post' enctype="multipart/form-data">
+          <form id="form_fileup" method="post" action="/testAPIEnsembl/fileup" enctype="multipart/form-data">
             <input type='file' name='filetoupload'>
             <br/>
             <input type='submit' value='valider'> </form>
@@ -164,13 +161,41 @@
               </tr>
               <tbody> </tbody>
             </table>
-            <% }%>
           </div>
         </div>
         <div id='contentGtext'>
           <p>GTEX Information</p>
           <div id="info_rs">
-            <p>test 2 </p>
+            <table id="info_var_gen">
+              <thead id="tabl_var_thead">
+                <th>Genecode Id</th>
+                <th>Gene Symbol</th>
+                <th>Variant Id</th>
+                <th>SNP</th>
+              </thead>
+              <tbody>
+                <% for (let i in data.gtexvalue) {
+              %>
+                  <tr>
+                    <td>
+                      <%= data.gtexvalue[i].geneid%>
+                    </td>
+                    <td>
+                      <%= data.gtexvalue[i].symbol%>
+                    </td>
+                    <td>
+                      <%= data.gtexvalue[i].variantid%>
+                    </td>
+                    <td>
+                      <%= data.gtexvalue[i].snp%>
+                    </td>
+                  </tr>
+                  <%
+            }
+            %>
+              </tbody>
+            </table>
+            <% }%>
           </div>
         </div>
         <div id='contentGwas'>

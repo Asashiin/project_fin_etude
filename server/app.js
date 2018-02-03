@@ -1,12 +1,15 @@
 const express = require('express')
-const app = express()
 const path = require('path')
 const bodyParser = require('body-parser')
+const helmet = require('helmet')
+const app = express()
+app.use(helmet())
 const port = process.env.PORT || 3000
+app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
   extended: true
 }))
-app.use(express.static(path.join(__dirname, 'public')))
+app.use(express.static(path.join(__dirname, '..', 'public')))
 //  route
 const index = require('../server/routes/index')
 const association = require('../server/routes/association')

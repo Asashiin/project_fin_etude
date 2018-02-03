@@ -16,7 +16,6 @@
     "express": "^4.16.2",
     "helmet": "^3.10.0",
     "nodemon": "^1.14.3",
-    "helmet": "^3.10.0",
     "standart": "*",
     "superagent": "^3.8.2"
   }

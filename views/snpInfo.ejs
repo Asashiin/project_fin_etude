@@ -4,96 +4,10 @@
 <head>
   <meta charset="utf-8">
   <title>SNP_INFO</title>
+  <link rel="stylesheet" href="Stylesheet/snpInfo.css">
   <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src='/JavaScript/snpInfoJS.js'></script>
-  <style>
-    #header {
-      height: 90px;
-      background-color: #5f5f5f;
-      padding: 0 3rem;
-      overflow: hidden;
-      width: 100%;
-    }
-    
-    p {
-      font-style: normal;
-      font-size: 20px;
-      color: #f1f1f1;
-    }
-    
-    body {
-      margin-left: auto;
-      margin-right: auto;
-      width: 1200px;
-      text-align: left;
-      background-color: #FFF;
-      overflow: hidden;
-    }
-    
-    #RsIdbox {
-      color: #fff;
-      background-color: #5f5f5f;
-      width: 140px;
-      margin: 1em 0 0 0;
-      display: inline-block;
-      font-style: normal;
-      font-size: 30px;
-      color: #f1f1f1;
-      padding: 0 1em 0 1em;
-    }
-    
-    #info_base,
-    #info_var_gen {
-      border-collapse: separate;
-      border-spacing: 15px 8px;
-    }
-    /*#info_var_gen tr:nth-child(even) {
-      background-color: #fff;
-    }*/
-    
-    #info_rs {
-      background-color: #e1f3f8;
-      border-left: 3px solid #205493;
-      overflow: hidden;
-    }
-    
-    #variant {
-      padding: 0 1em 0 1em;
-    }
-    
-    #nom_col,
-    #tabl_var_thead {
-      font-style: normal;
-      font-size: 18px;
-      padding: 0 3rem;
-    }
-    
-    #seq_div {
-      padding: 0 1em 0 1em;
-      display: inline-block;
-      margin-top: 25px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 25px;
-    }
-    
-    #genomic_region {
-      font-style: normal;
-      font-size: 30px;
-      color: #fff;
-      background-color: #5f5f5f;
-      width: 220px;
-      margin: 1em 0 0 0;
-      display: inline-block;
-      font-style: normal;
-      font-size: 30px;
-      color: #f1f1f1;
-      padding: 0 1em 0 1em;
-      margin-bottom: 25px;
-    }
-
-  </style>
 </head>
 
 <body>
@@ -163,13 +77,22 @@
           <th>SNP</th>
         </thead>
         <tbody>
-            <% for (let i in data.gtexvalue) {
-              %><tr>
-            <td><%= data.gtexvalue[i].geneid%></td>
-            <td><%= data.gtexvalue[i].symbol%></td>
-            <td><%= data.gtexvalue[i].variantid%></td>
-            <td><%= data.gtexvalue[i].snp%></td>
-          </tr>
+          <% for (let i in data.gtexvalue) {
+              %>
+            <tr>
+              <td>
+                <%= data.gtexvalue[i].geneid%>
+              </td>
+              <td>
+                <%= data.gtexvalue[i].symbol%>
+              </td>
+              <td>
+                <%= data.gtexvalue[i].variantid%>
+              </td>
+              <td>
+                <%= data.gtexvalue[i].snp%>
+              </td>
+            </tr>
             <%
             }
             %>
@@ -189,8 +112,7 @@
       <div id="sequence_viewer_graph">
         <!-- <div id="7lz86f" class="SeqViewerApp" data-autoload>
           <a href="?embedded=true&id=NC_000012.12&tracks=[key:sequence_track,name:Sequence,display_name:Sequence,id:STD1,category:Sequence,annots:Sequence,ShowLabel:false,shown:true,order:1][key:gene_model_track,name:Genes,display_name:Genes,id:STD12,category:Genes,annots:Unnamed,Options:MergeAll,SNPs:false,CDSProductFeats:false,NtRuler:true,AaRuler:true,HighlightMode:2,shown:true,order:12][key:alignment_track,name:Alignments---Gnomon Alignments,display_name:Gnomon Alignments,id:STD14,category:Alignments,annots:Gnomon Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:14][key:alignment_track,name:Alignments---NG Alignments,display_name:NG Alignments,id:STD15,category:Alignments,annots:NG Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:15][key:alignment_track,name:Alignments---Refseq Alignments,display_name:Refseq Alignments,id:STD16,category:Alignments,annots:Refseq Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:16][key:alignment_track,name:Alignments---Scaffold-to-Chromosome Alignments,display_name:Scaffold-to-Chromosome Alignments,id:STD17,category:Alignments,annots:Scaffold-to-Chromosome Alignments,Layout:Adaptive,StatDisplay:15,Color:Show Differences,UnalignedTailsMode:glyph,sort_by:,LinkMatePairAligns:false,ShowAlnStat:false,AlignedSeqFeats:false,Label:true,IdenticalBases:false,shown:true,order:17][key:feature_track,name:STS Markers,display_name:STS Markers,id:STD18,subkey:STS,category:Features,subcategory:STS Markers,annots:STS,Layout:Adaptive,LinkedFeat:Packed,shown:true,order:18]&assm_context=GCF_000001405.37&v=1:145138636&c=0000FF&select=null&slim=0&appname=no_appname"></a>
-        </div>-->
-      </div>
+        </div>--></div>
     </div>
 </body>
 

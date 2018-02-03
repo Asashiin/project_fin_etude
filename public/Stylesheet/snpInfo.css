@@ -1,0 +1,84 @@
+#header {
+  height: 90px;
+  background-color: #5f5f5f;
+  padding: 0 3rem;
+  overflow: hidden;
+  width: 100%;
+}
+
+p {
+  font-style: normal;
+  font-size: 20px;
+  color: #f1f1f1;
+}
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  text-align: left;
+  background-color: #FFF;
+  overflow: hidden;
+}
+
+#RsIdbox {
+  color: #fff;
+  background-color: #5f5f5f;
+  width: 140px;
+  margin: 1em 0 0 0;
+  display: inline-block;
+  font-style: normal;
+  font-size: 30px;
+  color: #f1f1f1;
+  padding: 0 1em 0 1em;
+}
+
+#info_base,
+#info_var_gen {
+  border-collapse: separate;
+  border-spacing: 15px 8px;
+}
+/*#info_var_gen tr:nth-child(even) {
+background-color: #fff;
+}*/
+
+  #info_rs {
+    background-color: #e1f3f8;
+    border-left: 3px solid #205493;
+    overflow: hidden;
+  }
+
+  #variant {
+    padding: 0 1em 0 1em;
+  }
+
+  #nom_col,
+  #tabl_var_thead {
+    font-style: normal;
+    font-size: 18px;
+    padding: 0 3rem;
+  }
+
+  #seq_div {
+    padding: 0 1em 0 1em;
+    display: inline-block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+  }
+
+  #genomic_region {
+    font-style: normal;
+    font-size: 30px;
+    color: #fff;
+    background-color: #5f5f5f;
+    width: 220px;
+    margin: 1em 0 0 0;
+    display: inline-block;
+    font-style: normal;
+    font-size: 30px;
+    color: #f1f1f1;
+    padding: 0 1em 0 1em;
+    margin-bottom: 25px;
+  }

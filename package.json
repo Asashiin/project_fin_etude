@@ -14,6 +14,7 @@
     "ejs": "^2.5.7",
     "excel4node": "^1.3.2",
     "express": "^4.16.2",
+    "helmet": "^3.10.0",
     "nodemon": "^1.14.3",
     "standart": "*",
     "superagent": "^3.8.2"

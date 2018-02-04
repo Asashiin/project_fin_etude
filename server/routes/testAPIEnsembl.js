@@ -22,18 +22,17 @@ router.post('/', (req, res) => {
 })
 /******/
 router.post('/fileup', (req, res) => {
-  var form = new formidable.IncomingForm()
+  let form = new formidable.IncomingForm()
   form.parse(req, function (err, fields, files) {
     console.log(files.fileToUpload.path)
-    var pth = files.fileToUpload.path;
-    //déplacer fichier si on veut le save sur le serveur/qqc part -->>dossier a lire
-    /* var newpath = 'C:/Users/Your Name/' + files.filetoupload.name;
-    fs.rename(pth, newpath, function (err) {
-      if (err) throw err;
-      res.write('File uploaded and moved!');
-    })*/
-    excel.readFichier(pth)
-    // --> a voir sin crrée directement l'appel a l'écriture des résultats en asynchrones ici ou à un autre endroit
+    let pth = files.fileToUpload.path;
+    excel.readFichierLine(pth)
   })
 })
 module.exports = router
+/******/
+/* var newpath = 'C:/Users/Your Name/' + files.filetoupload.name;
+fs.rename(pth, newpath, function (err) {
+  if (err) throw err;
+  res.write('File uploaded and moved!');
+})*/

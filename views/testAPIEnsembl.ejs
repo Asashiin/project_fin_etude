@@ -4,74 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Test API Ensembl</title>
+  <link rel="stylesheet" href="Stylesheet/APIEnsembl.css">
   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
-  <style>
-    #header {
-      height: 90px;
-      background-color: #5f5f5f;
-      padding: 0 3rem;
-      overflow: hidden;
-      width: 100%;
-    }
-    
-    p {
-      font-style: normal;
-      font-size: 25px;
-      color: #205493;
-    }
-    
-    body {
-      margin-left: auto;
-      margin-right: auto;
-      width: 1200px;
-      text-align: left;
-      background-color: #FFF;
-      overflow: hidden;
-    }
-    
-    #RsIdbox {
-      color: #fff;
-      background-color: #5f5f5f;
-      margin: 1em 0 0 0;
-      display: inline-block;
-      font-style: normal;
-      font-size: 42px;
-      color: #f1f1f1;
-      padding: 0 1em 0 1em;
-    }
-    
-    #info_base {
-      border-collapse: separate;
-      border-spacing: 15px 8px;
-    }
-    
-    #inner-content {
-      background-color: #e1f3f8;
-      overflow: hidden;
-    }
-    
-    #variant {
-      padding: 0 1em 0 1em;
-    }
-    
-    #info_base .th {
-      font-style: normal;
-      font-size: 20px;
-      padding: 0 3rem;
-    }
-    
-    #contentEnsembl,
-    #contentGtext,
-    #contentGwas {
-      width: 300px;
-      display: table-cell;
-      border-left: 3px solid #205493;
-      padding: 0 2em 0 2em;
-      overflow: hidden;
-    }
-
-  </style>
 </head>
 
 <body>
@@ -80,7 +15,7 @@
       <div id="RsIdbox">
         <%= data.name %>
           <form id="form_fileup" method="post" action="/testAPIEnsembl/fileup" enctype="multipart/form-data">
-            <input type='file' name='filetoupload'>
+            <input type='file' id="file" name='fileToUpload'>
             <br/>
             <input type='submit' value='valider'> </form>
       </div>
@@ -206,6 +141,38 @@
         </div>
       </div>
   </div>
+  <script type="text/javascript">
+    /*
+                                                                        function ajax(page, callback, post) {
+                                                                          var xhr
+                                                                          if (window.XMLHttpRequest || window.ActiveXObject) {
+                                                                            if (window.XMLHttpRequest) {
+                                                                              xhr = new XMLHttpRequest()
+                                                                            } else {
+                                                                              try {
+                                                                                xhr = new ActiveXObject("Msxml2.XMLHTTP")
+                                                                              } catch (e) {
+                                                                                xhr = new ActiveXObject("Microsoft.XMLHTTP")
+                                                                              }
+                                                                            }
+                                                                          } else {
+                                                                            document.location.href = page
+                                                                          }
+                                                                          xhr.onreadystatechange = function() {
+                                                                            if (typeof callback != "undefined") {
+                                                                              callback(xhr.responseText);
+                                                                            }
+                                                                          };
+                                                                          xhr.open("GET", page, true)
+                                                                          xhr.send(null)
+                                                                        }
+                                                                        ajax("SNP.txt", function(data) {
+                                                                          console.log(data)
+                                                                          document.body.innerHTML = data.split(/\n/g)[0] // blabla
+                                                                        })
+                                                                    */
+
+  </script>
 </body>
 
 </html>

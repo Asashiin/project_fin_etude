@@ -14,10 +14,10 @@
     <% if (data) { %>
       <div id="RsIdbox">
         <%= data.name %>
-          <form id="form_fileup" method="post" action="/testAPIEnsembl/fileup" enctype="multipart/form-data">
+          <!-- <form id="form_fileup" method="post" action="/testAPIEnsembl/fileup" enctype="multipart/form-data">
             <input type='file' id="file" name='fileToUpload'>
             <br/>
-            <input type='submit' value='valider'> </form>
+            <input type='submit' value='valider'> </form>-->
       </div>
       <div id='inner-content'>
         <div id='contentEnsembl'>
@@ -143,34 +143,34 @@
   </div>
   <script type="text/javascript">
     /*
-                                                                        function ajax(page, callback, post) {
-                                                                          var xhr
-                                                                          if (window.XMLHttpRequest || window.ActiveXObject) {
-                                                                            if (window.XMLHttpRequest) {
-                                                                              xhr = new XMLHttpRequest()
-                                                                            } else {
-                                                                              try {
-                                                                                xhr = new ActiveXObject("Msxml2.XMLHTTP")
-                                                                              } catch (e) {
-                                                                                xhr = new ActiveXObject("Microsoft.XMLHTTP")
-                                                                              }
-                                                                            }
-                                                                          } else {
-                                                                            document.location.href = page
-                                                                          }
-                                                                          xhr.onreadystatechange = function() {
-                                                                            if (typeof callback != "undefined") {
-                                                                              callback(xhr.responseText);
-                                                                            }
-                                                                          };
-                                                                          xhr.open("GET", page, true)
-                                                                          xhr.send(null)
-                                                                        }
-                                                                        ajax("SNP.txt", function(data) {
-                                                                          console.log(data)
-                                                                          document.body.innerHTML = data.split(/\n/g)[0] // blabla
-                                                                        })
-                                                                    */
+                                                                                        function ajax(page, callback, post) {
+                                                                                          var xhr
+                                                                                          if (window.XMLHttpRequest || window.ActiveXObject) {
+                                                                                            if (window.XMLHttpRequest) {
+                                                                                              xhr = new XMLHttpRequest()
+                                                                                            } else {
+                                                                                              try {
+                                                                                                xhr = new ActiveXObject("Msxml2.XMLHTTP")
+                                                                                              } catch (e) {
+                                                                                                xhr = new ActiveXObject("Microsoft.XMLHTTP")
+                                                                                              }
+                                                                                            }
+                                                                                          } else {
+                                                                                            document.location.href = page
+                                                                                          }
+                                                                                          xhr.onreadystatechange = function() {
+                                                                                            if (typeof callback != "undefined") {
+                                                                                              callback(xhr.responseText);
+                                                                                            }
+                                                                                          };
+                                                                                          xhr.open("GET", page, true)
+                                                                                          xhr.send(null)
+                                                                                        }
+                                                                                        ajax("SNP.txt", function(data) {
+                                                                                          console.log(data)
+                                                                                          document.body.innerHTML = data.split(/\n/g)[0] // blabla
+                                                                                        })
+                                                                                    */
 
   </script>
 </body>

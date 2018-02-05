@@ -20,7 +20,8 @@ router.post('/', (req, res) => {
     })
   }
 })
-/******/
+// le POST est maintenant sur la page index
+/*
 router.post('/fileup', (req, res) => {
   let listId = []
   let form = new formidable.IncomingForm()
@@ -36,5 +37,5 @@ router.post('/fileup', (req, res) => {
       })
     }
   })
-})
+})*/
 module.exports = router

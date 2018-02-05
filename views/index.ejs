@@ -4,13 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Bioinfo</title>
-  <link rel="stylesheet" href="Stylesheet/index.css">
-</head>
+  <link rel="stylesheet" href="Stylesheet/index.css"> </head>
 
 <body>
   <header id="header" class="header" role="banner">
     <div class="banner_div">
-      <p>Version 1.0</p>
+      <p>Interface Centralisée d'accès aux APIs GTEX, GWAS, Ensembl et NCBI : Version 2.0</p>
     </div>
   </header>
   <div class="research" id="button_search">
@@ -21,10 +20,18 @@
     <form id="form_snpInfo" method="post" action="/testAPIEnsembl">
       <input type="search" name="rs" pattern="^[Rr][Ss]\d+$" placeholder="Search for rs" id="rs" class="rs" />
       <input type="submit" id="submit_id" class="submit" value="Research" /> </form> <span id="string-msg">Exemple :   rs699</span>
-    <form id="form_asso" method="post" action="/association">
+    <!-- <form id="form_asso" method="post" action="/association">
       <input type="text" placeholder="Search for trait" name="trait" id="trait" />
       <input type="submit" id="submit_trait" class="submit_trait" value="Research_trait" /> </form> <span id="string-msg">Exemple :  breast carcinoma</span>
     <form id="form_loc" method="post" action="/location">
       <input type="text" placeholder="Search for location" pattern="^[Rr][Ss]\d+$" name="location" id="location" />
-      <input type="submit" id="submit_location" class="submit_location" value="Research_location" /> </form> <span id="string-msg">Exemple :  10:95000000-96000000</span> </div>
+      <input type="submit" id="submit_location" class="submit_location" value="Research_location" /> </form> <span id="string-msg">Exemple :  10:95000000-96000000</span>
+    <-->
+    <div id="RsIdbox">
+      <form id="form_fileup" method="post" action="/fileup" enctype="multipart/form-data">
+        <input type='file' id="file" name='fileToUpload'>
+        <input type='submit' id="valid" value='valider'>
+        <br/> <span id="conseilUp">Veuillez charger un fichier txt contenant une liste de rs_id (un par ligne)</span> </form>
+    </div>
+  </div>
 </body>

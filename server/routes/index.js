@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
   res.render('index')
 })
 router.post('/fileup', (req, res) => {
-  let listId = []
+  let tablInfo = []
   let form = new formidable.IncomingForm()
   form.parse(req, (err, fields, files) => {
     let pth = files.fileToUpload.path
@@ -20,6 +20,11 @@ router.post('/fileup', (req, res) => {
     for (let i = 0; i < listId.length; i++) {
       jsonFunc.APIEnsembl(listId[i]).then(result => {
         console.log(result)
+        tablInfo.push(result)
+        /*  fs.writeFile('SNPInfo.txt', result, err => {
+            if (err) throw err
+          })*/
+        setTimeout(function () {}, 1000)
       })
     }
   })

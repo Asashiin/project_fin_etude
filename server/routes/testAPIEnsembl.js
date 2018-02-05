@@ -6,13 +6,13 @@ var router = express.Router()
 var formidable = require('formidable')
 /*****/
 router.post('/', (req, res) => {
-  console.log('test route')
   if (req.body.rs) {
     jsonFunc.APIEnsembl(req.body.rs).then(result => {
       if (typeof result === 'string') {
         console.log(result)
         res.render('index')
       } else {
+        console.log(result)
         res.render('testAPIEnsembl', {
           data: result
         })
@@ -22,17 +22,19 @@ router.post('/', (req, res) => {
 })
 /******/
 router.post('/fileup', (req, res) => {
+  let listId = []
   let form = new formidable.IncomingForm()
-  form.parse(req, function (err, fields, files) {
-    console.log(files.fileToUpload.path)
-    let pth = files.fileToUpload.path;
-    excel.readFichierLine(pth)
+  form.parse(req, (err, fields, files) => {
+    let pth = files.fileToUpload.path
+    let data = fs.readFileSync(pth, {
+      encoding: 'utf-8'
+    })
+    let listId = data.split("\n")
+    for (let i = 0; i < listId.length; i++) {
+      jsonFunc.APIEnsembl(listId[i]).then(result => {
+        console.log(result)
+      })
+    }
   })
 })
 module.exports = router
-/******/
-/* var newpath = 'C:/Users/Your Name/' + files.filetoupload.name;
-fs.rename(pth, newpath, function (err) {
-  if (err) throw err;
-  res.write('File uploaded and moved!');
-})*/

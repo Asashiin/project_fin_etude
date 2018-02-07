@@ -11,10 +11,13 @@
 
 <body>
   <div id='content'>
-    <% if (data) { %>
+    <% 
+    for (let i = 0; i < data.length; i++) {
+      console.log('data : ' +  data[i])
+    if (data[i]) { %>
       <div id="RsIdbox">
-        <%= data.name %>
-          <!-- <form id="form_fileup" method="post" action="/testAPIEnsembl/fileup" enctype="multipart/form-data">
+        <%= data[i].name %>
+          <!-- <form id="form_fileup" method="post" action="/testAPIEnsembl/fileup" enctype="multipart/form-data[i]">
             <input type='file' id="file" name='fileToUpload'>
             <br/>
             <input type='submit' value='valider'> </form>-->
@@ -27,31 +30,31 @@
               <tr>
                 <th>Consequence</th>
                 <td>
-                  <%= data.conseq %>
+                  <%= data[i].conseq %>
                 </td>
               </tr>
               <tr>
                 <th>Allele</th>
                 <td>
-                  <%= data.allele %>
+                  <%= data[i].allele %>
                 </td>
               </tr>
               <tr>
                 <th>MAF</th>
                 <td>
-                  <%= data.maf %>
+                  <%= data[i].maf %>
                 </td>
               </tr>
               <tr>
                 <th>Ancestral</th>
                 <td>
-                  <%= data.ancestral %>
+                  <%= data[i].ancestral %>
                 </td>
               </tr>
               <tr>
                 <th>Location</th>
                 <td>
-                  <%= data.location %>
+                  <%= data[i].location %>
                 </td>
               </tr>
               <tr>
@@ -60,34 +63,34 @@
               <tr>
                 <th>Start</th>
                 <td>
-                  <%= data.start %>
+                  <%= data[i].start %>
                 </td>
               </tr>
               <tr>
                 <th>End</th>
                 <td>
-                  <%= data.end %>
+                  <%= data[i].end %>
                 </td>
               </tr>
               <tr>
                 <th>Sequence_Region</th>
                 <td>
-                  <%= data.seq %>
+                  <%= data[i].seq %>
                 </td>
               </tr>
               <tr>
                 <th>Clinical Significance</th>
                 <td>
-                  <%= data.clinicSigni %>
+                  <%= data[i].clinicSigni %>
                 </td>
               </tr>
               <tr>
                 <th>Variant</th>
                 <td>
                   <%
-        for (let i in data.variant) {
+        for (let j in data[i].variant) {
       %>
-                    <%= data.variant[i] %>
+                    <%= data[i].variant[j] %>
                       <br/>
                       <%
         }
@@ -109,20 +112,20 @@
                 <th>SNP</th>
               </thead>
               <tbody>
-                <% for (let i in data.gtexvalue) {
+                <% for (let j in data[i].gtexvalue) {
               %>
                   <tr>
                     <td>
-                      <%= data.gtexvalue[i].geneid%>
+                      <%= data[i].gtexvalue[j].geneid%>
                     </td>
                     <td>
-                      <%= data.gtexvalue[i].symbol%>
+                      <%= data[i].gtexvalue[j].symbol%>
                     </td>
                     <td>
-                      <%= data.gtexvalue[i].variantid%>
+                      <%= data[i].gtexvalue[j].variantid%>
                     </td>
                     <td>
-                      <%= data.gtexvalue[i].snp%>
+                      <%= data[i].gtexvalue[j].snp%>
                     </td>
                   </tr>
                   <%
@@ -130,7 +133,7 @@
             %>
               </tbody>
             </table>
-            <% }%>
+            <% } } %>
           </div>
         </div>
         <div id='contentGwas'>
@@ -166,9 +169,9 @@
                                                                                           xhr.open("GET", page, true)
                                                                                           xhr.send(null)
                                                                                         }
-                                                                                        ajax("SNP.txt", function(data) {
-                                                                                          console.log(data)
-                                                                                          document.body.innerHTML = data.split(/\n/g)[0] // blabla
+                                                                                        ajax("SNP.txt", function(data[i]) {
+                                                                                          console.log(data[i])
+                                                                                          document.body.innerHTML = data[i].split(/\n/g)[0] // blabla
                                                                                         })
                                                                                     */
 

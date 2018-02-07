@@ -1,9 +1,9 @@
 var express = require('express')
 const jsonFunc = require('jsonFunc')
-const excel = require('rwExcel')
-var fs = require('fs')
+// const excel = require('rwExcel')
+// var fs = require('fs')
 var router = express.Router()
-var formidable = require('formidable')
+// var formidable = require('formidable')
 /*****/
 router.post('/', (req, res) => {
   if (req.body.rs) {
@@ -37,5 +37,5 @@ router.post('/fileup', (req, res) => {
       })
     }
   })
-})*/
+}) */
 module.exports = router

@@ -18,12 +18,17 @@ router.post('/fileup', (req, res) => {
     })
     let listId = data.split('\n')
     jsonFunc.APIEnsembl(listId).then(result => {
+      if (typeof result === 'string') {
+        console.log(result)
+        res.render('index')
+      }
       let wPath = 'public/snpi.txt'
       // stream
       let wstream = fs.createWriteStream(wPath)
       for (let i = 0; i < result.length; i++) {
         let test = JSON.stringify(result[i])
         wstream.write(test)
+        wstream.write('\n')
         wstream.write('\n')
       }
       wstream.end()

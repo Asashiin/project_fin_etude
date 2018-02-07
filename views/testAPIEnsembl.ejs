@@ -11,7 +11,7 @@
 
 <body>
   <div id='content'>
-    <% 
+    <%
     for (let i = 0; i < data.length; i++) {
       console.log('data : ' +  data[i])
     if (data[i]) { %>
@@ -52,9 +52,15 @@
                 </td>
               </tr>
               <tr>
-                <th>Location</th>
+                <th>Location (38)</th>
                 <td>
                   <%= data[i].location %>
+                </td>
+              </tr>
+              <tr>
+                <th>Location (37)</th>
+                <td>
+                  <%= data[i].location2 %>
                 </td>
               </tr>
               <tr>
@@ -133,7 +139,7 @@
             %>
               </tbody>
             </table>
-            <% } } %>
+            <% } %>
           </div>
         </div>
         <div id='contentGwas'>
@@ -143,39 +149,8 @@
           </div>
         </div>
       </div>
+    <% } %>
   </div>
-  <script type="text/javascript">
-    /*
-                                                                                        function ajax(page, callback, post) {
-                                                                                          var xhr
-                                                                                          if (window.XMLHttpRequest || window.ActiveXObject) {
-                                                                                            if (window.XMLHttpRequest) {
-                                                                                              xhr = new XMLHttpRequest()
-                                                                                            } else {
-                                                                                              try {
-                                                                                                xhr = new ActiveXObject("Msxml2.XMLHTTP")
-                                                                                              } catch (e) {
-                                                                                                xhr = new ActiveXObject("Microsoft.XMLHTTP")
-                                                                                              }
-                                                                                            }
-                                                                                          } else {
-                                                                                            document.location.href = page
-                                                                                          }
-                                                                                          xhr.onreadystatechange = function() {
-                                                                                            if (typeof callback != "undefined") {
-                                                                                              callback(xhr.responseText);
-                                                                                            }
-                                                                                          };
-                                                                                          xhr.open("GET", page, true)
-                                                                                          xhr.send(null)
-                                                                                        }
-                                                                                        ajax("SNP.txt", function(data[i]) {
-                                                                                          console.log(data[i])
-                                                                                          document.body.innerHTML = data[i].split(/\n/g)[0] // blabla
-                                                                                        })
-                                                                                    */
-
-  </script>
 </body>
 
 </html>

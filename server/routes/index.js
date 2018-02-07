@@ -19,7 +19,7 @@ router.post('/fileup', (req, res) => {
     for (let i = 0; i < listId.length; i++) {
       jsonFunc.APIEnsembl(listId[i]).then(result => {
         console.log(result)
-        let test = JSON.stringify(buffer)
+        let test = JSON.stringify(result)
         let wPath = 'public/snpi.txt'
         /* fs.writeFile(wPath, test, 'utf-8', (err) => {
            console.log('test appendfile 1 ')

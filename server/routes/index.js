@@ -9,7 +9,6 @@ router.get('/', (req, res) => {
   res.render('index')
 })
 router.post('/fileup', (req, res) => {
-  // let tablInfo = []
   let form = new formidable.IncomingForm()
   form.parse(req, (err, fields, files) => {
     let pth = files.fileToUpload.path
@@ -17,25 +16,37 @@ router.post('/fileup', (req, res) => {
       encoding: 'utf-8'
     })
     let listId = data.split('\n')
-   /* for (let i = 0; i < listId.length; i++) {
+    for (let i = 0; i < listId.length; i++) {
       jsonFunc.APIEnsembl(listId[i]).then(result => {
-        let tablInfo = []
         console.log(result)
-        tablInfo.push(result) */
-        /*  fs.writeFile('SNPInfo.txt', result, err => {
-            if (err) throw err
-          }) */
-        // setTimeout(jsonFunc.APIEnsembl, 2000)
-        /* if (i === listId.length) {
-          console.log('tab : ' + tablInfo[0])
-          res.render('testAPIEnsembl', {
-            data: tablInfo
-          })
-          return
-        }
+        let test = JSON.stringify(buffer)
+        let wPath = 'public/snpi.txt'
+        /* fs.writeFile(wPath, test, 'utf-8', (err) => {
+           console.log('test appendfile 1 ')
+           if (err) {
+             console.log('err writefile : ' + err)
+           } else {
+             console.log('succeed at :  ' + wPath)
+           }
+         })
+      
+      fs.appendFile(wPath, test, 'utf-8', (err) => {
+          console.log('test appendfile 1 ')
+          if (err) {
+            console.log('err writefile : ' + err)
+          } else {
+            console.log('succeed at :  ' + wPath)
+          }
+        })*/
+
+        //stream
+        let wstream = fs.createWriteStream(wPath);
+        wstream.write(test)
+        wstream.end()
+        setTimeout(function () {}, 1000)
       })
-    } */
-    res.render('index')
+    }
   })
+  res.render('index')
 })
 module.exports = router

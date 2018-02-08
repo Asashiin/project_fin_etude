@@ -25,6 +25,7 @@ router.post('/fileup', (req, res) => {
         let test = JSON.stringify(result[i])
         wstream.write(test)
         wstream.write('\n')
+        wstream.write('\n')
       }
       wstream.end()
       // setTimeout(function () {}, 1000)

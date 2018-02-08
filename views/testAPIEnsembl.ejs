@@ -11,7 +11,7 @@
 
 <body>
   <div id='content'>
-    <% 
+    <%
     for (let i = 0; i < data.length; i++) {
       console.log('data : ' +  data[i])
     if (data[i]) { %>
@@ -52,9 +52,15 @@
                 </td>
               </tr>
               <tr>
-                <th>Location</th>
+                <th>Location (38)</th>
                 <td>
                   <%= data[i].location %>
+                </td>
+              </tr>
+              <tr>
+                <th>Location (37)</th>
+                <td>
+                  <%= data[i].location2 %>
                 </td>
               </tr>
               <tr>
@@ -133,7 +139,7 @@
             %>
               </tbody>
             </table>
-            <% } } %>
+            <% } %>
           </div>
         </div>
         <div id='contentGwas'>
@@ -153,6 +159,7 @@
           </div>
         </div>
       </div>
+    <% } %>
   </div>
 </body>
 

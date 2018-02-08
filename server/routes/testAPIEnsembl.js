@@ -1,13 +1,13 @@
 var express = require('express')
 const jsonFunc = require('jsonFunc')
-// const excel = require('rwExcel')
-// var fs = require('fs')
 var router = express.Router()
-// var formidable = require('formidable')
 /*****/
 router.post('/', (req, res) => {
-  if (req.body.rs) {
-    jsonFunc.APIEnsembl(req.body.rs).then(result => {
+  let data = req.body.rs
+  let listId = data.split('/')
+
+  if (listId) {
+    jsonFunc.APIEnsembl(listId).then(result => {
       if (typeof result === 'string') {
         console.log(result)
         res.render('index')

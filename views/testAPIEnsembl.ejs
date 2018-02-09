@@ -10,6 +10,12 @@
 </head>
 
 <body>
+  <!--  -->
+  <div id="dl">
+    <label for="champ_nom_file">Nom du fichier texte a dl</label>
+    <form id="form_file_name" method="post" action="">
+      <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> </form> <a href="snpi.txt" download="snpi.txt">Télécharger en TXT</a> </div>
+  <!--  -->
   <div id='content'>
     <%
     for (let i = 0; i < data.length; i++) {
@@ -17,10 +23,6 @@
     if (data[i]) { %>
       <div id="RsIdbox">
         <%= data[i].name %>
-          <!-- <form id="form_fileup" method="post" action="/testAPIEnsembl/fileup" enctype="multipart/form-data[i]">
-            <input type='file' id="file" name='fileToUpload'>
-            <br/>
-            <input type='submit' value='valider'> </form>-->
       </div>
       <div id='inner-content'>
         <div id='contentEnsembl'>
@@ -81,7 +83,7 @@
               <tr>
                 <th>Sequence_Region</th>
                 <td>
-                  <%= data[i].seq %>
+                  <%= ' Chromosome : '+ data[i].seq %>
                 </td>
               </tr>
               <tr>
@@ -139,7 +141,6 @@
             %>
               </tbody>
             </table>
-            <% } %>
           </div>
         </div>
         <div id='contentGwas'>
@@ -151,7 +152,6 @@
                 <th>RiskFrequency</th>
                 <th>pvalue</th>
                 <th>range</th>
-
                 <th></th>
               </thead>
               <tbody>
@@ -176,16 +176,7 @@
             %>
               </tbody>
             </table>
-            <tr>
-              <th></th>
-              <td>
-
-
-              </td>
-            </tr>
-            <table id='info_asso'>
-
-            </table>
+            <% } %>
           </div>
         </div>
       </div>

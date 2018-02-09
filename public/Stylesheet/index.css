@@ -31,6 +31,38 @@ body {
   letter-spacing: 1px;
 }
 
+#form_loc #location {
+  background-color: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #dddddd;
+  width: 1000px;
+  height: 40px;
+  box-shadow: 1px 1px 1px #aaa;
+  padding: 5px 10px 5px 10px;
+  box-sizing: border-box;
+  font-family: Lato;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+#form_loc #submit_location {
+  height: 40px;
+  background-color: #5f5f5f;
+  margin-top: 2px;
+  color: #fff;
+  border-style: solid;
+  border-width: 1px;
+  padding: 5px 10px 5px 10px;
+  box-sizing: border-box;
+  font-family: PT sans;
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin: 10px 0 0 0;
+}
+
 #form_snpInfo #submit_id {
   height: 40px;
   background-color: #5f5f5f;
@@ -83,62 +115,6 @@ valid:active {
   font-family: Lato;
   font-size: 12px;
   font-weight: normal;
-}
-
-#form_asso #trait {
-  box-shadow: 1px 1px 1px #aaa;
-  background-color: #ffffff;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #dddddd;
-  padding: 5px 10px 5px 10px;
-  box-sizing: border-box;
-  font-family: Lato;
-  font-size: 12px;
-  font-weight: normal;
-  letter-spacing: 1px;
-}
-
-#form_asso #submit_trait {
-  background-color: #5f5f5f;
-  color: #fff;
-  border-style: solid;
-  border-width: 1px;
-  padding: 5px 10px 5px 10px;
-  box-sizing: border-box;
-  font-family: PT sans;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: 2px;
-  margin: 10px 0 0 0;
-}
-
-#form_loc #location {
-  box-shadow: 1px 1px 1px #aaa;
-  background-color: #ffffff;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #dddddd;
-  padding: 5px 10px 5px 10px;
-  box-sizing: border-box;
-  font-family: Lato;
-  font-size: 12px;
-  font-weight: normal;
-  letter-spacing: 1px;
-}
-
-#form_loc #submit_location {
-  background-color: #5f5f5f;
-  color: #fff;
-  padding: 5px 10px 5px 10px;
-  border-style: solid;
-  border-width: 1px;
-  box-sizing: border-box;
-  font-family: PT sans;
-  font-size: 13px;
-  font-weight: normal;
-  letter-spacing: 2px;
-  margin: 10px 0 0 0;
 }
 
 #string_msg {

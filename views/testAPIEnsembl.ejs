@@ -145,11 +145,51 @@
         <div id='contentGwas'>
           <p>GWAS Information</p>
           <div id="info_rs">
-            <p>test 3</p>
+            <table id="info_var_gen">
+              <thead id="tabl_var_thead">
+                <th>Name</th>
+                <th>RiskFrequency</th>
+                <th>pvalue</th>
+                <th>range</th>
+
+                <th></th>
+              </thead>
+              <tbody>
+                <% for (let j in data[i].gwasvalue) {
+              %>
+                  <tr>
+                    <td>
+                      <%= data[i].gwasvalue[j].name%>
+                    </td>
+                    <td>
+                      <%= data[i].gwasvalue[j].riskFrequency%>
+                    </td>
+                    <td>
+                      <%= data[i].gwasvalue[j].pvalue%>
+                    </td>
+                    <td>
+                      <%= data[i].gwasvalue[j].range%>
+                    </td>
+                  </tr>
+                  <%
+            }
+            %>
+              </tbody>
+            </table>
+            <tr>
+              <th></th>
+              <td>
+
+
+              </td>
+            </tr>
+            <table id='info_asso'>
+
+            </table>
           </div>
         </div>
       </div>
-    <% } %>
+      <% } %>
   </div>
 </body>
 

@@ -13,12 +13,12 @@
     </div>
   </header>
   <div class="research" id="button_search">
-    <form id="form_snpInfo" method="post" action="/snpInfo">
+    <!--<form id="form_snpInfo" method="post" action="/snpInfo">
       <br/>
       <input type="search" name="rs" pattern="^[Rr][Ss]\d+$" placeholder="Search for rs" id="rs" class="rs" />
-      <input type="submit" id="submit_id" class="submit" value="Research" /> </form> <span id="string-msg">Exemple :   rs333</span>
+      <input type="submit" id="submit_id" class="submit" value="Research" /> </form> <span id="string-msg">Exemple :   rs333</span>-->
     <form id="form_snpInfo" method="post" action="/testAPIEnsembl">
-      <input type="search" name="rs" pattern="^[Rr][Ss]\d+$" placeholder="Search for rs" id="rs" class="rs" />
+      <input type="search" name="rs" placeholder="Search for rs" id="rs" class="rs" />
       <input type="submit" id="submit_id" class="submit" value="Research" /> </form> <span id="string-msg">Exemple :   rs699</span>
     <!-- <form id="form_asso" method="post" action="/association">
       <input type="text" placeholder="Search for trait" name="trait" id="trait" />

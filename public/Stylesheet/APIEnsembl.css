@@ -43,14 +43,13 @@
     padding: 5px;
   }
   
-  .inner-content0,
-  .inner-content1,
-  .inner-content2,
-  .inner-content3,
-  .inner-content4 {
+  #inner-content0,
+  #inner-content1,
+  #inner-content2,
+  #inner-content3,
+  #inner-content4 {
     background-color: #e1f3f8;
     overflow: hidden;
-    float: left;
   }
   
   #variant {

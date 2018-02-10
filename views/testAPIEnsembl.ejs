@@ -5,7 +5,9 @@
   <meta charset="utf-8">
   <title>Test API Ensembl</title>
   <link rel="stylesheet" href="Stylesheet/APIEnsembl.css">
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
 </head>
 
@@ -24,7 +26,8 @@
       <div id="RsIdbox">
         <%= data[i].name %>
       </div>
-      <div id='inner-content'>
+      <button type="button" class="btn_info" data-toggle="collapse" data-target="#inner-content<%= i %>">Show/Hide</button>
+      <div id="inner-content<%= i %>" class="collapse">
         <div id='contentEnsembl'>
           <p>Ensembl Information</p>
           <div id="info_rs">
@@ -148,7 +151,8 @@
                 <th>RiskFrequency</th>
                 <th>pvalue</th>
                 <th>range</th>
-                <th></th>
+                <th>Or</th>
+                <th>links</th>
               </thead>
               <tbody>
                 <% for (let j in data[i].gwasvalue) {
@@ -166,6 +170,10 @@
                     <td>
                       <%= data[i].gwasvalue[j].range%>
                     </td>
+                    <td>
+                      <%= data[i].gwasvalue[j].or%>
+                    </td>
+                    <td> <a href=" <%= data[i].gwasvalue[j].study.study%>">Lien study</a> </td>
                   </tr>
                   <%
             }

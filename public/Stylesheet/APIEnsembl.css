@@ -5,22 +5,22 @@
     overflow: hidden;
     width: 100%;
   }
-
+  
   p {
     font-style: normal;
     font-size: 25px;
     color: #205493;
   }
-
+  
   body {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1500px;
-    text-align: left;
+    margin-left: 15px auto;
+    margin-right: 15px auto;
+    padding: 15px;
+    width: 17250px;
     background-color: #FFF;
     overflow: hidden;
   }
-
+  
   #RsIdbox {
     color: #fff;
     background-color: #5f5f5f;
@@ -31,33 +31,44 @@
     color: #f1f1f1;
     padding: 0 1em 0 1em;
   }
-
+  
   #info_base {
     border-collapse: separate;
     border-spacing: 15px 8px;
   }
-
-  #inner-content {
+  
+  #info_var_gen {}
+  
+  td {
+    padding: 5px;
+  }
+  
+  .inner-content0,
+  .inner-content1,
+  .inner-content2,
+  .inner-content3,
+  .inner-content4 {
     background-color: #e1f3f8;
     overflow: hidden;
+    float: left;
   }
-
+  
   #variant {
     padding: 0 1em 0 1em;
   }
-
+  
   #info_base .th {
     font-style: normal;
     font-size: 20px;
     padding: 0 3rem;
   }
-
+  
   #contentEnsembl,
   #contentGtext,
   #contentGwas {
-    width: 500px;
+    width: 600px;
     display: table-cell;
     border-left: 3px solid #205493;
-    padding: 0 2em 0 2em;
+    padding: 1em 5em 1em 5em;
     overflow: hidden;
   }

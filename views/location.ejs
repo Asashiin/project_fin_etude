@@ -9,20 +9,21 @@
 <body>
   <div id='content'>
     <%
+    let max = nbMaxi
     for (let i = 0; i < data.length; i++) {      
     if (data[i]) { %>
       <table>
         <thead>
-          <th>SNP </th>
+          <th>SNP</th>
         </thead>
         <tbody>
-          <td>
-            <% for(let j in data[i].snp.SnpList){ %>
-              <p>
-                <%=data[i].snp.SnpList[j]%>
-              </p>
-              <% } %>
-          </td>
+          <% for(let j in data[i].snp){ %>
+            <tr>
+              <td>
+                <%=data[i].snp[j]%>
+                  <!-- <a href="/testAPIEnsembl">Study</a>--></td>
+            </tr>
+            <% } %>
         </tbody>
       </table>
       <% } %>

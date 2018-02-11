@@ -4,188 +4,195 @@
 <head>
   <meta charset="utf-8">
   <title>Test API Ensembl</title>
-  <link rel="stylesheet" href="Stylesheet/APIEnsembl.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
-</head>
+  <link rel="stylesheet" href="Stylesheet/APIEnsembl.css"> </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!--<script src="../node_modules/bootstrap/css/bootstrap.min.css"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
 
-<body>
-  <!--  -->
-  <div id="dl">
-    <label for="champ_nom_file">Nom du fichier texte a dl</label>
-    <form id="form_file_name" method="post" action="">
-      <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> </form> <a href="snpi.txt" download="snpi.txt">Télécharger en TXT</a> </div>
+<body id='global'>
+  <header id="header" class="header" role="banner">
+    <div class="banner_div">
+      <div id="dl">
+        <label for="champ_nom_file">Nom du fichier texte a dl</label>
+        <form id="form_file_name" method="post" action="">
+          <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> </form> <a href="snpi.txt" download="snpi.txt">Télécharger en TXT</a> </div>
+    </div>
+  </header>
   <!--  -->
   <div id='content'>
     <%
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {%>
+      <div id='inner_content_glob'>
+        <%
       console.log('data : ' +  data[i])
     if (data[i]) { %>
-      <div id="RsIdbox">
-        <%= data[i].name %>
-      </div>
-      <button type="button" class="btn_info" data-toggle="collapse" data-target="#inner-content<%= i %>">+</button>
-      <br/>
-      <div id="inner-content<%= i %>" class="collapse">
-        <div id='contentEnsembl'>
-          <p>Ensembl Information</p>
-          <div id="info_rs">
-            <table id="info_base">
-              <tr>
-                <th>Consequence</th>
-                <td>
-                  <%= data[i].conseq %>
-                </td>
-              </tr>
-              <tr>
-                <th>Allele</th>
-                <td>
-                  <%= data[i].allele %>
-                </td>
-              </tr>
-              <tr>
-                <th>MAF</th>
-                <td>
-                  <%= data[i].maf %>
-                </td>
-              </tr>
-              <tr>
-                <th>Ancestral</th>
-                <td>
-                  <%= data[i].ancestral %>
-                </td>
-              </tr>
-              <tr>
-                <th>Location (38)</th>
-                <td>
-                  <%= data[i].location %>
-                </td>
-              </tr>
-              <tr>
-                <th>Location (37)</th>
-                <td>
-                  <%= data[i].location2 %>
-                </td>
-              </tr>
-              <tr>
-                <th>VCF</th>
-              </tr>
-              <tr>
-                <th>Start</th>
-                <td>
-                  <%= data[i].start %>
-                </td>
-              </tr>
-              <tr>
-                <th>End</th>
-                <td>
-                  <%= data[i].end %>
-                </td>
-              </tr>
-              <tr>
-                <th>Sequence_Region</th>
-                <td>
-                  <%= ' Chromosome : '+ data[i].seq %>
-                </td>
-              </tr>
-              <tr>
-                <th>Clinical Significance</th>
-                <td>
-                  <%= data[i].clinicSigni %>
-                </td>
-              </tr>
-              <tr>
-                <th>Variant</th>
-                <td>
-                  <%
+          <div id="RsIdbox">
+            <%= data[i].name %>
+          </div>
+          <button type="button" class="btn_info" data-toggle="collapse" data-target="#inner-content<%= i %>">+</button>
+          <br/>
+          <div id="inner-content<%= i %>" class="collapse">
+            <div id='contentEnsembl'>
+              <p>Ensembl Information</p>
+              <div id="info_rs">
+                <table id="info_base">
+                  <tr>
+                    <th>Consequence</th>
+                    <td>
+                      <%= data[i].conseq %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Allele</th>
+                    <td>
+                      <%= data[i].allele %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>MAF</th>
+                    <td>
+                      <%= data[i].maf %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Ancestral</th>
+                    <td>
+                      <%= data[i].ancestral %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Location (38)</th>
+                    <td>
+                      <%= data[i].location %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Location (37)</th>
+                    <td>
+                      <%= data[i].location2 %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>VCF</th>
+                  </tr>
+                  <tr>
+                    <th>Start</th>
+                    <td>
+                      <%= data[i].start %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>End</th>
+                    <td>
+                      <%= data[i].end %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Sequence_Region</th>
+                    <td>
+                      <%= ' Chromosome : '+ data[i].seq %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Clinical Significance</th>
+                    <td>
+                      <%= data[i].clinicSigni %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Variant</th>
+                    <td>
+                      <%
         for (let j in data[i].variant) {
       %>
-                    <%= data[i].variant[j] %>
-                      <br/>
-                      <%
+                        <%= data[i].variant[j] %>
+                          <br/>
+                          <%
         }
       %>
-                </td>
-              </tr>
-              <tbody> </tbody>
-            </table>
-          </div>
-        </div>
-        <div id='contentGtext'>
-          <p>GTEX Information</p>
-          <div id="info_rs">
-            <table id="info_var_gen">
-              <thead id="tabl_var_thead">
-                <th>Genecode Id</th>
-                <th>Gene Symbol</th>
-                <th>Variant Id</th>
-              </thead>
-              <tbody>
-                <% for (let j in data[i].gtexvalue) {
-              %>
-                  <tr>
-                    <td>
-                      <%= data[i].gtexvalue[j].geneid%>
-                    </td>
-                    <td>
-                      <%= data[i].gtexvalue[j].symbol%>
-                    </td>
-                    <td>
-                      <%= data[i].gtexvalue[j].variantid%>
                     </td>
                   </tr>
-                  <%
-            }
-            %>
-              </tbody>
-            </table>
-          </div>
-        </div>
-        <div id='contentGwas'>
-          <p>GWAS Information</p>
-          <div id="info_rs">
-            <table id="info_var_gen">
-              <thead id="tabl_var_thead">
-                <th>Name</th>
-                <th>RiskFrequency</th>
-                <th>pvalue</th>
-                <th>range</th>
-                <th>Or</th>
-                <th>links</th>
-              </thead>
-              <tbody>
-                <% for (let j in data[i].gwasvalue) {
+                  <tbody> </tbody>
+                </table>
+              </div>
+            </div>
+            <div id='contentGtext'>
+              <p>GTEX Information</p>
+              <div id="info_rs">
+                <table id="info_var_gen">
+                  <thead id="tabl_var_thead">
+                    <th>Genecode Id</th>
+                    <th>Gene Symbol</th>
+                    <th>Variant Id</th>
+                  </thead>
+                  <tbody>
+                    <% for (let j in data[i].gtexvalue) {
               %>
-                  <tr>
-                    <td>
-                      <%= data[i].gwasvalue[j].name%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].riskFrequency%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].pvalue%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].range%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].or%>
-                    </td>
-                    <td> <a href=" <%= data[i].gwasvalue[j].study.study%>">Lien study</a> </td>
-                  </tr>
-                  <%
+                      <tr>
+                        <td>
+                          <%= data[i].gtexvalue[j].geneid%>
+                        </td>
+                        <td>
+                          <%= data[i].gtexvalue[j].symbol%>
+                        </td>
+                        <td>
+                          <%= data[i].gtexvalue[j].variantid%>
+                        </td>
+                      </tr>
+                      <%
             }
             %>
-              </tbody>
-            </table>
-            <% } %>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div id='contentGwas'>
+              <p>GWAS Information</p>
+              <div id="info_rs">
+                <table id="info_var_gen">
+                  <thead id="tabl_var_thead">
+                    <th>Name</th>
+                    <th>RiskFrequency</th>
+                    <th>pvalue</th>
+                    <th>range</th>
+                    <th>Or</th>
+                    <th>links</th>
+                  </thead>
+                  <tbody>
+                    <% for (let j in data[i].gwasvalue) {
+              %>
+                      <tr>
+                        <td>
+                          <%= data[i].gwasvalue[j].name%>
+                        </td>
+                        <td>
+                          <%= data[i].gwasvalue[j].riskFrequency%>
+                        </td>
+                        <td>
+                          <%= data[i].gwasvalue[j].pvalue%>
+                        </td>
+                        <td>
+                          <%= data[i].gwasvalue[j].range%>
+                        </td>
+                        <td>
+                          <%= data[i].gwasvalue[j].or%>
+                        </td>
+                        <td> <a href=" <%= data[i].gwasvalue[j].study.study%>">Study</a> </td>
+                      </tr>
+                      <%
+            }
+            %>
+                  </tbody>
+                </table>
+                <% } %>
+              </div>
+            </div>
           </div>
-        </div>
+          <% } %>
       </div>
-      <% } %>
   </div>
 </body>
 

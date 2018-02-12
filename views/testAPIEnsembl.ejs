@@ -4,13 +4,12 @@
 <head>
   <meta charset="utf-8">
   <title>Test API Ensembl</title>
-  <link rel="stylesheet" href="Stylesheet/APIEnsembl.css"> </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<!--<script src="../node_modules/bootstrap/css/bootstrap.min.css"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>-->
-<script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
+  <link rel="stylesheet" href="Stylesheet/APIEnsembl.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
+</head>
 
 <body id='global'>
   <header id="header" class="header" role="banner">
@@ -182,8 +181,11 @@
                           <%= data[i].gwasvalue[j].or%>
                         </td>
                         <td>
-                          <%= data[i].gwasvalue[j].trait.listname[0]%> <a href=" <%= data[i].gwasvalue[j].trait.traitlink%>">Study</a> </td>
-                        <td> <a href=" <%= data[i].gwasvalue[j].study.study%>">Study</a> </td>
+                          <%= data[i].gwasvalue[j].trait.listname[0]%> <a href=" <%= data[i].gwasvalue[j].trait.traitlink%>">Trait</a> </td>
+                        <td>
+                          <form id='form_study' methode='post' action='/study'>
+                            <input type='submit' id="valid" value='Study'> </form>
+                        </td>
                       </tr>
                       <%
             }
@@ -197,6 +199,12 @@
           <% } %>
       </div>
   </div>
+  <script>
+    $(document).ready(function() {
+      $("#info_var_gen").tablesorter();
+    });
+
+  </script>
 </body>
 
 </html>

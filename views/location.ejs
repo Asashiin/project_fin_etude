@@ -4,28 +4,31 @@
 <head>
   <meta charset="utf-8">
   <title>Bioinfo</title>
+  <link rel="stylesheet" href="Stylesheet/location.css"> </head>
 
-  <body>
-    <% if (dataLoc) { %>
+<body>
+  <div id='content'>
+    <%
+    let max = nbMaxi
+    for (let i = 0; i < data.length; i++) {      
+    if (data[i]) { %>
       <table>
         <thead>
           <th>SNP</th>
         </thead>
         <tbody>
-          <td>
-            <% for(let i in dataLoc.snp){ %>
-              <p>
-                <%=dataLoc.snp[i]%> <span>
-                <a href="result.ejs" target="lien">
-                  
-                  </a>
-                </span> </p>
-              <% } %>
-          </td>
+          <% for(let j in data[i].snp){ %>
+            <tr>
+              <td>
+                <%=data[i].snp[j]%>
+                  <!-- <a href="/testAPIEnsembl">Study</a>--></td>
+            </tr>
+            <% } %>
         </tbody>
       </table>
       <% } %>
-  </body>
-</head>
+        <% } %>
+  </div>
+</body>
 
 </html>

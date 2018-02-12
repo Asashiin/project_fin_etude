@@ -1,63 +1,88 @@
   #header {
-    height: 90px;
+    height: 80px;
     background-color: #5f5f5f;
     padding: 0 3rem;
     overflow: hidden;
     width: 100%;
   }
-
+  
   p {
     font-style: normal;
-    font-size: 25px;
+    font-size: 16px;
     color: #205493;
   }
-
-  body {
+  
+  #global {
     margin-left: auto;
     margin-right: auto;
     width: 1500px;
-    text-align: left;
-    background-color: #FFF;
-    overflow: hidden;
+    background-color: #eeeeee;
   }
-
+  
   #RsIdbox {
     color: #fff;
     background-color: #5f5f5f;
-    margin: 1em 0 0 0;
+    margin-top: 2px;
     display: inline-block;
     font-style: normal;
-    font-size: 42px;
+    font-size: 18px;
     color: #f1f1f1;
     padding: 0 1em 0 1em;
   }
-
-  #info_base {
-    border-collapse: separate;
-    border-spacing: 15px 8px;
+  
+  #content {
+    margin: 5px;
   }
-
-  #inner-content {
-    background-color: #e1f3f8;
+  
+  #info_base {
+    border-collapse: collapse;
+    border-spacing: 10px 5px;
+  }
+  
+  #info_var_gen {
+    border-spacing: 10px 5px;
+    width: 100%;
+    border-collapse: separate;
+  }
+  
+  #inner_content_glob {
+    padding-bottom: 5px;
+  }
+  
+  td,
+  th {
+    padding: 1em 1em 5em 1em;
+    border-spacing: 15px 8px;
+    text-align: left;
+    border-bottom: 1px solid #D3D3D3;
+  }
+  
+  #inner-content0,
+  #inner-content1,
+  #inner-content2,
+  #inner-content3,
+  #inner-content4 {
+    background-color: #eeeeee;
+    border-bottom: 1px solid #000000;
     overflow: hidden;
   }
-
+  
   #variant {
     padding: 0 1em 0 1em;
   }
-
+  
   #info_base .th {
     font-style: normal;
-    font-size: 20px;
+    font-size: 14px;
     padding: 0 3rem;
   }
-
+  
   #contentEnsembl,
   #contentGtext,
   #contentGwas {
-    width: 500px;
+    width: auto;
+    min-width: 350px;
     display: table-cell;
-    border-left: 3px solid #205493;
-    padding: 0 2em 0 2em;
+    border-left: 3px solid #D3D3D3;
     overflow: hidden;
   }

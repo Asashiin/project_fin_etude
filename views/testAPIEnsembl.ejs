@@ -159,7 +159,8 @@
                     <th>pvalue</th>
                     <th>range</th>
                     <th>Or</th>
-                    <th>links</th>
+                    <th>Traits</th>
+                    <th>Study</th>
                   </thead>
                   <tbody>
                     <% for (let j in data[i].gwasvalue) {
@@ -180,6 +181,8 @@
                         <td>
                           <%= data[i].gwasvalue[j].or%>
                         </td>
+                        <td>
+                          <%= data[i].gwasvalue[j].trait.listname[0]%> <a href=" <%= data[i].gwasvalue[j].trait.traitlink%>">Study</a> </td>
                         <td> <a href=" <%= data[i].gwasvalue[j].study.study%>">Study</a> </td>
                       </tr>
                       <%

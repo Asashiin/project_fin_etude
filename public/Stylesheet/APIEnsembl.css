@@ -15,7 +15,7 @@
   #global {
     margin-left: auto;
     margin-right: auto;
-    width: 1200px;
+    width: 1500px;
     background-color: #eeeeee;
   }
   
@@ -36,14 +36,13 @@
   
   #info_base {
     border-collapse: collapse;
-    border-spacing: 15px 8px;
+    border-spacing: 10px 5px;
   }
   
   #info_var_gen {
-    border-spacing: 15px 8px;
-    border-bottom: 1px solid;
+    border-spacing: 10px 5px;
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
   }
   
   #inner_content_glob {
@@ -81,7 +80,8 @@
   #contentEnsembl,
   #contentGtext,
   #contentGwas {
-    width: 350px;
+    width: auto;
+    min-width: 350px;
     display: table-cell;
     border-left: 3px solid #D3D3D3;
     overflow: hidden;

@@ -117,7 +117,7 @@ body {
 }
 
 valid:hover {
-  box-shadow: 0px 2px 1px inset, 0px -2px 20px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 1px inset, 0px -2px 20px grey, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 valid:active {
@@ -166,7 +166,7 @@ p1 {
 
 p {
   font-style: normal;
-  font-size: 10px;
+  font-size: 8px;
   font-family: "Segoe print";
   color: #f1f1f1;
   text-align: center;

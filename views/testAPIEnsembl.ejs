@@ -33,16 +33,12 @@
           <% } }%>
       </div>
       <div id='content'>
-        <%
-    for (let i = 0; i < data.length; i++) {%>
+        <%for (let i = 0; i < data.length; i++) {%>
           <div id='inner_content_glob<%= i %>' class="collapse">
-            <%
-      console.log('data : ' +  data[i])
-    if (data[i]) { %>
+            <%if (data[i]) { %>
               <div id="RsIdbox">
                 <%= data[i].name %>
               </div>
-              <br/>
               <div id="inner-content">
                 <div id='contentEnsembl'>
                   <p>Ensembl Information</p>
@@ -51,13 +47,13 @@
                       <tr>
                         <th>Consequence</th>
                         <td>
-                          <%= data[i].conseq %>
+                          <%=data[i].conseq %>
                         </td>
                       </tr>
                       <tr>
                         <th>Allele</th>
                         <td>
-                          <%= data[i].allele %>
+                          <%=data[i].allele %>
                         </td>
                       </tr>
                       <tr>
@@ -119,8 +115,7 @@
       %>
                             <%= data[i].variant[j] %>
                               <br/>
-                              <%
-        }
+                              <% }
       %>
                         </td>
                       </tr>
@@ -133,22 +128,18 @@
                   <div id="info_rs">
                     <table id="info_var_gen">
                       <thead id="tabl_var_thead">
-                        <th>Genecode Id</th>
-                        <th>Gene Symbol</th>
                         <th>Variant Id</th>
+                        <th>r²</th>
                       </thead>
                       <tbody>
-                        <% for (let j in data[i].gtexvalue) {
+                        <% for (let j in data[i].r2) {
               %>
                           <tr>
                             <td>
-                              <%= data[i].gtexvalue[j].geneid%>
+                              <%= data[i].r2[j].nom%>
                             </td>
                             <td>
-                              <%= data[i].gtexvalue[j].symbol%>
-                            </td>
-                            <td>
-                              <%= data[i].gtexvalue[j].variantid%>
+                              <%= data[i].r2[j].r2%>
                             </td>
                           </tr>
                           <%

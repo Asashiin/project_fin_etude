@@ -6,7 +6,12 @@ var formidable = require('formidable')
 var json2xls = require('json2xls')
 /**********/
 router.get('/', (req, res) => {
-  res.render('index')
+  jsonFunc.searchPopu().then(result => {
+    const tab = result
+    res.render('index', {
+      data: tab
+    })
+  })
 })
 router.post('/fileup', (req, res) => {
   let form = new formidable.IncomingForm()
@@ -20,7 +25,7 @@ router.post('/fileup', (req, res) => {
     jsonFunc.APIEnsembl(listId).then(result => {
       if (typeof result === 'string') {
         console.log(result)
-        res.render('index')
+        // res.render('index')
       }
       let wPath = 'public/snpi.txt'
       // stream
@@ -33,7 +38,10 @@ router.post('/fileup', (req, res) => {
         wstream.write('/n')
       }
       wstream.end()
+<<<<<<< HEAD
       // setTimeout(function () {}, 1000)
+=======
+>>>>>>> c396f24c8cc0381243df7b34b96b2c4019cb7be3
       res.render('testAPIEnsembl', {
         data: result
       })

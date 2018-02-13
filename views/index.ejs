@@ -16,14 +16,31 @@
     <form id="form_snpInfo" method="post" action="/testAPIEnsembl">
       <input type="search" name="rs" placeholder="Search for rs" id="rs" class="rs" />
       <br />
+      <label>Population : </label>
       <select name="population">
         <%
-        for (let i in data) {
+        if (data) {
+          for (let i in data) {
           %>
         <option value="<%= data[i].name %>"><%= data[i].desc %></option>
         <%
         }
-        %>
+        }
+        %>        
+      </select>
+      <br />
+      <label>Windows size : </label>
+      <select name="size">
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+        <option value="1500">1500</option>
+        <option value="2000">2000</option>
+        <option value="2500">2500</option>
+        <option value="3000">3000</option>
+        <option value="3500">3500</option>
+        <option value="4000">4000</option>
+        <option value="4500">4500</option>
+        <option value="500">5000</option>
       </select>
       <br />
       <input type="submit" id="submit_id" class="submit" value="Research" /> 

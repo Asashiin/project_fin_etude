@@ -26,26 +26,11 @@
     for (let i = 0; i < data.length; i++) {%>
       <div id='inner_content_glob'>
         <%
-      console.log('data : ' +  data[i])
+      // console.log('data : ' +  data[i])
     if (data[i]) { %>
           <div id="RsIdbox">
             <%= data[i].name %>
           </div>
-<<<<<<< HEAD
-        </div>
-        <div id='contentGtext'>
-          <p>GTEX Information</p>
-          <div id="info_rs">
-            <!-- <table id="info_var_gen">
-              <thead id="tabl_var_thead">
-                <th>Genecode Id</th>
-                <th>Gene Symbol</th>
-                <th>Variant Id</th>
-              </thead>
-              <tbody>
-                <%// for (let j in data[i].gtexvalue) {
-              %>
-=======
           <button type="button" class="btn_info" data-toggle="collapse" data-target="#inner-content<%= i %>">+</button>
           <br/>
           <div id="inner-content<%= i %>" class="collapse">
@@ -53,60 +38,24 @@
               <p>Ensembl Information</p>
               <div id="info_rs">
                 <table id="info_base">
->>>>>>> 34164cee115d0ce2a01a64a36744fd543e13e82c
                   <tr>
                     <th>Consequence</th>
                     <td>
-<<<<<<< HEAD
-                      <%= //data[i].gtexvalue[j].geneid%>
-=======
                       <%= data[i].conseq %>
->>>>>>> 34164cee115d0ce2a01a64a36744fd543e13e82c
                     </td>
                   </tr>
                   <tr>
                     <th>Allele</th>
                     <td>
-<<<<<<< HEAD
-                      <%= //data[i].gtexvalue[j].symbol%>
-=======
                       <%= data[i].allele %>
->>>>>>> 34164cee115d0ce2a01a64a36744fd543e13e82c
                     </td>
                   </tr>
                   <tr>
                     <th>MAF</th>
                     <td>
-<<<<<<< HEAD
-                      <%= //data[i].gtexvalue[j].variantid%>
-                    </td>
-                  </tr>
-                  <%
-            //}
-            %>
-              </tbody>
-            </table> -->
-          </div>
-        </div>
-        <div id='contentGwas'>
-          <p>GWAS Information</p>
-          <div id="info_rs">
-            <table id="info_var_gen">
-              <thead id="tabl_var_thead">
-                <th>Name</th>
-                <th>RiskFrequency</th>
-                <th>pvalue</th>
-                <th>range</th>
-                <th></th>
-              </thead>
-              <tbody>
-                <% for (let j in data[i].gwasvalue) {
-              %>
-=======
                       <%= data[i].maf %>
                     </td>
                   </tr>
->>>>>>> 34164cee115d0ce2a01a64a36744fd543e13e82c
                   <tr>
                     <th>Ancestral</th>
                     <td>
@@ -174,22 +123,18 @@
               <div id="info_rs">
                 <table id="info_var_gen">
                   <thead id="tabl_var_thead">
-                    <th>Genecode Id</th>
-                    <th>Gene Symbol</th>
                     <th>Variant Id</th>
+                    <th>r²</th>
                   </thead>
                   <tbody>
-                    <% for (let j in data[i].gtexvalue) {
+                    <% for (let j in data[i].r2) {
               %>
                       <tr>
                         <td>
-                          <%= data[i].gtexvalue[j].geneid%>
+                          <%= data[i].r2[j].nom%>
                         </td>
                         <td>
-                          <%= data[i].gtexvalue[j].symbol%>
-                        </td>
-                        <td>
-                          <%= data[i].gtexvalue[j].variantid%>
+                          <%= data[i].r2[j].r2%>
                         </td>
                       </tr>
                       <%
@@ -254,7 +199,6 @@
     $(document).ready(function() {
       $("#info_var_gen").tablesorter();
     });
-
   </script>
 </body>
 

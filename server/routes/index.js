@@ -5,7 +5,18 @@ var fs = require('fs')
 var formidable = require('formidable')
   /**********/
 router.get('/', (req, res) => {
-  res.render('index')
+  jsonFunc.searchPopu().then(result => {
+    const tab = result
+    // console.log(tab)
+    res.render('index', {
+      data: tab
+    })
+  })
+  // const tab = jsonFunc.searchPopu()
+  /* console.log(tab)
+  res.render('index', {
+    data: tab
+  }) */
 })
 router.post('/fileup', (req, res) => {
   let form = new formidable.IncomingForm()

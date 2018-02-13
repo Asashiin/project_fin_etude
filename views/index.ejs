@@ -15,7 +15,19 @@
   <div class="research" id="button_search">
     <form id="form_snpInfo" method="post" action="/testAPIEnsembl">
       <input type="search" name="rs" placeholder="Search for rs" id="rs" class="rs" />
-      <input type="submit" id="submit_id" class="submit" value="Research" /> </form> <span id="string-msg">Exemple :   rs699</span>
+      <br />
+      <select name="population">
+        <%
+        for (let i in data) {
+          %>
+        <option value="<%= data[i].name %>"><%= data[i].desc %></option>
+        <%
+        }
+        %>
+      </select>
+      <br />
+      <input type="submit" id="submit_id" class="submit" value="Research" /> 
+    </form> <span id="string-msg">Exemple :   rs699</span>
     <form id="form_loc" method="post" action="/location">
       <input type="search" placeholder="Search for location" name="location" id="location" />
       <input type="search" placeholder="Nb max de rs recupere" name="location_nbMax" id="location_nbMax" />

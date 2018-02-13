@@ -9,7 +9,7 @@
 <body>
   <header id="header" class="header" role="banner">
     <div class="banner_div">
-      <p>Interface Centralisée d'accès aux APIs GTEX, GWAS, Ensembl et NCBI : Version 2.0</p>
+      <p1>Interface Centralisation API</p1>
     </div>
   </header>
   <div class="research" id="button_search">
@@ -36,7 +36,18 @@
       <form id="form_fileup" method="post" action="/fileup" enctype="multipart/form-data">
         <input type='file' id="file" name='fileToUpload'>
         <input type='submit' id="valid" value='valider'>
-        <br/> <span id="conseilUp">Veuillez charger un fichier txt contenant une liste de rs_id (un par ligne)</span> </form>
+        <br/> <span id="string-msg">Liste de rs_id (un/ligne)</span> </form>
     </div>
   </div>
+  <div id='lien'> </div>
+  <footer id="footer" class="footer" role="footer">
+    <div class="footer-div">
+      <div id='team_dev'>
+        <p> Equipe PFE EFREI</p>
+        <p>Developpeur : Galinou Silouane (silouane.galinou@efrei.net), Payet Xavier (xavier.payet@efrei.net)</p>
+      </div>
+      <!--<div id='autres'>
+        <p>BI : Carette Julien, Puill Robin</p>
+      </div>--></div>
+  </footer>
 </body>

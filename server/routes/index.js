@@ -3,7 +3,7 @@ var router = express.Router()
 const jsonFunc = require('jsonFunc')
 var fs = require('fs')
 var formidable = require('formidable')
-var json2xls = require('json2xls')
+
 /**********/
 router.get('/', (req, res) => {
   jsonFunc.searchPopu().then(result => {

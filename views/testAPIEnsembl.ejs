@@ -183,8 +183,34 @@
                             <td>
                               <%= data[i].gwasvalue[j].trait.listname[0]%> <a href=" <%= data[i].gwasvalue[j].trait.traitlink%>">Trait</a> </td>
                             <td>
+
                               <!-- <form id='form_study' methode='post' action='/study'>
-                            <input type='submit' id="valid" value='Study'> </form>--><a href='#study_<%= j %>' class="btn_info" data-toggle="collapse" data-target="#study_<%= j %>">More</a> </td>
+                            <input type='submit' id="valid" value='Study'> </form><a href='#study_<%= j %>' class="btn_info" data-toggle="collapse" data-target="#study_<%= j %>">More</a>-->
+                              <div class="popup" onclick="myFunction(<%= i %>,<%= j %>)">study
+                                <div class='popuptext' id='study_<%= i %>_<%= j %>'>
+                                  <div id='infoStudy'>
+
+                                    <%=data[i].gwasvalue[j].study.title%>
+
+                                      <%= data[i].gwasvalue[j].study.author%>
+
+                                        <%= data[i].gwasvalue[j].study.publicationDate%>
+
+                                          <%= data[i].gwasvalue[j].study.publication%>
+
+                                            <%= data[i].gwasvalue[j].study.initialSampleSize%>
+
+                                              <%= data[i].gwasvalue[j].study.pubmedId%>
+
+                                                <%= data[i].gwasvalue[j].study.snpCount%>
+
+                                                  <%= data[i].gwasvalue[j].study.accessionId%>
+
+                                  </div>
+                                </div>
+
+                              </div>
+                            </td>
                           </tr>
                           <%
                         }
@@ -198,56 +224,18 @@
           </div>
           <% } %>
       </div>
-      <% for (let i = 0; i< data.length; i++) {%>
-        <div id='study<%= i %>'>
-          <% for (let j in data[i].gwasvalue) {%>
-            <div id='study_<%= j %>' class='collapse'>
-              <div id='infoStudy'>
-                <table id='table_info'>
-                  <thead>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Date</th>
-                    <th>Publication</th>
-                    <th>InitialSampleSize</th>
-                    <th>PubmedId</th>
-                    <th>snpCount</th>
-                    <th>accessionId</th>
-                  </thead>
-                  <tbody>
-                    <td>
-                      <%=data[i].gwasvalue[j].study.title%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.author%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.publicationDate%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.publication%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.initialSampleSize%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.pubmedId%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.snpCount%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.accessionId%>
-                    </td>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <% } %>
-        </div>
-        <% } %>
     </div>
   </div>
+  <script>
+    function myFunction(i, j) {
+      var popup = document.getElementById("study_" + i + "_" + j)
+      popup.classList.toggle("show")
+      console.log(popup.innerText)
+    }
+
+  </script>
+
 </body>
+
 
 </html>

@@ -38,10 +38,7 @@ router.post('/fileup', (req, res) => {
         wstream.write('/n')
       }
       wstream.end()
-<<<<<<< HEAD
       // setTimeout(function () {}, 1000)
-=======
->>>>>>> c396f24c8cc0381243df7b34b96b2c4019cb7be3
       res.render('testAPIEnsembl', {
         data: result
       })

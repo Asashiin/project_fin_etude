@@ -75,70 +75,47 @@
                       <%= data[i].location2 %>
                     </td>
                   </tr>
-
-                  <%
-            }
-            %>
-                </table>
-
-              </div>
-            </div>
-            <div id='contentGwas'>
-              <p>GWAS Information</p>
-              <div id="info_rs">
-                <table id="info_var_gen">
-                  <thead id="tabl_var_thead">
-                    <th>Name</th>
-                    <th>RiskFrequency</th>
-                    <th>pvalue</th>
-                    <th>range</th>
-
-                    <th></th>
-                  </thead>
-                  <tbody>
-                    <% for (let j in data[i].gwasvalue) {
-              %>
-                      <tr>
-                        <th>VCF</th>
-                      </tr>
-                      <tr>
-                        <th>Start</th>
-                        <td>
-                          <%= data[i].start %>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>End</th>
-                        <td>
-                          <%= data[i].end %>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Sequence_Region</th>
-                        <td>
-                          <%= ' Chromosome : '+ data[i].seq %>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Clinical Significance</th>
-                        <td>
-                          <%= data[i].clinicSigni %>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th>Variant</th>
-                        <td>
-                          <%
+                  <tr>
+                    <th>VCF</th>
+                  </tr>
+                  <tr>
+                    <th>Start</th>
+                    <td>
+                      <%= data[i].start %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>End</th>
+                    <td>
+                      <%= data[i].end %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Sequence_Region</th>
+                    <td>
+                      <%= ' Chromosome : '+ data[i].seq %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Clinical Significance</th>
+                    <td>
+                      <%= data[i].clinicSigni %>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>Variant</th>
+                    <td>
+                      <%
         for (let j in data[i].variant) {
       %>
-                            <%= data[i].variant[j] %>
-                              <br/>
-                              <%
+                        <%= data[i].variant[j] %>
+                          <br/>
+                          <%
         }
       %>
-                        </td>
-                      </tr>
-                      <tbody> </tbody>
+                    </td>
+                  </tr>
+                  <tbody> </tbody>
                 </table>
               </div>
             </div>
@@ -170,7 +147,6 @@
             %>
                   </tbody>
                 </table>
-
               </div>
             </div>
             <div id='contentGwas'>

@@ -1,9 +1,60 @@
-{"name":"rs699","conseq":"missense_variant","maf":0.294928,"location":"1:230710048-230710048","location2":"1:230845794-230845794","start":230710048,"end":230710048,"seq":"1","allele":"A/G","ancestral":"G","variant":["rs3182295","rs386606420","rs4714","rs61617185","rs17856353"],"clinicSigni":["benign","risk factor"],"gtexvalue":[{"geneid":"ENSG00000135773","symbol":"CAPN9","variantid":"1_230802003_A_G_b37"},{"geneid":"ENSG00000244137","symbol":"AL512328.1","variantid":"1_230795492_A_G_b37"},{"geneid":"ENSG00000135775","symbol":"COG2","variantid":"1_230693982_A_G_b37"},{"geneid":"ENSG00000135744","symbol":"AGT","variantid":"1_230714297_A_G_b37"},{"geneid":"ENSG00000135744","symbol":"AGT","variantid":"1_230714297_A_G_b37"},{"geneid":"ENSG00000135775","symbol":"COG2","variantid":"1_230693982_A_G_b37"},{"geneid":"ENSG00000235817","symbol":"AL158214.1","variantid":"1_230612412_A_G_b37"},{"geneid":"ENSG00000135773","symbol":"CAPN9","variantid":"1_230802003_A_G_b37"}],"gwasvalue":[{"name":"rs699-A","riskFrequency":"0.5795","pvalue":"2*10^-8","range":"[0.023-0.049]","or":"NR","study":{"self":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/27239731","associations":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/27239731{?projection}","study":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/27239731/study","efoTraits":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/27239731/efoTraits","snps":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/27239731/snps"}}]}
+"E"
 
 
-{"name":"rs333","conseq":"frameshift_variant","maf":"0.02915","location":"3:46373456-46373487","location2":"3:46414947-46414978","start":46373456,"end":46373487,"seq":"3","allele":"GTCAGTATCAATTCTGGAAGAATTTCCAGACA/-","ancestral":null,"variant":["rs4646963","rs56030631","rs562091107","rs62627090"],"clinicSigni":["risk factor","protective"],"gtexvalue":[],"gwasvalue":[]}
+"R"
 
 
-{"name":"rs6538678","conseq":"intron_variant","maf":0.226238,"location":"12:95867790-95867790","location2":"12:96261568-96261568","start":95867790,"end":95867790,"seq":"12","allele":"A/G","ancestral":"G","variant":["rs17310760","rs56496097"],"gtexvalue":[{"geneid":"ENSG00000139344","symbol":"AMDHD1","variantid":"12_95968716_A_G_b37"},{"geneid":"ENSG00000165972","symbol":"CCDC38","variantid":"12_95942974_A_G_b37"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","variantid":"12_95858839_A_G_b37"},{"geneid":"ENSG00000074527","symbol":"NTN4","variantid":"12_95791152_A_G_b37"},{"geneid":"ENSG00000165972","symbol":"CCDC38","variantid":"12_95942974_A_G_b37"},{"geneid":"ENSG00000139343","symbol":"SNRPF","variantid":"12_95903828_A_G_b37"},{"geneid":"ENSG00000199506","symbol":"RNU6-247P","variantid":"12_95792635_A_G_b37"},{"geneid":"ENSG00000139344","symbol":"AMDHD1","variantid":"12_95968716_A_G_b37"},{"geneid":"ENSG00000074527","symbol":"NTN4","variantid":"12_95791152_A_G_b37"},{"geneid":"ENSG00000199506","symbol":"RNU6-247P","variantid":"12_95792635_A_G_b37"},{"geneid":"ENSG00000258292","symbol":"LINC02410","variantid":"12_95823307_A_G_b37"},{"geneid":"ENSG00000139343","symbol":"SNRPF","variantid":"12_95903828_A_G_b37"}],"gwasvalue":[{"name":"rs6538678-A","riskFrequency":"NR","pvalue":"2*10^-6","range":"[1.30-1.88]","or":1.57,"study":{"self":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/42893","associations":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/42893{?projection}","study":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/42893/study","efoTraits":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/42893/efoTraits","snps":"http://www.ebi.ac.uk/gwas/beta/rest/api/associations/42893/snps"}}]}
+"E"
+
+
+"r"
+
+
+"r"
+
+
+"o"
+
+
+"r"
+
+
+":"
+
+
+" "
+
+
+"B"
+
+
+"a"
+
+
+"d"
+
+
+" "
+
+
+"R"
+
+
+"e"
+
+
+"q"
+
+
+"u"
+
+
+"e"
+
+
+"s"
+
+
+"t"
 
 

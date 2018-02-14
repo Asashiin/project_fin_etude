@@ -5,20 +5,84 @@
     overflow: hidden;
     width: 100%;
   }
-  
+
+  #liste_rs,
+  #content {
+    display: table-cell;
+    padding: 10px;
+  }
+
   p {
     font-style: normal;
     font-size: 16px;
     color: #205493;
   }
-  
+
+  .popup {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* The actual popup */
+
+  .popup .popuptext {
+    visibility: hidden;
+    width: auto;
+    height: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+  }
+
+
+
+  /* Toggle this class - hide and show the popup */
+
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  /* Add animation (fade in the popup) */
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #liste_rs {
+    width: 150px;
+    margin-right: 10px;
+    border-right: 1px solid black;
+  }
+
   #global {
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 1500px;
+    width: 1600px;
     background-color: #eeeeee;
   }
-  
+
   #RsIdbox {
     color: #fff;
     background-color: #5f5f5f;
@@ -29,26 +93,19 @@
     color: #f1f1f1;
     padding: 0 1em 0 1em;
   }
-  
-  #content {
-    margin: 5px;
-  }
-  
+
   #info_base {
     border-collapse: collapse;
     border-spacing: 10px 5px;
   }
-  
-  #info_var_gen {
+
+  #info_var_gen,
+  #table_info {
     border-spacing: 10px 5px;
     width: 100%;
     border-collapse: separate;
   }
-  
-  #inner_content_glob {
-    padding-bottom: 5px;
-  }
-  
+
   td,
   th {
     padding: 1em 1em 5em 1em;
@@ -56,32 +113,32 @@
     text-align: left;
     border-bottom: 1px solid #D3D3D3;
   }
-  
-  #inner-content0,
-  #inner-content1,
-  #inner-content2,
-  #inner-content3,
-  #inner-content4 {
+
+  #inner_content_glob0,
+  #inner_content_glob1,
+  #inner_content_glob2,
+  #inner_content_glob3,
+  #inner_content_glob4 {
     background-color: #eeeeee;
     border-bottom: 1px solid #000000;
     overflow: hidden;
   }
-  
+
   #variant {
     padding: 0 1em 0 1em;
   }
-  
+
   #info_base .th {
     font-style: normal;
     font-size: 14px;
     padding: 0 3rem;
   }
-  
+
   #contentEnsembl,
   #contentGtext,
   #contentGwas {
     width: auto;
-    min-width: 350px;
+    min-width: 454px;
     display: table-cell;
     border-left: 3px solid #D3D3D3;
     overflow: hidden;

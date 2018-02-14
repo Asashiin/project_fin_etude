@@ -3,7 +3,8 @@ var router = express.Router()
 const jsonFunc = require('jsonFunc')
 var fs = require('fs')
 var formidable = require('formidable')
-  /**********/
+
+/**********/
 router.get('/', (req, res) => {
   jsonFunc.searchPopu().then(result => {
     const tab = result
@@ -27,16 +28,17 @@ router.post('/fileup', (req, res) => {
         // res.render('index')
       }
       let wPath = 'public/snpi.txt'
-        // stream
+      // stream
       let wstream = fs.createWriteStream(wPath)
       for (let i = 0; i < result.length; i++) {
-        let test = JSON.stringify(result[i])
-        wstream.write(test)
-        wstream.write('\n')
-        wstream.write('\n')
-        wstream.write('\n')
+        let json = JSON.stringify(result[i])
+        wstream.write(json)
+        wstream.write('/n')
+        wstream.write('/n')
+        wstream.write('/n')
       }
       wstream.end()
+      // setTimeout(function () {}, 1000)
       res.render('testAPIEnsembl', {
         data: result
       })

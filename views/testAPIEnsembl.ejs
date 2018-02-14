@@ -128,6 +128,36 @@
                   <div id="info_rs">
                     <table id="info_var_gen">
                       <thead id="tabl_var_thead">
+                        <th>Genecode Id</th>
+                        <th>Gene symbol</th>
+                        <th>P-Value</th>
+                        <th>Tissue</th>
+                      </thead>
+                      <tbody>
+                        <% for (let k in data[i].gtexvalue) {
+              %>
+                          <tr>
+                            <td>
+                              <%= data[i].gtexvalue[k].geneid%>
+                            </td>
+                            <td>
+                              <%= data[i].gtexvalue[k].symbol%>
+                            </td>
+                            <td>
+                              <%= data[i].gtexvalue[k].pvalue%>
+                            </td>
+                            <td>
+                              <%= data[i].gtexvalue[k].tissu%>
+                            </td>
+                          </tr>
+                          <%
+            }
+            %>
+                      </tbody>
+                    </table>
+                    <br />
+                    <table id="info_var_gen">
+                      <thead id="tabl_var_thead">
                         <th>Variant Id</th>
                         <th>r²</th>
                       </thead>

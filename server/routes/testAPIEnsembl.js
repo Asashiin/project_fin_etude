@@ -7,7 +7,7 @@ router.post('/', (req, res) => {
   let listId = data.split('/')
   let pop = req.body.population
   let size = req.body.size
-  console.log('Population name: ' + pop)
+  // console.log('Population name: ' + pop)
   if (listId) {
     jsonFunc.APIEnsembl(listId, pop, size).then(result => {
       if (typeof result === 'string') {

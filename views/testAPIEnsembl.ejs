@@ -59,7 +59,7 @@
                       <tr>
                         <th>MAF</th>
                         <td>
-                          <%= data[i].maf %>
+                          <%= data[i].maf %> (<%= data[i].minor %>)
                         </td>
                       </tr>
                       <tr>
@@ -113,7 +113,7 @@
                           <%
         for (let j in data[i].variant) {
       %>
-                            <%= data[i].variant[j] %>
+                            <%= data[i].variant[j]%>
                               <br/>
                               <% }
       %>
@@ -166,7 +166,8 @@
               %>
                           <tr>
                             <td>
-                              <%= data[i].r2[j].nom%>
+                               <a href="/?rs=<%= data[i].r2[j].nom %>&amp;pop=<%=data[i].pop%>&amp;size=<%= data[i].size %>" onclick="window.open(this.href); return false;"> <%= data[i].r2[j].nom %> </a>
+                              <%= %>
                             </td>
                             <td>
                               <%= data[i].r2[j].r2%>

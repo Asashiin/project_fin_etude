@@ -12,7 +12,6 @@ router.post('/', (req, res) => {
     jsonFunc.APIEnsembl(listId, pop, size).then(result => {
       if (typeof result === 'string') {
         console.log(result)
-        // res.render('index')
         jsonFunc.searchPopu().then(result => {
           const tab = result
           res.render('index', {

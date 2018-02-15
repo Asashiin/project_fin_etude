@@ -42,7 +42,7 @@
               <div id="inner-content">
                 <div id='contentEnsembl'>
                   <p>Ensembl Information</p>
-                  <div id="info_rs">
+                  <div id="info_rs_ensembl">
                     <table id="info_base">
                       <tr>
                         <th>Consequence</th>
@@ -125,7 +125,7 @@
                 </div>
                 <div id='contentGtext'>
                   <p>GTEX Information</p>
-                  <div id="info_rs">
+                  <div id="info_rs_gtex">
                     <table id="info_var_gen">
                       <thead id="tabl_var_thead">
                         <th>Genecode Id</th>
@@ -181,7 +181,7 @@
                 </div>
                 <div id='contentGwas'>
                   <p>GWAS Information</p>
-                  <div id="info_rs">
+                  <div id="info_rs_gwas">
                     <table id="info_var_gen">
                       <thead id="tabl_var_thead">
                         <th>Name</th>
@@ -216,30 +216,7 @@
 
                               <!-- <form id='form_study' methode='post' action='/study'>
                             <input type='submit' id="valid" value='Study'> </form><a href='#study_<%= j %>' class="btn_info" data-toggle="collapse" data-target="#study_<%= j %>">More</a>-->
-                              <div class="popup" onclick="myFunction(<%= i %>,<%= j %>)">study
-                                <div class='popuptext' id='study_<%= i %>_<%= j %>'>
-                                  <div id='infoStudy'>
 
-                                    <%=data[i].gwasvalue[j].study.title%>
-
-                                      <%= data[i].gwasvalue[j].study.author%>
-
-                                        <%= data[i].gwasvalue[j].study.publicationDate%>
-
-                                          <%= data[i].gwasvalue[j].study.publication%>
-
-                                            <%= data[i].gwasvalue[j].study.initialSampleSize%>
-
-                                              <%= data[i].gwasvalue[j].study.pubmedId%>
-
-                                                <%= data[i].gwasvalue[j].study.snpCount%>
-
-                                                  <%= data[i].gwasvalue[j].study.accessionId%>
-
-                                  </div>
-                                </div>
-
-                              </div>
                             </td>
                           </tr>
                           <%

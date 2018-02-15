@@ -20,8 +20,8 @@
           <% for(let j in data[i].snp){ %>
             <tr>
               <td>
-                <%=data[i].snp[j]%>
-                  <!-- <a href="/testAPIEnsembl">Study</a>--></td>
+                <a href="/?rs=<%= data[i].snp[j] %>&amp;pop=<%=data[i].pop%>&amp;size=<%= data[i].size %>" onclick="window.open(this.href); return false;"> <%= data[i].snp[j] %> </a>
+              </td>
             </tr>
             <% } %>
         </tbody>

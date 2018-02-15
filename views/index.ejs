@@ -57,9 +57,37 @@
       <div id='search_loc'>
         <input type="search" placeholder="Search for location" name="location" id="location" />
         <input type="search" placeholder="Nb max de rs recupere" name="location_nbMax" id="location_nbMax" />
+        <label id='pop'>Population : </label>
+          <select id='select_name' name="population">
+        <%
+        if (data) {
+          for (let i in data) {
+          %>
+        <option value="<%= data[i].name %>"><%= data[i].desc %></option>
+        <%
+        }
+        }
+        %>        
+      </select>
+
+          <label id="wind_size">Windows size : </label>
+          <select id='select_size' name="size">
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+        <option value="1500">1500</option>
+        <option value="2000">2000</option>
+        <option value="2500">2500</option>
+        <option value="3000">3000</option>
+        <option value="3500">3500</option>
+        <option value="4000">4000</option>
+        <option value="4500">4500</option>
+        <option value="500">5000</option>
+      </select>
+          <br />
       </div>
       <div id='submit_loc'>
-        <input type="submit" id="submit_location" class="submit_location" value="Research" /></div>
+        <input type="submit" id="submit_location" class="submit_location" value="Research" />
+      </div>
     </form> <span id="string-msg">Exemple :  10:95000000-96000000</span>
     <div id="RsIdbox">
       <form id="form_fileup" method="post" action="/fileup" enctype="multipart/form-data">

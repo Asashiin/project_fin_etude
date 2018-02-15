@@ -15,6 +15,9 @@
   <div id='global'>
     <header id="header" class="header" role="banner">
       <div class="banner_div">
+        <div id="acceuil">
+          <a href="/"> HOME </a>
+        </div>
         <div id="dl">
           <label for="champ_nom_file">Nom du fichier texte a dl</label>
           <form id="form_file_name" method="post" action="">
@@ -59,7 +62,8 @@
                       <tr>
                         <th>MAF</th>
                         <td>
-                          <%= data[i].maf %> (<%= data[i].minor %>)
+                          <%= data[i].maf %> (
+                            <%= data[i].minor %>)
                         </td>
                       </tr>
                       <tr>
@@ -166,7 +170,9 @@
               %>
                           <tr>
                             <td>
-                               <a href="/?rs=<%= data[i].r2[j].nom %>&amp;pop=<%=data[i].pop%>&amp;size=<%= data[i].size %>" onclick="window.open(this.href); return false;"> <%= data[i].r2[j].nom %> </a>
+                              <a href="/?rs=<%= data[i].r2[j].nom %>&amp;pop=<%=data[i].pop%>&amp;size=<%= data[i].size %>" onclick="window.open(this.href); return false;">
+                                <%= data[i].r2[j].nom %>
+                              </a>
                               <%= %>
                             </td>
                             <td>

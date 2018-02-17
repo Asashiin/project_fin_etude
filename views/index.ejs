@@ -13,11 +13,15 @@
     </div>
   </header>
   <div class="research" id="button_search">
-    <form id="form_snpInfo" method="post" action="/testAPIEnsembl">
-      <input type="search" name="rs" placeholder="Search for rs" id="rs" class="rs" />
-      <br />
-      <label>Population : </label>
-      <select name="population">
+    <div id='global'>
+      <form id="form_snpInfo" method="post" action="/testAPIEnsembl">
+
+        <div id='test'>
+          <input type="search" name="rs" placeholder="Search for rs" id="rs" class="rs" />
+          <span id="string-msg">Exemple :   rs699</span>
+          <br />
+          <label id='pop'>Population : </label>
+          <select id='select_name' name="population">
         <%
         if (data) {
           for (let i in data) {
@@ -28,9 +32,9 @@
         }
         %>        
       </select>
-      <br />
-      <label>Windows size : </label>
-      <select name="size">
+
+          <label id="wind_size">Windows size : </label>
+          <select id='select_size' name="size">
         <option value="500">500</option>
         <option value="1000">1000</option>
         <option value="1500">1500</option>
@@ -42,13 +46,49 @@
         <option value="4500">4500</option>
         <option value="500">5000</option>
       </select>
-      <br />
-      <input type="submit" id="submit_id" class="submit" value="Research" /> 
-    </form> <span id="string-msg">Exemple :   rs699</span>
+          <br />
+        </div>
+        <div id='input_id'>
+          <input type="submit" id="submit_id" class="submit" value="Research" /></div>
+
+      </form>
+    </div>
     <form id="form_loc" method="post" action="/location">
-      <input type="search" placeholder="Search for location" name="location" id="location" />
-      <input type="search" placeholder="Nb max de rs recupere" name="location_nbMax" id="location_nbMax" />
-      <input type="submit" id="submit_location" class="submit_location" value="Research" /> </form> <span id="string-msg">Exemple :  10:95000000-96000000</span>
+      <div id='search_loc'>
+        <input type="search" placeholder="Search for location" name="location" id="location" />
+        <input type="search" placeholder="Nb max de rs recupere" name="location_nbMax" id="location_nbMax" />
+        <label id='pop'>Population : </label>
+          <select id='select_name' name="population">
+        <%
+        if (data) {
+          for (let i in data) {
+          %>
+        <option value="<%= data[i].name %>"><%= data[i].desc %></option>
+        <%
+        }
+        }
+        %>        
+      </select>
+
+          <label id="wind_size">Windows size : </label>
+          <select id='select_size' name="size">
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+        <option value="1500">1500</option>
+        <option value="2000">2000</option>
+        <option value="2500">2500</option>
+        <option value="3000">3000</option>
+        <option value="3500">3500</option>
+        <option value="4000">4000</option>
+        <option value="4500">4500</option>
+        <option value="500">5000</option>
+      </select>
+          <br />
+      </div>
+      <div id='submit_loc'>
+        <input type="submit" id="submit_location" class="submit_location" value="Research" />
+      </div>
+    </form> <span id="string-msg">Exemple :  10:95000000-96000000</span>
     <div id="RsIdbox">
       <form id="form_fileup" method="post" action="/fileup" enctype="multipart/form-data">
         <input type='file' id="file" name='fileToUpload'>

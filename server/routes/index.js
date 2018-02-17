@@ -3,15 +3,40 @@ var router = express.Router()
 const jsonFunc = require('jsonFunc')
 var fs = require('fs')
 var formidable = require('formidable')
-var json2xls = require('json2xls')
+
 /**********/
 router.get('/', (req, res) => {
-  jsonFunc.searchPopu().then(result => {
-    const tab = result
-    res.render('index', {
-      data: tab
+  let popu = req.query.pop
+  let size = req.query.size
+  let rs = req.query.rs
+  if ((rs) && (size) && popu) {
+    console.log('test : ' + rs + '; ' + popu + '; ' + size)
+    let tab = [rs]
+    jsonFunc.APIEnsembl(tab, popu, size).then(result => {
+      if (typeof result === 'string') {
+        console.log(result)
+        // res.render('index')
+        jsonFunc.searchPopu().then(result => {
+          const tab = result
+          res.render('index', {
+            data: tab
+          })
+        })
+      } else {
+        // console.log(result)
+        res.render('testAPIEnsembl', {
+          data: result
+        })
+      }
     })
-  })
+  } else {
+    jsonFunc.searchPopu().then(result => {
+      const tab = result
+      res.render('index', {
+        data: tab
+      })
+    })
+  }
 })
 router.post('/fileup', (req, res) => {
   let form = new formidable.IncomingForm()

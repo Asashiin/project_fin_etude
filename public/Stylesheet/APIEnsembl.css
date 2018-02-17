@@ -1,37 +1,119 @@
   #header {
-    height: 80px;
+    height: 110px;
     background-color: #5f5f5f;
     padding: 0 3rem;
     overflow: hidden;
     width: 100%;
   }
-  
+
   #liste_rs,
   #content {
     display: table-cell;
     padding: 10px;
+    overflow: hidden
   }
-  
+
   p {
     font-style: normal;
     font-size: 16px;
     color: #205493;
   }
-  
+
+  .popup {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* The actual popup */
+
+  .popup .popuptext {
+    visibility: hidden;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+  }
+
+  #footer {
+    height: 60px;
+    background-color: #5f5f5f;
+    overflow: hidden;
+    max-width: 100%;
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: table-cell;
+  }
+
+
+
+  #logo {
+    margin-top: 20px;
+  }
+
+  #acceuil {
+    display: table-cell;
+    padding: 10px;
+  }
+
+  #dl {
+    display: table-cell;
+    padding: 10px;
+  }
+
+
+  /* Toggle this class - hide and show the popup */
+
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+  }
+
+  /* Add animation (fade in the popup) */
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
   #liste_rs {
-    width: 150px;
+    width: 130px;
     margin-right: 10px;
     border-right: 1px solid black;
   }
-  
+
   #global {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 1600px;
+    width: 1650px;
     background-color: #eeeeee;
+
   }
-  
+
+  #all_content {}
+
+
   #RsIdbox {
     color: #fff;
     background-color: #5f5f5f;
@@ -42,19 +124,25 @@
     color: #f1f1f1;
     padding: 0 1em 0 1em;
   }
-  
+
   #info_base {
     border-collapse: collapse;
     border-spacing: 10px 5px;
   }
-  
+
+  #contentGtext {
+    height: 360px;
+    overflow-y: scroll;
+  }
+
   #info_var_gen,
   #table_info {
     border-spacing: 10px 5px;
     width: 100%;
     border-collapse: separate;
+
   }
-  
+
   td,
   th {
     padding: 1em 1em 5em 1em;
@@ -62,33 +150,54 @@
     text-align: left;
     border-bottom: 1px solid #D3D3D3;
   }
-  
+
   #inner_content_glob0,
   #inner_content_glob1,
   #inner_content_glob2,
   #inner_content_glob3,
-  #inner_content_glob4 {
+  #inner_content_glob4,
+  #inner_content_glob5,
+  #inner_content_glob6,
+  #inner_content_glob7,
+  #inner_content_glob8,
+  #inner_content_glob9 {
     background-color: #eeeeee;
     border-bottom: 1px solid #000000;
     overflow: hidden;
   }
-  
+
+  #info_rs_gwas {
+    width: auto;
+    max-height: 360px;
+  }
+
+  #info_rs_gtex {
+    width: auto;
+    max-height: 360px;
+    overflow-y: scroll;
+  }
+
+  #info_rs_ensembl {
+    width: auto;
+    padding: 8px;
+    max-height: 360px;
+  }
+
   #variant {
     padding: 0 1em 0 1em;
   }
-  
+
   #info_base .th {
     font-style: normal;
     font-size: 14px;
     padding: 0 3rem;
   }
-  
+
   #contentEnsembl,
   #contentGtext,
   #contentGwas {
     width: auto;
-    min-width: 350px;
     display: table-cell;
     border-left: 3px solid #D3D3D3;
-    overflow: hidden;
+    height: 360px;
   }

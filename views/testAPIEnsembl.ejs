@@ -15,6 +15,9 @@
   <div id='global'>
     <header id="header" class="header" role="banner">
       <div class="banner_div">
+        <div id="acceuil">
+          <a href="/"><img id="logo" src="img/logo.png" alt="logo" width="42" height="42" /></a>
+        </div>
         <div id="dl">
           <label for="champ_nom_file">Nom du fichier texte a dl</label>
           <form id="form_file_name" method="post" action="">
@@ -42,7 +45,7 @@
               <div id="inner-content">
                 <div id='contentEnsembl'>
                   <p>Ensembl Information</p>
-                  <div id="info_rs">
+                  <div id="info_rs_ensembl">
                     <table id="info_base">
                       <tr>
                         <th>Consequence</th>
@@ -59,7 +62,8 @@
                       <tr>
                         <th>MAF</th>
                         <td>
-                          <%= data[i].maf %>
+                          <%= data[i].maf %> (
+                            <%= data[i].minor %>)
                         </td>
                       </tr>
                       <tr>
@@ -113,7 +117,7 @@
                           <%
         for (let j in data[i].variant) {
       %>
-                            <%= data[i].variant[j] %>
+                            <%= data[i].variant[j]%>
                               <br/>
                               <% }
       %>
@@ -125,7 +129,37 @@
                 </div>
                 <div id='contentGtext'>
                   <p>GTEX Information</p>
-                  <div id="info_rs">
+                  <div id="info_rs_gtex">
+                    <table id="info_var_gen">
+                      <thead id="tabl_var_thead">
+                        <th>Genecode Id</th>
+                        <th>Gene symbol</th>
+                        <th>P-Value</th>
+                        <th>Tissue</th>
+                      </thead>
+                      <tbody>
+                        <% for (let k in data[i].gtexvalue) {
+              %>
+                          <tr>
+                            <td>
+                              <%= data[i].gtexvalue[k].geneid%>
+                            </td>
+                            <td>
+                              <%= data[i].gtexvalue[k].symbol%>
+                            </td>
+                            <td>
+                              <%= data[i].gtexvalue[k].pvalue%>
+                            </td>
+                            <td>
+                              <%= data[i].gtexvalue[k].tissu%>
+                            </td>
+                          </tr>
+                          <%
+            }
+            %>
+                      </tbody>
+                    </table>
+                    <br />
                     <table id="info_var_gen">
                       <thead id="tabl_var_thead">
                         <th>Variant Id</th>
@@ -136,7 +170,10 @@
               %>
                           <tr>
                             <td>
-                              <%= data[i].r2[j].nom%>
+                              <a href="/?rs=<%= data[i].r2[j].nom %>&amp;pop=<%=data[i].pop%>&amp;size=<%= data[i].size %>" onclick="window.open(this.href); return false;">
+                                <%= data[i].r2[j].nom %>
+                              </a>
+                              <%= %>
                             </td>
                             <td>
                               <%= data[i].r2[j].r2%>
@@ -151,7 +188,7 @@
                 </div>
                 <div id='contentGwas'>
                   <p>GWAS Information</p>
-                  <div id="info_rs">
+                  <div id="info_rs_gwas">
                     <table id="info_var_gen">
                       <thead id="tabl_var_thead">
                         <th>Name</th>
@@ -183,8 +220,11 @@
                             <td>
                               <%= data[i].gwasvalue[j].trait.listname[0]%> <a href=" <%= data[i].gwasvalue[j].trait.traitlink%>">Trait</a> </td>
                             <td>
+
                               <!-- <form id='form_study' methode='post' action='/study'>
-                            <input type='submit' id="valid" value='Study'> </form>--><a href='#study_<%= j %>' class="btn_info" data-toggle="collapse" data-target="#study_<%= j %>">More</a> </td>
+                            <input type='submit' id="valid" value='Study'> </form><a href='#study_<%= j %>' class="btn_info" data-toggle="collapse" data-target="#study_<%= j %>">More</a>-->
+
+                            </td>
                           </tr>
                           <%
                         }
@@ -198,56 +238,19 @@
           </div>
           <% } %>
       </div>
-      <% for (let i = 0; i< data.length; i++) {%>
-        <div id='study<%= i %>'>
-          <% for (let j in data[i].gwasvalue) {%>
-            <div id='study_<%= j %>' class='collapse'>
-              <div id='infoStudy'>
-                <table id='table_info'>
-                  <thead>
-                    <th>Title</th>
-                    <th>Author</th>
-                    <th>Date</th>
-                    <th>Publication</th>
-                    <th>InitialSampleSize</th>
-                    <th>PubmedId</th>
-                    <th>snpCount</th>
-                    <th>accessionId</th>
-                  </thead>
-                  <tbody>
-                    <td>
-                      <%=data[i].gwasvalue[j].study.title%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.author%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.publicationDate%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.publication%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.initialSampleSize%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.pubmedId%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.snpCount%>
-                    </td>
-                    <td>
-                      <%= data[i].gwasvalue[j].study.accessionId%>
-                    </td>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <% } %>
-        </div>
-        <% } %>
     </div>
   </div>
+
+
+  <script>
+    function myFunction(i, j) {
+      var popup = document.getElementById("study_" + i + "_" + j)
+      popup.classList.toggle("show")
+      console.log(popup.innerText)
+    }
+
+  </script>
 </body>
+
 
 </html>

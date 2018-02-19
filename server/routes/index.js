@@ -50,9 +50,9 @@ router.post('/fileup', (req, res) => {
     jsonFunc.APIEnsembl(listId).then(result => {
       if (typeof result === 'string') {
         console.log(result)
-        // res.render('index')
+        res.render('index')
       }
-      let wPath = 'public/snpi.txt'
+      let wPath = 'public/SNPInfo.txt'
       // stream
       let wstream = fs.createWriteStream(wPath)
       for (let i = 0; i < result.length; i++) {

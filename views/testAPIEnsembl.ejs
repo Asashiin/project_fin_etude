@@ -21,7 +21,7 @@
         <div id="dl">
           <label for="champ_nom_file">Nom du fichier texte a dl</label>
           <form id="form_file_name" method="post" action="">
-            <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> </form> <a href="snpi.txt" download="snpi.txt">Télécharger en TXT</a> </div>
+            <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> </form> <a href="snpi.txt" download="SNPInfo.txt">Télécharger en TXT</a> </div>
       </div>
     </header>
     <!--  -->
@@ -130,6 +130,7 @@
                 <div id='contentGtext'>
                   <p>GTEX Information</p>
                   <div id="info_rs_gtex">
+
                     <table id="info_var_gen">
                       <thead id="tabl_var_thead">
                         <th>Genecode Id</th>
@@ -138,23 +139,28 @@
                         <th>Tissue</th>
                       </thead>
                       <tbody>
-                        <% for (let k in data[i].gtexvalue) {
+                        <% if(data[i].link !== ''){ %>
+                          <p>
+                            <%= data[i].link%>
+                          </p>
+                          <%}%>
+                            <% for (let k in data[i].gtexvalue) {
               %>
-                          <tr>
-                            <td>
-                              <%= data[i].gtexvalue[k].geneid%>
-                            </td>
-                            <td>
-                              <%= data[i].gtexvalue[k].symbol%>
-                            </td>
-                            <td>
-                              <%= data[i].gtexvalue[k].pvalue%>
-                            </td>
-                            <td>
-                              <%= data[i].gtexvalue[k].tissu%>
-                            </td>
-                          </tr>
-                          <%
+                              <tr>
+                                <td>
+                                  <%= data[i].gtexvalue[k].geneid%>
+                                </td>
+                                <td>
+                                  <%= data[i].gtexvalue[k].symbol%>
+                                </td>
+                                <td>
+                                  <%= data[i].gtexvalue[k].pvalue%>
+                                </td>
+                                <td>
+                                  <%= data[i].gtexvalue[k].tissu%>
+                                </td>
+                              </tr>
+                              <%
             }
             %>
                       </tbody>

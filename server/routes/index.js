@@ -47,7 +47,7 @@ router.post('/fileup', (req, res) => {
       encoding: 'utf-8'
     })
     let listId = data.split('\n')
-    jsonFunc.APIEnsembl(listId).then(result => {
+    jsonFunc.APIEnsembl(listId, fields.population, fields.size).then(result => {
       if (typeof result === 'string') {
         console.log(result)
         res.render('index')

@@ -22,7 +22,7 @@
     <div id='container'>
       <div id='content'>
         <%    
-    for (let i = 0; i < nbMaxi; i++) {      
+    for (let i = 0; i < data.length ; i++) {      
     if (data[i]) { %>
           <div id='table_rs'>
             <table>
@@ -32,7 +32,7 @@
                 </th>
               </thead>
               <tbody>
-                <% for(let j in data[i].snp){ %>
+                <% for(let j = 0; j < nbMaxi; j++ ){ %>
                   <tr>
                     <td>
                       <a href="/?rs=<%= data[i].snp[j] %>&amp;pop=<%=data[i].pop%>&amp;size=<%= data[i].size %>" onclick="window.open(this.href); return false;">
@@ -40,7 +40,7 @@
                       </a>
                     </td>
                   </tr>
-                  <% } %>
+                  <%} %>
               </tbody>
             </table>
           </div>

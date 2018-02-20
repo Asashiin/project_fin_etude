@@ -3,7 +3,6 @@ var router = express.Router()
 const jsonFunc = require('jsonFunc')
 var fs = require('fs')
 var formidable = require('formidable')
-
 /**********/
 router.get('/', (req, res) => {
   let popu = req.query.pop
@@ -46,7 +45,7 @@ router.post('/fileup', (req, res) => {
     let data = fs.readFileSync(pth, {
       encoding: 'utf-8'
     })
-    let listId = data.split('\r\n')
+    let listId = data.split('\n')
     jsonFunc.APIEnsembl(listId, fields.population, fields.size).then(result => {
       if (typeof result === 'string') {
         console.log(result)
@@ -58,9 +57,9 @@ router.post('/fileup', (req, res) => {
       for (let i = 0; i < result.length; i++) {
         let json = JSON.stringify(result[i])
         wstream.write(json)
-        wstream.write('/n')
-        wstream.write('/n')
-        wstream.write('/n')
+        wstream.write('\r\n')
+        wstream.write('\r\n')
+        wstream.write('\r\n')
       }
       wstream.end()
       // setTimeout(function () {}, 1000)

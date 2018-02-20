@@ -22,7 +22,6 @@ router.get('/', (req, res) => {
           })
         })
       } else {
-        // console.log(result)
         res.render('testAPIEnsembl', {
           data: result
         })
@@ -45,7 +44,10 @@ router.post('/fileup', (req, res) => {
     let data = fs.readFileSync(pth, {
       encoding: 'utf-8'
     })
+    // OS UBUNTU
     let listId = data.split('\n')
+    // OS WINDOWS 
+    // let listId = data.split('\r\n')
     jsonFunc.APIEnsembl(listId, fields.population, fields.size).then(result => {
       if (typeof result === 'string') {
         console.log(result)

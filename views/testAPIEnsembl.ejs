@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Test API Ensembl</title>
+  <title>API Ensembl</title>
   <link rel="stylesheet" href="Stylesheet/APIEnsembl.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,12 +16,14 @@
     <header id="header" class="header" role="banner">
       <div class="banner_div">
         <div id="acceuil">
-          <a href="/"><img id="logo" src="img/logo.png" alt="logo" width="42" height="42" /></a>
+          <a href="/"><img id="logo" src="img/logo.png" alt="logo" width="60" height="60" /></a>
+        </div>
+        <div id='title'>
+          <h> Liste Information SNP Ensembl, GWAS, GTEX </h>
         </div>
         <div id="dl">
-          <label for="champ_nom_file">Nom du fichier texte a dl</label>
           <form id="form_file_name" method="post" action="">
-            <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> </form> <a href="SNPInfo.txt" download="SNPInfo.txt">Télécharger en TXT</a> </div>
+            <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> </form> <a iud='txt_dl' href="SNPInfo.txt" download="SNPInfo.txt">Télécharger en TXT</a> </div>
       </div>
     </header>
     <!--  -->
@@ -63,8 +65,7 @@
                         <th>MAF</th>
                         <td>
                           <%= data[i].maf %> (
-                            <%= data[i].minor %>)
-                        </td>
+                            <%= data[i].minor %>) </td>
                       </tr>
                       <tr>
                         <th>Ancestral</th>
@@ -130,7 +131,6 @@
                 <div id='contentGtext'>
                   <p>GTEX Information</p>
                   <div id="info_rs_gtex">
-
                     <table id="info_var_gen">
                       <thead id="tabl_var_thead">
                         <th>Genecode Id</th>
@@ -226,10 +226,8 @@
                             <td>
                               <%= data[i].gwasvalue[j].trait.listname[0]%> <a href=" <%= data[i].gwasvalue[j].trait.traitlink%>">Trait</a> </td>
                             <td>
-
                               <!-- <form id='form_study' methode='post' action='/study'>
                             <input type='submit' id="valid" value='Study'> </form><a href='#study_<%= j %>' class="btn_info" data-toggle="collapse" data-target="#study_<%= j %>">More</a>-->
-
                             </td>
                           </tr>
                           <%
@@ -246,8 +244,6 @@
       </div>
     </div>
   </div>
-
-
   <script>
     function myFunction(i, j) {
       var popup = document.getElementById("study_" + i + "_" + j)
@@ -257,6 +253,5 @@
 
   </script>
 </body>
-
 
 </html>

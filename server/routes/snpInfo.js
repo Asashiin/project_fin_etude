@@ -8,7 +8,6 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
   // console.log('test route')
   if (req.body.rs) {
-    // console.log('test route' + req.body.rs)
     jsonFunc.searchRs(req.body.rs, res)
       .then((result) => {
         if (typeof result === 'string') {

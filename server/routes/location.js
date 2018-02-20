@@ -17,6 +17,7 @@ router.post('/', (req, res) => {
       // console.log(result)
       // console.log(JSON.stringify(result[0].snp[0]))
       res.render('location', {
+        loc: listLoc,
         data: result,
         nbMaxi: max
       })

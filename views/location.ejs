@@ -5,29 +5,49 @@
   <meta charset="utf-8">
   <title>Bioinfo</title>
   <link rel="stylesheet" href="Stylesheet/location.css"> </head>
+<header id="header" class="header" role="banner">
+  <div class="banner_div">
+    <div id="acceuil">
+      <a href="/"><img id="logo" src="img/logo.png" alt="logo" width="60" height="60" /></a>
+    </div>
+    <div id='title'>
+      <h> Liste SNP par location</h>
+    </div>
+  </div>
+</header>
+<!--  -->
 
 <body>
-  <div id='content'>
-    <%
-    let max = nbMaxi
-    for (let i = 0; i < data.length; i++) {      
+  <div id='flipped'>
+    <div id='container'>
+      <div id='content'>
+        <%    
+    for (let i = 0; i < nbMaxi; i++) {      
     if (data[i]) { %>
-      <table>
-        <thead>
-          <th>SNP</th>
-        </thead>
-        <tbody>
-          <% for(let j in data[i].snp){ %>
-            <tr>
-              <td>
-                <a href="/?rs=<%= data[i].snp[j] %>&amp;pop=<%=data[i].pop%>&amp;size=<%= data[i].size %>" onclick="window.open(this.href); return false;"> <%= data[i].snp[j] %> </a>
-              </td>
-            </tr>
+          <div id='table_rs'>
+            <table>
+              <thead>
+                <th>SNP location :
+                  <%= loc[i]%>
+                </th>
+              </thead>
+              <tbody>
+                <% for(let j in data[i].snp){ %>
+                  <tr>
+                    <td>
+                      <a href="/?rs=<%= data[i].snp[j] %>&amp;pop=<%=data[i].pop%>&amp;size=<%= data[i].size %>" onclick="window.open(this.href); return false;">
+                        <%= data[i].snp[j] %>
+                      </a>
+                    </td>
+                  </tr>
+                  <% } %>
+              </tbody>
+            </table>
+          </div>
+          <% } %>
             <% } %>
-        </tbody>
-      </table>
-      <% } %>
-        <% } %>
+      </div>
+    </div>
   </div>
 </body>
 

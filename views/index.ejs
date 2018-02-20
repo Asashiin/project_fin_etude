@@ -92,8 +92,36 @@
     <div id="RsIdbox">
       <form id="form_fileup" method="post" action="/fileup" enctype="multipart/form-data">
         <input type='file' id="file" name='fileToUpload'>
+        <br />
+        <label id='pop'>Population : </label>
+          <select id='select_name' name="population">
+        <%
+        if (data) {
+          for (let i in data) {
+          %>
+        <option value="<%= data[i].name %>"><%= data[i].desc %></option>
+        <%
+        }
+        }
+        %>        
+      </select>
+
+          <label id="wind_size">Windows size : </label>
+          <select id='select_size' name="size">
+        <option value="500">500</option>
+        <option value="1000">1000</option>
+        <option value="1500">1500</option>
+        <option value="2000">2000</option>
+        <option value="2500">2500</option>
+        <option value="3000">3000</option>
+        <option value="3500">3500</option>
+        <option value="4000">4000</option>
+        <option value="4500">4500</option>
+        <option value="500">5000</option>
+      </select>
         <input type='submit' id="valid" value='valider'>
-        <br/> <span id="string-msg">Liste de rs_id (un/ligne)</span> </form>
+        <br/> <span id="string-msg">Liste de rs_id (un/ligne)</span> 
+      </form>
     </div>
   </div>
   <div id='lien'> </div>

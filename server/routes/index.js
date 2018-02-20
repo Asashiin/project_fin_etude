@@ -46,7 +46,7 @@ router.post('/fileup', (req, res) => {
     let data = fs.readFileSync(pth, {
       encoding: 'utf-8'
     })
-    let listId = data.split('\n')
+    let listId = data.split('\r\n')
     jsonFunc.APIEnsembl(listId, fields.population, fields.size).then(result => {
       if (typeof result === 'string') {
         console.log(result)

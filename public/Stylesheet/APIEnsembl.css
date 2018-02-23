@@ -185,9 +185,6 @@
     position: fixed;
     top: 50%;
     right: 0;
-    padding: 10px;
-    border: 2px solid red;
-    background: white;
   }
   
   #info_rs_ensembl {

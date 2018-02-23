@@ -23,27 +23,29 @@
         </div>
         <div id="dl">
           <form id="form_file_name" method="post" action="">
-            <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> </form> <a iud='txt_dl' href="SNPInfo.txt" download="SNPInfo.txt">Télécharger en TXT</a> </div>
+            <!-- <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> -->
+          </form><a iud='txt_dl' href="SNPInfo.txt" download="SNPInfo.txt">Télécharger en TXT</a> </div>
       </div>
     </header>
     <!--  -->
     <div id='all_content'>
       <div id='liste_rs'>
-        <% for (let i = 0; i < data.length; i++) {
-      if(data[i]){%>
+        <% for (let i = 0; i < data.length; i++) { %>
           <div id='liste_id'>
-            <%= data[i].name %>
+            <% if(data[i]){ %>
+              <a href="#inner_content_glob<%= i %>">
+                <%= data[i].name %>
+              </a>
               <button type="button" class="btn_info" data-toggle="collapse" data-target="#inner_content_glob<%= i %>">+</button>
           </div>
           <% } }%>
       </div>
       <div id='content'>
         <%for (let i = 0; i < data.length; i++) {%>
-          <div id='inner_content_glob<%= i %>' class="collapse">
+          <div id='inner_content_glob<%= i %>'>
             <%if (data[i]) { %>
               <div id="RsIdbox">
-                <%= data[i].name %>
-              </div>
+                <%= data[i].name %> <a id='link_top' href="#global">top</a> </div>
               <div id="inner-content">
                 <div id='contentEnsembl'>
                   <p>Ensembl Information</p>
@@ -243,13 +245,43 @@
           <% } %>
       </div>
     </div>
-  </div>
+  </div> <a id="toTop" href="#">Go to Top</a>
   <script>
     function myFunction(i, j) {
       var popup = document.getElementById("study_" + i + "_" + j)
       popup.classList.toggle("show")
       console.log(popup.innerText)
     }
+    $(document).ready(function() {
+      $('content').localScroll({
+        target: 'body'
+      });
+      // Hide the toTop button when the page loads.
+      $("#toTop").css("display", "none");
+      // This function runs every time the user scrolls the page.
+      $(window).scroll(function() {
+        // Check weather the user has scrolled down (if "scrollTop()"" is more than 0)
+        if ($(window).scrollTop() > 0) {
+          // If it's more than or equal to 0, show the toTop button.
+          console.log("is more");
+          $("#toTop").fadeIn("slow");
+        } else {
+          // If it's less than 0 (at the top), hide the toTop button.
+          console.log("is less");
+          $("#toTop").fadeOut("slow");
+        }
+      })
+    });
+    // When the user clicks the toTop button, we want the page to scroll to the top.
+    $("#toTop").click(function() {
+      // Disable the default behaviour when a user clicks an empty anchor link.
+      // (The page jumps to the top instead of // animating)
+      event.preventDefault();
+      // Animate the scrolling motion.
+      $("html, body").animate({
+        scrollTop: 0
+      }, "slow");
+    });
 
   </script>
 </body>

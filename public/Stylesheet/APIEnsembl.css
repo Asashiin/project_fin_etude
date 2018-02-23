@@ -13,10 +13,20 @@
     overflow: hidden
   }
   
+  #liste_rs {
+    width: 130px;
+    margin-right: 10px;
+    border-right: 1px solid black;
+  }
+  
   p {
     font-style: normal;
     font-size: 16px;
     color: #205493;
+  }
+  
+  #link_top {
+    float: right;
   }
   
   #title {
@@ -109,21 +119,13 @@
     }
   }
   
-  #liste_rs {
-    width: 130px;
-    margin-right: 10px;
-    border-right: 1px solid black;
-  }
-  
   #global {
     margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 1650px;
+    width: 1800px;
     background-color: #eeeeee;
   }
-  
-  #all_content {}
   
   #RsIdbox {
     color: #fff;
@@ -161,16 +163,7 @@
     border-bottom: 1px solid #D3D3D3;
   }
   
-  #inner_content_glob0,
-  #inner_content_glob1,
-  #inner_content_glob2,
-  #inner_content_glob3,
-  #inner_content_glob4,
-  #inner_content_glob5,
-  #inner_content_glob6,
-  #inner_content_glob7,
-  #inner_content_glob8,
-  #inner_content_glob9 {
+  #inner_content_glob0 {
     background-color: #eeeeee;
     border-bottom: 1px solid #000000;
     overflow: hidden;
@@ -185,6 +178,16 @@
     width: auto;
     max-height: 360px;
     overflow-y: scroll;
+  }
+  
+  #toTop {
+    display: block;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    padding: 10px;
+    border: 2px solid red;
+    background: white;
   }
   
   #info_rs_ensembl {

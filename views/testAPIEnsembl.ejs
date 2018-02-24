@@ -5,9 +5,9 @@
   <meta charset="utf-8">
   <title>API Ensembl</title>
   <link rel="stylesheet" href="Stylesheet/APIEnsembl.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/jquery.scrollto/jquery.scrollTo.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://www.ncbi.nlm.nih.gov/projects/sviewer/js/sviewer.js"></script>
 </head>
 
@@ -22,12 +22,9 @@
           <h> Liste Information SNP Ensembl, GWAS, GTEX </h>
         </div>
         <div id="dl">
-          <form id="form_file_name" method="post" action="">
-            <!-- <input type="text" id="champ_nom_file" name="name_file" placeholder="SNPInfo.txt"> -->
-          </form><a iud='txt_dl' href="SNPInfo.txt" download="SNPInfo.txt">Télécharger en TXT</a> </div>
+          <form id="form_file_name" method="post" action=""> </form><a iud='txt_dl' href="SNPInfo.txt" download="SNPInfo.txt">Télécharger en TXT</a> </div>
       </div>
     </header>
-    <!--  -->
     <div id='all_content'>
       <div id='liste_rs'>
         <% for (let i = 0; i < data.length; i++) { %>
@@ -36,16 +33,16 @@
               <a href="#inner_content_glob<%= i %>">
                 <%= data[i].name %>
               </a>
-              <button type="button" class="btn_info" data-toggle="collapse" data-target="#inner_content_glob<%= i %>">+</button>
           </div>
           <% } }%>
       </div>
       <div id='content'>
         <%for (let i = 0; i < data.length; i++) {%>
-          <div id='inner_content_glob<%= i %>'>
+          <div class="inner_content_global" id='inner_content_glob<%= i %>'>
             <%if (data[i]) { %>
               <div id="RsIdbox">
-                <%= data[i].name %> <a id='link_top' href="#global">top</a> </div>
+                <%= data[i].name %>
+              </div>
               <div id="inner-content">
                 <div id='contentEnsembl'>
                   <p>Ensembl Information</p>
@@ -226,11 +223,8 @@
                               <%= data[i].gwasvalue[j].or%>
                             </td>
                             <td>
-                              <%= data[i].gwasvalue[j].trait.listname[0]%> <a href=" <%= data[i].gwasvalue[j].trait.traitlink%>">Trait</a> </td>
-                            <td>
-                              <!-- <form id='form_study' methode='post' action='/study'>
-                            <input type='submit' id="valid" value='Study'> </form><a href='#study_<%= j %>' class="btn_info" data-toggle="collapse" data-target="#study_<%= j %>">More</a>-->
-                            </td>
+                              <%= data[i].gwasvalue[j].trait.listname[0]%> <a href=" <%= data[i].gwasvalue[j].trait.traitlink%>" onclick="window.open(this.href); return false;">Trait</a> </td>
+                            <td> <a href="http://europepmc.org/abstract/MED/<%=data[i].gwasvalue[j].study.pubmedId %>" onclick="window.open(this.href); return false;">Study</a> </td>
                           </tr>
                           <%
                         }
@@ -245,44 +239,36 @@
           <% } %>
       </div>
     </div>
-  </div> <a id="toTop" href="#">Go to Top</a>
+  </div>
+  <a id="toTop" href="#"><img id="up" src="img/up.png" alt="up" width="40" height="40" /></a>
   <script>
     function myFunction(i, j) {
       var popup = document.getElementById("study_" + i + "_" + j)
       popup.classList.toggle("show")
       console.log(popup.innerText)
     }
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('content').localScroll({
         target: 'body'
       });
-      // Hide the toTop button when the page loads.
       $("#toTop").css("display", "none");
-      // This function runs every time the user scrolls the page.
-      $(window).scroll(function() {
-        // Check weather the user has scrolled down (if "scrollTop()"" is more than 0)
+      $(window).scroll(function () {
         if ($(window).scrollTop() > 0) {
-          // If it's more than or equal to 0, show the toTop button.
           console.log("is more");
           $("#toTop").fadeIn("slow");
-        } else {
-          // If it's less than 0 (at the top), hide the toTop button.
+        }
+        else {
           console.log("is less");
           $("#toTop").fadeOut("slow");
         }
       })
+      $("#toTop").click(function () {
+        event.preventDefault();
+        $("html, body").animate({
+          scrollTop: 0
+        }, "slow");
+      });
     });
-    // When the user clicks the toTop button, we want the page to scroll to the top.
-    $("#toTop").click(function() {
-      // Disable the default behaviour when a user clicks an empty anchor link.
-      // (The page jumps to the top instead of // animating)
-      event.preventDefault();
-      // Animate the scrolling motion.
-      $("html, body").animate({
-        scrollTop: 0
-      }, "slow");
-    });
-
   </script>
 </body>
 

@@ -1,30 +1,201 @@
-{"name":"rs699","conseq":"missense_variant","maf":0.294928,"minor":"A","location":"1:230710048-230710048","location2":"1:230845794-230845794","start":230710048,"end":230710048,"seq":"1","allele":"A/G","ancestral":"G","variant":["rs3182295","rs386606420","rs4714","rs61617185","rs17856353"],"clinicSigni":["benign","risk factor"],"gwasvalue":[{"name":"rs699-A","riskFrequency":"0.5795","pvalue":"2*10^-8","range":"[0.023-0.049]","or":"NR","study":{"author":"van der Harst P","publicationDate":"2017-12-06T00:00:00.000+0000","publication":"Circ Res","title":"The Identification of 64 Novel Genetic Loci Provides an Expanded View on the Genetic Architecture of Coronary Artery Disease.","initialSampleSize":"88,192 cases, 162,544 controls ","pubmedId":"29212778","snpCount":8041861,"accessionId":"GCST005196"},"trait":{"listname":["coronary artery disease"],"traitlink":"http://www.ebi.ac.uk/efo/EFO_0000378"}}],"r2":[{"nom":"rs58359338","r2":"0.960736"},{"nom":"rs2493134","r2":"0.960736"},{"nom":"rs5051","r2":"0.919749"},{"nom":"rs2493136","r2":"0.879907"},{"nom":"rs2493135","r2":"0.879907"}],"gtexvalue":[{"geneid":"ENSG00000173409","symbol":"ARV1","pvalue":0.0659323436109526,"tissu":"Brain_Anterior_cingulate_cortex_BA24"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.0052151920233286,"tissu":"Skin_Not_Sun_Exposed_Suprapubic"},{"geneid":"ENSG00000116918","symbol":"TSNAX","pvalue":0.00178604159144623,"tissu":"Cells_EBV-transformed_lymphocytes"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.00151089746285135,"tissu":"Testis"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.0000146294616978178,"tissu":"Colon_Transverse"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.010652966587188,"tissu":"Adrenal_Gland"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.0226146696380883,"tissu":"Spleen"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":7.55886117139405e-17,"tissu":"Brain_Cerebellar_Hemisphere"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.00135013483329387,"tissu":"Brain_Frontal_Cortex_BA9"},{"geneid":"ENSG00000135773","symbol":"CAPN9","pvalue":0.0184212691570401,"tissu":"Brain_Hypothalamus"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.000992433770897249,"tissu":"Colon_Sigmoid"},{"geneid":"ENSG00000177614","symbol":"PGBD5","pvalue":0.00112374307707533,"tissu":"Brain_Cortex"},{"geneid":"ENSG00000223393","symbol":"AL118511.1","pvalue":0.0339150621313936,"tissu":"Breast_Mammary_Tissue"},{"geneid":"ENSG00000228058","symbol":"LINC01736","pvalue":0.0850865872141668,"tissu":"Brain_Hippocampus"},{"geneid":"ENSG00000228058","symbol":"LINC01736","pvalue":0.00274597911813323,"tissu":"Heart_Left_Ventricle"},{"geneid":"ENSG00000119280","symbol":"C1orf198","pvalue":0.0165417074986142,"tissu":"Esophagus_Gastroesophageal_Junction"},{"geneid":"ENSG00000244137","symbol":"AL512328.1","pvalue":0.00425605678100719,"tissu":"Brain_Putamen_basal_ganglia"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.0298392742593682,"tissu":"Esophagus_Mucosa"},{"geneid":"ENSG00000119280","symbol":"C1orf198","pvalue":0.00851684148888235,"tissu":"Artery_Tibial"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.0000038866557965161,"tissu":"Muscle_Skeletal"},{"geneid":"ENSG00000135775","symbol":"COG2","pvalue":0.0396490619583086,"tissu":"Adipose_Visceral_Omentum"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":8.47033647894406e-9,"tissu":"Cells_Transformed_fibroblasts"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.00122233056551712,"tissu":"Uterus"},{"geneid":"ENSG00000135775","symbol":"COG2","pvalue":0.0049987717392173,"tissu":"Artery_Aorta"},{"geneid":"ENSG00000162946","symbol":"DISC1","pvalue":0.0622394901568096,"tissu":"Pituitary"},{"geneid":"ENSG00000270106","symbol":"TSNAX-DISC1","pvalue":0.00563368402924064,"tissu":"Thyroid"},{"geneid":"ENSG00000233461","symbol":"AL445524.1","pvalue":0.0482678500740238,"tissu":"Esophagus_Muscularis"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":1.14111962791174e-15,"tissu":"Brain_Cerebellum"},{"geneid":"ENSG00000135766","symbol":"EGLN1","pvalue":0.0606503650979264,"tissu":"Liver"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.00452165444986403,"tissu":"Adipose_Subcutaneous"},{"geneid":"ENSG00000116906","symbol":"GNPAT","pvalue":0.056587018611662,"tissu":"Prostate"},{"geneid":"ENSG00000229228","symbol":"LINC00582","pvalue":0.00083830932852203,"tissu":"Nerve_Tibial"},{"geneid":"ENSG00000227934","symbol":"AL732414.1","pvalue":0.078358925125025,"tissu":"Heart_Atrial_Appendage"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.00235546527034899,"tissu":"Small_Intestine_Terminal_Ileum"},{"geneid":"ENSG00000244137","symbol":"AL512328.1","pvalue":0.00361160810473372,"tissu":"Brain_Nucleus_accumbens_basal_ganglia"},{"geneid":"ENSG00000228058","symbol":"LINC01736","pvalue":0.064469111859118,"tissu":"Vagina"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.0000329676061271221,"tissu":"Brain_Caudate_basal_ganglia"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.00398263743183237,"tissu":"Artery_Coronary"},{"geneid":"ENSG00000135775","symbol":"COG2","pvalue":0.00163319303218435,"tissu":"Whole_Blood"},{"geneid":"ENSG00000177614","symbol":"PGBD5","pvalue":0.016285892948219,"tissu":"Lung"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.00101660906986704,"tissu":"Ovary"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.00324085065282384,"tissu":"Pancreas"},{"geneid":"ENSG00000135744","symbol":"AGT","pvalue":0.00000193171060818383,"tissu":"Skin_Sun_Exposed_Lower_leg"},{"geneid":"ENSG00000116918","symbol":"TSNAX","pvalue":0.00905119416520659,"tissu":"Stomach"}],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
+Ensembl Information : 
+Name : rs699,
+Consequence : missense_variant,
+Allele : A/G,
+MAF : 0.294928,
+Ancestral : G,
+Location (38) : 1:230710048-230710048,
+Location (37) : 1:230845794-230845794,
+VCF 
+Start : 230710048,
+End : 230710048,
+Sequence_Region -> Chromosome : 1,
+Clinical Significance : benign,risk factor,
+Variant : rs3182295,rs386606420,rs4714,rs61617185,rs17856353
+GTEX Information : 
+Genecode Id        Gene Symbol     P-Value                      Tissue
+ENSG00000173409        ARV1         0.0659323436109526          Brain_Anterior_cingulate_cortex_BA24
+ENSG00000135744        AGT         0.0052151920233286          Skin_Not_Sun_Exposed_Suprapubic
+ENSG00000116918        TSNAX         0.00178604159144623          Cells_EBV-transformed_lymphocytes
+ENSG00000135744        AGT         0.00151089746285135          Testis
+ENSG00000135744        AGT         0.0000146294616978178          Colon_Transverse
+ENSG00000135744        AGT         0.010652966587188          Adrenal_Gland
+ENSG00000135744        AGT         0.0226146696380883          Spleen
+ENSG00000135744        AGT         7.55886117139405e-17          Brain_Cerebellar_Hemisphere
+ENSG00000135744        AGT         0.00135013483329387          Brain_Frontal_Cortex_BA9
+ENSG00000135773        CAPN9         0.0184212691570401          Brain_Hypothalamus
+ENSG00000135744        AGT         0.000992433770897249          Colon_Sigmoid
+ENSG00000177614        PGBD5         0.00112374307707533          Brain_Cortex
+ENSG00000223393        AL118511.1         0.0339150621313936          Breast_Mammary_Tissue
+ENSG00000228058        LINC01736         0.0850865872141668          Brain_Hippocampus
+ENSG00000228058        LINC01736         0.00274597911813323          Heart_Left_Ventricle
+ENSG00000119280        C1orf198         0.0165417074986142          Esophagus_Gastroesophageal_Junction
+ENSG00000244137        AL512328.1         0.00425605678100719          Brain_Putamen_basal_ganglia
+ENSG00000135744        AGT         0.0298392742593682          Esophagus_Mucosa
+ENSG00000119280        C1orf198         0.00851684148888235          Artery_Tibial
+ENSG00000135744        AGT         0.0000038866557965161          Muscle_Skeletal
+ENSG00000135775        COG2         0.0396490619583086          Adipose_Visceral_Omentum
+ENSG00000135744        AGT         8.47033647894406e-9          Cells_Transformed_fibroblasts
+ENSG00000135744        AGT         0.00122233056551712          Uterus
+ENSG00000135775        COG2         0.0049987717392173          Artery_Aorta
+ENSG00000162946        DISC1         0.0622394901568096          Pituitary
+ENSG00000270106        TSNAX-DISC1         0.00563368402924064          Thyroid
+ENSG00000233461        AL445524.1         0.0482678500740238          Esophagus_Muscularis
+ENSG00000135744        AGT         1.14111962791174e-15          Brain_Cerebellum
+ENSG00000135766        EGLN1         0.0606503650979264          Liver
+ENSG00000135744        AGT         0.00452165444986403          Adipose_Subcutaneous
+ENSG00000116906        GNPAT         0.056587018611662          Prostate
+ENSG00000229228        LINC00582         0.00083830932852203          Nerve_Tibial
+ENSG00000227934        AL732414.1         0.078358925125025          Heart_Atrial_Appendage
+ENSG00000135744        AGT         0.00235546527034899          Small_Intestine_Terminal_Ileum
+ENSG00000244137        AL512328.1         0.00361160810473372          Brain_Nucleus_accumbens_basal_ganglia
+ENSG00000228058        LINC01736         0.064469111859118          Vagina
+ENSG00000135744        AGT         0.0000329676061271221          Brain_Caudate_basal_ganglia
+ENSG00000135744        AGT         0.00398263743183237          Artery_Coronary
+ENSG00000135775        COG2         0.00163319303218435          Whole_Blood
+ENSG00000177614        PGBD5         0.016285892948219          Lung
+ENSG00000135744        AGT         0.00101660906986704          Ovary
+ENSG00000135744        AGT         0.00324085065282384          Pancreas
+ENSG00000135744        AGT         0.00000193171060818383          Skin_Sun_Exposed_Lower_leg
+ENSG00000116918        TSNAX         0.00905119416520659          Stomach
+GWAS Information : 
+Name        RiskFrequency    P-Value          Range           Or   Traits          Study
+rs699-A        0.5795        2*10^-8         [0.023-0.049]   NR   coronary artery disease          29212778
+
+------------------------------------------------------------------------------------------------------------------------
 
 
-{"name":"rs6538678","conseq":"intron_variant","maf":0.226238,"minor":"A","location":"12:95867790-95867790","location2":"12:96261568-96261568","start":95867790,"end":95867790,"seq":"12","allele":"A/G","ancestral":"G","variant":["rs17310760","rs56496097"],"gwasvalue":[{"name":"rs6538678-A","riskFrequency":"NR","pvalue":"2*10^-6","range":"[1.30-1.88]","or":1.57,"study":{"author":"Chung SA","publicationDate":"2014-06-11T23:00:00.000+0000","publication":"J Am Soc Nephrol","title":"Lupus nephritis susceptibility Loci in women with systemic lupus erythematosus.","initialSampleSize":"588 European ancestry cases, 1,412 European ancestry controls","pubmedId":"24925725","snpCount":1621689,"accessionId":"GCST002479"},"trait":{"listname":["systemic lupus erythematosus","lupus nephritis"],"traitlink":"http://www.ebi.ac.uk/efo/EFO_0005761"}}],"r2":[{"nom":"rs7137751","r2":"1.000000"},{"nom":"rs4762633","r2":"0.742706"},{"nom":"rs66876037","r2":"0.699944"},{"nom":"rs10745733","r2":"0.690259"},{"nom":"rs10745734","r2":"0.690259"}],"gtexvalue":[{"geneid":"ENSG00000139344","symbol":"AMDHD1","pvalue":0.0958597061803314,"tissu":"Brain_Anterior_cingulate_cortex_BA24"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":2.6457915380686e-19,"tissu":"Skin_Not_Sun_Exposed_Suprapubic"},{"geneid":"ENSG00000257878","symbol":"AC007298.2","pvalue":0.0288797712658265,"tissu":"Cells_EBV-transformed_lymphocytes"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":0.0030715488201994,"tissu":"Testis"},{"geneid":"ENSG00000111145","symbol":"ELK3","pvalue":0.0445216414751177,"tissu":"Colon_Transverse"},{"geneid":"ENSG00000028203","symbol":"VEZT","pvalue":0.0829213045026009,"tissu":"Adrenal_Gland"},{"geneid":"ENSG00000165972","symbol":"CCDC38","pvalue":0.024539161206357,"tissu":"Spleen"},{"geneid":"ENSG00000120798","symbol":"NR2C1","pvalue":0.0188648465174136,"tissu":"Brain_Cerebellar_Hemisphere"},{"geneid":"ENSG00000111145","symbol":"ELK3","pvalue":0.0138199468902202,"tissu":"Brain_Frontal_Cortex_BA9"},{"geneid":"ENSG00000111145","symbol":"ELK3","pvalue":0.0472403191097041,"tissu":"Brain_Hypothalamus"},{"geneid":"ENSG00000139343","symbol":"SNRPF","pvalue":0.0989549260043183,"tissu":"Colon_Sigmoid"},{"geneid":"ENSG00000184752","symbol":"NDUFA12","pvalue":0.0375758552881155,"tissu":"Brain_Cortex"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":4.25270242195875e-21,"tissu":"Breast_Mammary_Tissue"},{"geneid":"ENSG00000028203","symbol":"VEZT","pvalue":0.0131901336835521,"tissu":"Brain_Hippocampus"},{"geneid":"ENSG00000184752","symbol":"NDUFA12","pvalue":0.0306722555687471,"tissu":"Heart_Left_Ventricle"},{"geneid":"ENSG00000074527","symbol":"NTN4","pvalue":0.0711136100188573,"tissu":"Esophagus_Gastroesophageal_Junction"},{"geneid":"ENSG00000139343","symbol":"SNRPF","pvalue":0.0203448913742322,"tissu":"Brain_Putamen_basal_ganglia"},{"geneid":"ENSG00000258177","symbol":"AC008149.1","pvalue":0.0245566994036081,"tissu":"Esophagus_Mucosa"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":7.95064268036386e-20,"tissu":"Artery_Tibial"},{"geneid":"ENSG00000257878","symbol":"AC007298.2","pvalue":0.0167784188333683,"tissu":"Muscle_Skeletal"},{"geneid":"ENSG00000139343","symbol":"SNRPF","pvalue":0.02131384089332,"tissu":"Adipose_Visceral_Omentum"},{"geneid":"ENSG00000120798","symbol":"NR2C1","pvalue":0.00639776989448318,"tissu":"Cells_Transformed_fibroblasts"},{"geneid":"ENSG00000188596","symbol":"CFAP54","pvalue":0.156954290554949,"tissu":"Uterus"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":6.85391814898312e-17,"tissu":"Artery_Aorta"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":0.00883178173837578,"tissu":"Pituitary"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":4.83798119871313e-26,"tissu":"Thyroid"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":2.7427980008164e-14,"tissu":"Esophagus_Muscularis"},{"geneid":"ENSG00000258177","symbol":"AC008149.1","pvalue":0.172653565216862,"tissu":"Brain_Cerebellum"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":8.67771433658146e-13,"tissu":"Liver"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":9.12760884669275e-32,"tissu":"Adipose_Subcutaneous"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":6.73134920570389e-9,"tissu":"Prostate"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":1.30181841777275e-25,"tissu":"Nerve_Tibial"},{"geneid":"ENSG00000184752","symbol":"NDUFA12","pvalue":0.017829164304882,"tissu":"Heart_Atrial_Appendage"},{"geneid":"ENSG00000111145","symbol":"ELK3","pvalue":0.0166394516621088,"tissu":"Small_Intestine_Terminal_Ileum"},{"geneid":"ENSG00000111145","symbol":"ELK3","pvalue":0.000204993994460898,"tissu":"Brain_Nucleus_accumbens_basal_ganglia"},{"geneid":"ENSG00000257150","symbol":"PGAM1P5","pvalue":0.0603860213101454,"tissu":"Vagina"},{"geneid":"ENSG00000184752","symbol":"NDUFA12","pvalue":0.0342792078779705,"tissu":"Brain_Caudate_basal_ganglia"},{"geneid":"ENSG00000074527","symbol":"NTN4","pvalue":0.00400413407226472,"tissu":"Artery_Coronary"},{"geneid":"ENSG00000136014","symbol":"USP44","pvalue":0.0219205345034597,"tissu":"Whole_Blood"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":5.86239604823015e-36,"tissu":"Lung"},{"geneid":"ENSG00000111145","symbol":"ELK3","pvalue":0.163659351872932,"tissu":"Ovary"},{"geneid":"ENSG00000241556","symbol":"AC018475.1","pvalue":0.101169554147216,"tissu":"Pancreas"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":8.47794221424257e-31,"tissu":"Skin_Sun_Exposed_Lower_leg"},{"geneid":"ENSG00000258343","symbol":"AC090001.1","pvalue":3.37062301124042e-10,"tissu":"Stomach"}],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
+Ensembl Information : 
+Name : rs6538678,
+Consequence : intron_variant,
+Allele : A/G,
+MAF : 0.226238,
+Ancestral : G,
+Location (38) : 12:95867790-95867790,
+Location (37) : 12:96261568-96261568,
+VCF 
+Start : 95867790,
+End : 95867790,
+Sequence_Region -> Chromosome : 12,
+Clinical Significance : undefined,
+Variant : rs17310760,rs56496097
+GTEX Information : 
+Genecode Id        Gene Symbol     P-Value                      Tissue
+ENSG00000139344        AMDHD1         0.0958597061803314          Brain_Anterior_cingulate_cortex_BA24
+ENSG00000258343        AC090001.1         2.6457915380686e-19          Skin_Not_Sun_Exposed_Suprapubic
+ENSG00000257878        AC007298.2         0.0288797712658265          Cells_EBV-transformed_lymphocytes
+ENSG00000258343        AC090001.1         0.0030715488201994          Testis
+ENSG00000111145        ELK3         0.0445216414751177          Colon_Transverse
+ENSG00000028203        VEZT         0.0829213045026009          Adrenal_Gland
+ENSG00000165972        CCDC38         0.024539161206357          Spleen
+ENSG00000120798        NR2C1         0.0188648465174136          Brain_Cerebellar_Hemisphere
+ENSG00000111145        ELK3         0.0138199468902202          Brain_Frontal_Cortex_BA9
+ENSG00000111145        ELK3         0.0472403191097041          Brain_Hypothalamus
+ENSG00000139343        SNRPF         0.0989549260043183          Colon_Sigmoid
+ENSG00000184752        NDUFA12         0.0375758552881155          Brain_Cortex
+ENSG00000258343        AC090001.1         4.25270242195875e-21          Breast_Mammary_Tissue
+ENSG00000028203        VEZT         0.0131901336835521          Brain_Hippocampus
+ENSG00000184752        NDUFA12         0.0306722555687471          Heart_Left_Ventricle
+ENSG00000074527        NTN4         0.0711136100188573          Esophagus_Gastroesophageal_Junction
+ENSG00000139343        SNRPF         0.0203448913742322          Brain_Putamen_basal_ganglia
+ENSG00000258177        AC008149.1         0.0245566994036081          Esophagus_Mucosa
+ENSG00000258343        AC090001.1         7.95064268036386e-20          Artery_Tibial
+ENSG00000257878        AC007298.2         0.0167784188333683          Muscle_Skeletal
+ENSG00000139343        SNRPF         0.02131384089332          Adipose_Visceral_Omentum
+ENSG00000120798        NR2C1         0.00639776989448318          Cells_Transformed_fibroblasts
+ENSG00000188596        CFAP54         0.156954290554949          Uterus
+ENSG00000258343        AC090001.1         6.85391814898312e-17          Artery_Aorta
+ENSG00000258343        AC090001.1         0.00883178173837578          Pituitary
+ENSG00000258343        AC090001.1         4.83798119871313e-26          Thyroid
+ENSG00000258343        AC090001.1         2.7427980008164e-14          Esophagus_Muscularis
+ENSG00000258177        AC008149.1         0.172653565216862          Brain_Cerebellum
+ENSG00000258343        AC090001.1         8.67771433658146e-13          Liver
+ENSG00000258343        AC090001.1         9.12760884669275e-32          Adipose_Subcutaneous
+ENSG00000258343        AC090001.1         6.73134920570389e-9          Prostate
+ENSG00000258343        AC090001.1         1.30181841777275e-25          Nerve_Tibial
+ENSG00000184752        NDUFA12         0.017829164304882          Heart_Atrial_Appendage
+ENSG00000111145        ELK3         0.0166394516621088          Small_Intestine_Terminal_Ileum
+ENSG00000111145        ELK3         0.000204993994460898          Brain_Nucleus_accumbens_basal_ganglia
+ENSG00000257150        PGAM1P5         0.0603860213101454          Vagina
+ENSG00000184752        NDUFA12         0.0342792078779705          Brain_Caudate_basal_ganglia
+ENSG00000074527        NTN4         0.00400413407226472          Artery_Coronary
+ENSG00000136014        USP44         0.0219205345034597          Whole_Blood
+ENSG00000258343        AC090001.1         5.86239604823015e-36          Lung
+ENSG00000111145        ELK3         0.163659351872932          Ovary
+ENSG00000241556        AC018475.1         0.101169554147216          Pancreas
+ENSG00000258343        AC090001.1         8.47794221424257e-31          Skin_Sun_Exposed_Lower_leg
+ENSG00000258343        AC090001.1         3.37062301124042e-10          Stomach
+GWAS Information : 
+Name        RiskFrequency    P-Value          Range           Or   Traits          Study
+rs6538678-A        NR        2*10^-6         [1.30-1.88]   1.57   systemic lupus erythematosus          24925725
+
+------------------------------------------------------------------------------------------------------------------------
 
 
-{"name":"rs1042779","conseq":"missense_variant","maf":0.42472,"minor":"G","location":"3:52786995-52786995","location2":"3:52821011-52821011","start":52786995,"end":52786995,"seq":"3","allele":"A/G","ancestral":"G","variant":["rs52791326","rs3182234","rs57378468","rs17418937"],"gwasvalue":[{"name":"rs1042779-A","riskFrequency":"0.63","pvalue":"2*10^-7","range":"[1.11-1.27]","or":1.19,"study":{"author":"Scott LJ","publicationDate":"2009-05-04T23:00:00.000+0000","publication":"Proc Natl Acad Sci U S A","title":"Genome-wide association and meta-analysis of bipolar disorder in individuals of European ancestry.","initialSampleSize":"3,683 European ancestry cases, 14,507 European ancestry controls","pubmedId":"19416921","snpCount":2366197,"accessionId":"GCST000387"},"trait":{"listname":["bipolar disorder"],"traitlink":"http://www.ebi.ac.uk/efo/EFO_0000289"}}],"r2":[{"nom":"rs1075653","r2":"0.979180"},{"nom":"rs2071506","r2":"0.979180"},{"nom":"rs3216516","r2":"0.979180"},{"nom":"rs3216517","r2":"0.881867"},{"nom":"rs6792369","r2":"0.838707"}],"gtexvalue":[{"geneid":"ENSG00000168237","symbol":"GLYCTK","pvalue":0.0306361052493788,"tissu":"Brain_Anterior_cingulate_cortex_BA24"},{"geneid":"ENSG00000168268","symbol":"NT5DC2","pvalue":0.0000991551436960182,"tissu":"Skin_Not_Sun_Exposed_Suprapubic"},{"geneid":"ENSG00000168268","symbol":"NT5DC2","pvalue":0.0000170115760641718,"tissu":"Cells_EBV-transformed_lymphocytes"},{"geneid":"ENSG00000163938","symbol":"GNL3","pvalue":3.24210644173863e-7,"tissu":"Testis"},{"geneid":"ENSG00000168268","symbol":"NT5DC2","pvalue":7.67189973333067e-7,"tissu":"Colon_Transverse"},{"geneid":"ENSG00000114904","symbol":"NEK4","pvalue":0.000505271048225474,"tissu":"Adrenal_Gland"},{"geneid":"ENSG00000168237","symbol":"GLYCTK","pvalue":0.0000413740188034589,"tissu":"Spleen"},{"geneid":"ENSG00000163938","symbol":"GNL3","pvalue":0.0000331138708010646,"tissu":"Brain_Cerebellar_Hemisphere"},{"geneid":"ENSG00000016864","symbol":"GLT8D1","pvalue":0.000691365588100057,"tissu":"Brain_Frontal_Cortex_BA9"},{"geneid":"ENSG00000243224","symbol":"AC006252.1","pvalue":0.0007590639393217,"tissu":"Brain_Hypothalamus"},{"geneid":"ENSG00000168268","symbol":"NT5DC2","pvalue":0.000516330795042126,"tissu":"Colon_Sigmoid"},{"geneid":"ENSG00000243224","symbol":"AC006252.1","pvalue":0.0063757681199519,"tissu":"Brain_Cortex"},{"geneid":"ENSG00000163938","symbol":"GNL3","pvalue":0.000233779460282679,"tissu":"Breast_Mammary_Tissue"},{"geneid":"ENSG00000168237","symbol":"GLYCTK","pvalue":0.00000975751370332981,"tissu":"Brain_Hippocampus"},{"geneid":"ENSG00000163938","symbol":"GNL3","pvalue":3.56233852702616e-7,"tissu":"Heart_Left_Ventricle"},{"geneid":"ENSG00000242797","symbol":"GLYCTK-AS1","pvalue":0.0000808475999061105,"tissu":"Esophagus_Gastroesophageal_Junction"},{"geneid":"ENSG00000163938","symbol":"GNL3","pvalue":0.00281154370490463,"tissu":"Brain_Putamen_basal_ganglia"},{"geneid":"ENSG00000243696","symbol":"AC006254.1","pvalue":0.00000914959645890775,"tissu":"Esophagus_Mucosa"},{"geneid":"ENSG00000239799","symbol":"ITIH4-AS1","pvalue":2.38326199151025e-11,"tissu":"Artery_Tibial"},{"geneid":"ENSG00000239799","symbol":"ITIH4-AS1","pvalue":2.62692156796046e-9,"tissu":"Muscle_Skeletal"},{"geneid":"ENSG00000114904","symbol":"NEK4","pvalue":8.01487249255126e-7,"tissu":"Adipose_Visceral_Omentum"},{"geneid":"ENSG00000114904","symbol":"NEK4","pvalue":5.82155878426938e-11,"tissu":"Cells_Transformed_fibroblasts"},{"geneid":"ENSG00000168268","symbol":"NT5DC2","pvalue":0.00180380577277848,"tissu":"Uterus"},{"geneid":"ENSG00000239799","symbol":"ITIH4-AS1","pvalue":8.44339943943361e-17,"tissu":"Artery_Aorta"},{"geneid":"ENSG00000163935","symbol":"SFMBT1","pvalue":0.00021595753395364,"tissu":"Pituitary"},{"geneid":"ENSG00000163939","symbol":"PBRM1","pvalue":2.23921955403825e-25,"tissu":"Thyroid"},{"geneid":"ENSG00000243696","symbol":"AC006254.1","pvalue":0.00000490706048740002,"tissu":"Esophagus_Muscularis"},{"geneid":"ENSG00000163938","symbol":"GNL3","pvalue":0.0000478743828082251,"tissu":"Brain_Cerebellum"},{"geneid":"ENSG00000168268","symbol":"NT5DC2","pvalue":0.00833972189876082,"tissu":"Liver"},{"geneid":"ENSG00000163938","symbol":"GNL3","pvalue":0.00000695761391444126,"tissu":"Adipose_Subcutaneous"},{"geneid":"ENSG00000010319","symbol":"SEMA3G","pvalue":0.000858349963885805,"tissu":"Prostate"},{"geneid":"ENSG00000243696","symbol":"AC006254.1","pvalue":5.15418950872077e-8,"tissu":"Nerve_Tibial"},{"geneid":"ENSG00000168237","symbol":"GLYCTK","pvalue":8.75738661801247e-7,"tissu":"Heart_Atrial_Appendage"},{"geneid":"ENSG00000243696","symbol":"AC006254.1","pvalue":0.0000126635068777299,"tissu":"Small_Intestine_Terminal_Ileum"},{"geneid":"ENSG00000162267","symbol":"ITIH3","pvalue":0.00705812261214939,"tissu":"Brain_Nucleus_accumbens_basal_ganglia"},{"geneid":"ENSG00000213533","symbol":"TMEM110","pvalue":0.00998353004212267,"tissu":"Vagina"},{"geneid":"ENSG00000163931","symbol":"TKT","pvalue":0.0360094092946477,"tissu":"Brain_Caudate_basal_ganglia"},{"geneid":"ENSG00000239799","symbol":"ITIH4-AS1","pvalue":0.0000198463409558932,"tissu":"Artery_Coronary"},{"geneid":"ENSG00000239799","symbol":"ITIH4-AS1","pvalue":6.63140140337634e-10,"tissu":"Whole_Blood"},{"geneid":"ENSG00000242797","symbol":"GLYCTK-AS1","pvalue":2.43939820287388e-8,"tissu":"Lung"},{"geneid":"ENSG00000114904","symbol":"NEK4","pvalue":0.00236124029843095,"tissu":"Ovary"},{"geneid":"ENSG00000239799","symbol":"ITIH4-AS1","pvalue":0.0000988609114698219,"tissu":"Pancreas"},{"geneid":"ENSG00000168268","symbol":"NT5DC2","pvalue":6.07953538796026e-11,"tissu":"Skin_Sun_Exposed_Lower_leg"},{"geneid":"ENSG00000243696","symbol":"AC006254.1","pvalue":0.00000352833907269031,"tissu":"Stomach"}],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
+Ensembl Information : 
+Name : rs1042779,
+Consequence : missense_variant,
+Allele : A/G,
+MAF : 0.42472,
+Ancestral : G,
+Location (38) : 3:52786995-52786995,
+Location (37) : 3:52821011-52821011,
+VCF 
+Start : 52786995,
+End : 52786995,
+Sequence_Region -> Chromosome : 3,
+Clinical Significance : undefined,
+Variant : rs52791326,rs3182234,rs57378468,rs17418937
+GTEX Information : 
+Genecode Id        Gene Symbol     P-Value                      Tissue
+ENSG00000168237        GLYCTK         0.0306361052493788          Brain_Anterior_cingulate_cortex_BA24
+ENSG00000168268        NT5DC2         0.0000991551436960182          Skin_Not_Sun_Exposed_Suprapubic
+ENSG00000168268        NT5DC2         0.0000170115760641718          Cells_EBV-transformed_lymphocytes
+ENSG00000163938        GNL3         3.24210644173863e-7          Testis
+ENSG00000168268        NT5DC2         7.67189973333067e-7          Colon_Transverse
+ENSG00000114904        NEK4         0.000505271048225474          Adrenal_Gland
+ENSG00000168237        GLYCTK         0.0000413740188034589          Spleen
+ENSG00000163938        GNL3         0.0000331138708010646          Brain_Cerebellar_Hemisphere
+ENSG00000016864        GLT8D1         0.000691365588100057          Brain_Frontal_Cortex_BA9
+ENSG00000243224        AC006252.1         0.0007590639393217          Brain_Hypothalamus
+ENSG00000168268        NT5DC2         0.000516330795042126          Colon_Sigmoid
+ENSG00000243224        AC006252.1         0.0063757681199519          Brain_Cortex
+ENSG00000163938        GNL3         0.000233779460282679          Breast_Mammary_Tissue
+ENSG00000168237        GLYCTK         0.00000975751370332981          Brain_Hippocampus
+ENSG00000163938        GNL3         3.56233852702616e-7          Heart_Left_Ventricle
+ENSG00000242797        GLYCTK-AS1         0.0000808475999061105          Esophagus_Gastroesophageal_Junction
+ENSG00000163938        GNL3         0.00281154370490463          Brain_Putamen_basal_ganglia
+ENSG00000243696        AC006254.1         0.00000914959645890775          Esophagus_Mucosa
+ENSG00000239799        ITIH4-AS1         2.38326199151025e-11          Artery_Tibial
+ENSG00000239799        ITIH4-AS1         2.62692156796046e-9          Muscle_Skeletal
+ENSG00000114904        NEK4         8.01487249255126e-7          Adipose_Visceral_Omentum
+ENSG00000114904        NEK4         5.82155878426938e-11          Cells_Transformed_fibroblasts
+ENSG00000168268        NT5DC2         0.00180380577277848          Uterus
+ENSG00000239799        ITIH4-AS1         8.44339943943361e-17          Artery_Aorta
+ENSG00000163935        SFMBT1         0.00021595753395364          Pituitary
+ENSG00000163939        PBRM1         2.23921955403825e-25          Thyroid
+ENSG00000243696        AC006254.1         0.00000490706048740002          Esophagus_Muscularis
+ENSG00000163938        GNL3         0.0000478743828082251          Brain_Cerebellum
+ENSG00000168268        NT5DC2         0.00833972189876082          Liver
+ENSG00000163938        GNL3         0.00000695761391444126          Adipose_Subcutaneous
+ENSG00000010319        SEMA3G         0.000858349963885805          Prostate
+ENSG00000243696        AC006254.1         5.15418950872077e-8          Nerve_Tibial
+ENSG00000168237        GLYCTK         8.75738661801247e-7          Heart_Atrial_Appendage
+ENSG00000243696        AC006254.1         0.0000126635068777299          Small_Intestine_Terminal_Ileum
+ENSG00000162267        ITIH3         0.00705812261214939          Brain_Nucleus_accumbens_basal_ganglia
+ENSG00000213533        TMEM110         0.00998353004212267          Vagina
+ENSG00000163931        TKT         0.0360094092946477          Brain_Caudate_basal_ganglia
+ENSG00000239799        ITIH4-AS1         0.0000198463409558932          Artery_Coronary
+ENSG00000239799        ITIH4-AS1         6.63140140337634e-10          Whole_Blood
+ENSG00000242797        GLYCTK-AS1         2.43939820287388e-8          Lung
+ENSG00000114904        NEK4         0.00236124029843095          Ovary
+ENSG00000239799        ITIH4-AS1         0.0000988609114698219          Pancreas
+ENSG00000168268        NT5DC2         6.07953538796026e-11          Skin_Sun_Exposed_Lower_leg
+ENSG00000243696        AC006254.1         0.00000352833907269031          Stomach
+GWAS Information : 
+Name        RiskFrequency    P-Value          Range           Or   Traits          Study
+rs1042779-A        0.63        2*10^-7         [1.11-1.27]   1.19   bipolar disorder          19416921
 
-
-{"name":"rs144848","conseq":"missense_variant","maf":0.249401,"minor":"C","location":"13:32332592-32332592","location2":"13:32906729-32906729","start":32332592,"end":32332592,"seq":"13","allele":"A/C","ancestral":"A","variant":["rs52835869","rs60042381","rs766172","rs117954465","rs17593227","rs703222"],"clinicSigni":["uncertain significance","not provided","benign"],"gwasvalue":[],"r2":[{"nom":"rs559067","r2":"1.000000"},{"nom":"rs542551","r2":"0.868654"},{"nom":"rs3092990","r2":"0.868654"},{"nom":"rs517118","r2":"0.868654"},{"nom":"rs573014","r2":"0.868654"}],"gtexvalue":[{"geneid":"ENSG00000073910","symbol":"FRY","pvalue":0.429268845472861,"tissu":"Brain_Anterior_cingulate_cortex_BA24"},{"geneid":"ENSG00000139618","symbol":"BRCA2","pvalue":0.281780163722322,"tissu":"Skin_Not_Sun_Exposed_Suprapubic"},{"geneid":"ENSG00000139597","symbol":"N4BP2L1","pvalue":0.0786242103364151,"tissu":"Cells_EBV-transformed_lymphocytes"},{"geneid":"ENSG00000133105","symbol":"RXFP2","pvalue":0.140086665761654,"tissu":"Testis"},{"geneid":"ENSG00000139597","symbol":"N4BP2L1","pvalue":0.0112253796995515,"tissu":"Colon_Transverse"},{"geneid":"ENSG00000083642","symbol":"PDS5B","pvalue":0.110813809089135,"tissu":"Adrenal_Gland"},{"geneid":"ENSG00000215515","symbol":"IFIT1P1","pvalue":0.102200312972214,"tissu":"Spleen"},{"geneid":"ENSG00000244754","symbol":"N4BP2L2","pvalue":0.0498888024077933,"tissu":"Brain_Cerebellar_Hemisphere"},{"geneid":"ENSG00000139597","symbol":"N4BP2L1","pvalue":0.167882690576278,"tissu":"Brain_Frontal_Cortex_BA9"},{"geneid":"ENSG00000212293","symbol":"SNORA16","pvalue":0.193382848466599,"tissu":"Brain_Hypothalamus"},{"geneid":"ENSG00000139618","symbol":"BRCA2","pvalue":0.0425401381989664,"tissu":"Colon_Sigmoid"},{"geneid":"ENSG00000139597","symbol":"N4BP2L1","pvalue":0.105365667988386,"tissu":"Brain_Cortex"},{"geneid":"ENSG00000073910","symbol":"FRY","pvalue":0.155596222872356,"tissu":"Breast_Mammary_Tissue"},{"geneid":"ENSG00000270008","symbol":"AL137247.1","pvalue":0.11213370705053,"tissu":"Brain_Hippocampus"},{"geneid":"ENSG00000073910","symbol":"FRY","pvalue":0.108159719752231,"tissu":"Heart_Left_Ventricle"},{"geneid":"ENSG00000139618","symbol":"BRCA2","pvalue":0.0434854603318537,"tissu":"Esophagus_Gastroesophageal_Junction"},{"geneid":"ENSG00000083642","symbol":"PDS5B","pvalue":0.112052488091135,"tissu":"Brain_Putamen_basal_ganglia"},{"geneid":"ENSG00000229715","symbol":"EEF1DP3","pvalue":0.0467151081027155,"tissu":"Esophagus_Mucosa"},{"geneid":"ENSG00000133105","symbol":"RXFP2","pvalue":0.00553819416952147,"tissu":"Artery_Tibial"},{"geneid":"ENSG00000237637","symbol":"FRY-AS1","pvalue":0.0736964657312794,"tissu":"Muscle_Skeletal"},{"geneid":"ENSG00000229715","symbol":"EEF1DP3","pvalue":0.0132092593210162,"tissu":"Adipose_Visceral_Omentum"},{"geneid":"ENSG00000139618","symbol":"BRCA2","pvalue":0.0310286629911678,"tissu":"Cells_Transformed_fibroblasts"},{"geneid":"ENSG00000270008","symbol":"AL137247.1","pvalue":0.00676109416724787,"tissu":"Uterus"},{"geneid":"ENSG00000083642","symbol":"PDS5B","pvalue":0.000166495803757084,"tissu":"Artery_Aorta"},{"geneid":"ENSG00000244754","symbol":"N4BP2L2","pvalue":0.0456036038947433,"tissu":"Pituitary"},{"geneid":"ENSG00000236581","symbol":"STARD13-AS","pvalue":0.13338323295217,"tissu":"Thyroid"},{"geneid":"ENSG00000073910","symbol":"FRY","pvalue":0.147043564391886,"tissu":"Esophagus_Muscularis"},{"geneid":"ENSG00000133116","symbol":"KL","pvalue":0.339497794308882,"tissu":"Brain_Cerebellum"},{"geneid":"ENSG00000244754","symbol":"N4BP2L2","pvalue":0.103100634731677,"tissu":"Liver"},{"geneid":"ENSG00000139597","symbol":"N4BP2L1","pvalue":0.00353280269988595,"tissu":"Adipose_Subcutaneous"},{"geneid":"ENSG00000270008","symbol":"AL137247.1","pvalue":0.000273672869253731,"tissu":"Prostate"},{"geneid":"ENSG00000236581","symbol":"STARD13-AS","pvalue":0.0165654193802659,"tissu":"Nerve_Tibial"},{"geneid":"ENSG00000073910","symbol":"FRY","pvalue":0.238052560403362,"tissu":"Heart_Atrial_Appendage"},{"geneid":"ENSG00000139597","symbol":"N4BP2L1","pvalue":0.017965057503876,"tissu":"Small_Intestine_Terminal_Ileum"},{"geneid":"ENSG00000270008","symbol":"AL137247.1","pvalue":0.0312009912356102,"tissu":"Brain_Nucleus_accumbens_basal_ganglia"},{"geneid":"ENSG00000133116","symbol":"KL","pvalue":0.0165701468313812,"tissu":"Vagina"},{"geneid":"ENSG00000237637","symbol":"FRY-AS1","pvalue":0.0696803916936206,"tissu":"Brain_Caudate_basal_ganglia"},{"geneid":"ENSG00000139618","symbol":"BRCA2","pvalue":0.00744416571140716,"tissu":"Artery_Coronary"},{"geneid":"ENSG00000139618","symbol":"BRCA2","pvalue":0.0342812067319243,"tissu":"Whole_Blood"},{"geneid":"ENSG00000139618","symbol":"BRCA2","pvalue":0.00604181180464306,"tissu":"Lung"},{"geneid":"ENSG00000133116","symbol":"KL","pvalue":0.0231117735918149,"tissu":"Ovary"},{"geneid":"ENSG00000212293","symbol":"SNORA16","pvalue":0.0183837069300548,"tissu":"Pancreas"},{"geneid":"ENSG00000236581","symbol":"STARD13-AS","pvalue":0.0350171682592598,"tissu":"Skin_Sun_Exposed_Lower_leg"},{"geneid":"ENSG00000229715","symbol":"EEF1DP3","pvalue":0.0639893197393313,"tissu":"Stomach"}],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
-
-
-{"name":"rs33927012","conseq":"missense_variant","maf":0.00938498,"minor":"G","location":"1:17027802-17027802","location2":"1:17354297-17354297","start":17027802,"end":17027802,"seq":"1","allele":"A/G","ancestral":"A","variant":[],"clinicSigni":["not provided","benign","likely benign","pathogenic"],"gwasvalue":[],"r2":[{"nom":"rs74881636","r2":"1.000000"},{"nom":"rs530568288","r2":"1.000000"},{"nom":"rs114065513","r2":"1.000000"},{"nom":"rs77739664","r2":"1.000000"},{"nom":"rs370079236","r2":"1.000000"}],"gtexvalue":[{"geneid":"ENSG00000227751","symbol":"AC004824.1","pvalue":0.0111281908539575,"tissu":"Lung"}],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
-
-
-{"name":"rs351855","conseq":"missense_variant","maf":0.299521,"minor":"A","location":"5:177093242-177093242","location2":"5:176520243-176520243","start":177093242,"end":177093242,"seq":"5","allele":"G/A","ancestral":"G","variant":["rs56695235","rs117475361"],"clinicSigni":["pathogenic"],"gwasvalue":[],"r2":[{"nom":"rs3135911","r2":"0.952663"},{"nom":"rs31778","r2":"0.952663"},{"nom":"rs451643","r2":"0.813953"},{"nom":"rs62397219","r2":"0.230687"},{"nom":"rs352942","r2":"0.230687"}],"gtexvalue":[{"geneid":"ENSG00000183258","symbol":"DDX41","pvalue":0.0293760710014016,"tissu":"Brain_Anterior_cingulate_cortex_BA24"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.000096294643758715,"tissu":"Skin_Not_Sun_Exposed_Suprapubic"},{"geneid":"ENSG00000169228","symbol":"RAB24","pvalue":0.00880849523165347,"tissu":"Cells_EBV-transformed_lymphocytes"},{"geneid":"ENSG00000169220","symbol":"RGS14","pvalue":0.000445997396502178,"tissu":"Testis"},{"geneid":"ENSG00000113758","symbol":"DBN1","pvalue":0.0105575410473017,"tissu":"Colon_Transverse"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.000180492151488894,"tissu":"Adrenal_Gland"},{"geneid":"ENSG00000169223","symbol":"LMAN2","pvalue":0.010195442830954,"tissu":"Spleen"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.00287466953596748,"tissu":"Brain_Cerebellar_Hemisphere"},{"geneid":"ENSG00000249109","symbol":"AC140125.2","pvalue":0.00168033515510609,"tissu":"Brain_Frontal_Cortex_BA9"},{"geneid":"ENSG00000074317","symbol":"SNCB","pvalue":0.00356668918691232,"tissu":"Brain_Hypothalamus"},{"geneid":"ENSG00000250909","symbol":"AC138956.1","pvalue":0.00452622349429751,"tissu":"Colon_Sigmoid"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.00000910295412080888,"tissu":"Brain_Cortex"},{"geneid":"ENSG00000169230","symbol":"PRELID1","pvalue":0.00746935101706185,"tissu":"Breast_Mammary_Tissue"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.00456908252206183,"tissu":"Brain_Hippocampus"},{"geneid":"ENSG00000169220","symbol":"RGS14","pvalue":0.0107231206280062,"tissu":"Heart_Left_Ventricle"},{"geneid":"ENSG00000169230","symbol":"PRELID1","pvalue":0.00277729824574169,"tissu":"Esophagus_Gastroesophageal_Junction"},{"geneid":"ENSG00000184840","symbol":"TMED9","pvalue":0.0149008615746186,"tissu":"Brain_Putamen_basal_ganglia"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":2.97120915137168e-10,"tissu":"Esophagus_Mucosa"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.000136310852237949,"tissu":"Artery_Tibial"},{"geneid":"ENSG00000169228","symbol":"RAB24","pvalue":0.00386338071417977,"tissu":"Muscle_Skeletal"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.0115021382051096,"tissu":"Adipose_Visceral_Omentum"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":8.7412859347411e-12,"tissu":"Cells_Transformed_fibroblasts"},{"geneid":"ENSG00000048162","symbol":"NOP16","pvalue":0.0381894146872301,"tissu":"Uterus"},{"geneid":"ENSG00000087206","symbol":"UIMC1","pvalue":0.0191580071810102,"tissu":"Artery_Aorta"},{"geneid":"ENSG00000213347","symbol":"MXD3","pvalue":0.00554748173885683,"tissu":"Pituitary"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":6.91657814442488e-8,"tissu":"Thyroid"},{"geneid":"ENSG00000169220","symbol":"RGS14","pvalue":0.000286863541949789,"tissu":"Esophagus_Muscularis"},{"geneid":"ENSG00000027847","symbol":"B4GALT7","pvalue":0.0034575049833592,"tissu":"Brain_Cerebellum"},{"geneid":"ENSG00000204677","symbol":"FAM153C","pvalue":0.0249195352697957,"tissu":"Liver"},{"geneid":"ENSG00000146094","symbol":"DOK3","pvalue":0.0509589185653487,"tissu":"Adipose_Subcutaneous"},{"geneid":"ENSG00000248596","symbol":"AC139491.2","pvalue":0.0216845514790038,"tissu":"Prostate"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":1.43109809481629e-10,"tissu":"Nerve_Tibial"},{"geneid":"ENSG00000122203","symbol":"KIAA1191","pvalue":0.00971460860183657,"tissu":"Heart_Atrial_Appendage"},{"geneid":"ENSG00000183258","symbol":"DDX41","pvalue":0.0379838995390653,"tissu":"Small_Intestine_Terminal_Ileum"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.00201357952675691,"tissu":"Brain_Nucleus_accumbens_basal_ganglia"},{"geneid":"ENSG00000131183","symbol":"SLC34A1","pvalue":0.00152963217508037,"tissu":"Vagina"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.0238073737328382,"tissu":"Brain_Caudate_basal_ganglia"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":0.0343109589059401,"tissu":"Artery_Coronary"},{"geneid":"ENSG00000170085","symbol":"SIMC1","pvalue":0.0273578141273809,"tissu":"Whole_Blood"},{"geneid":"ENSG00000184840","symbol":"TMED9","pvalue":0.00806423532644521,"tissu":"Lung"},{"geneid":"ENSG00000048140","symbol":"TSPAN17","pvalue":0.00966011071629052,"tissu":"Ovary"},{"geneid":"ENSG00000169220","symbol":"RGS14","pvalue":0.00593408916422608,"tissu":"Pancreas"},{"geneid":"ENSG00000160867","symbol":"FGFR4","pvalue":3.42434878339968e-9,"tissu":"Skin_Sun_Exposed_Lower_leg"},{"geneid":"ENSG00000213347","symbol":"MXD3","pvalue":0.00455338221363989,"tissu":"Stomach"}],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
-
-
-{"name":"rs113798404","conseq":"missense_variant","maf":null,"minor":null,"location":"9:21970995-21970995","location2":"9:21970994-21970994","start":21970995,"end":21970995,"seq":"9","allele":"C/G/T","ancestral":"C","variant":[],"clinicSigni":["risk factor"],"gwasvalue":[],"r2":[],"gtexvalue":[],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
-
-
-{"name":"rs121434592","conseq":"missense_variant","maf":null,"minor":null,"location":"14:104780214-104780214","location2":"14:105246551-105246551","start":104780214,"end":104780214,"seq":"14","allele":"C/T","ancestral":"C","variant":[],"clinicSigni":["likely pathogenic","pathogenic"],"gwasvalue":[],"r2":[],"gtexvalue":[],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
-
-
-{"name":"rs121908984","conseq":"missense_variant","maf":null,"minor":null,"location":"11:112094923-112094923","location2":"11:111965647-111965647","start":112094923,"end":112094923,"seq":"11","allele":"C/A","ancestral":"C","variant":[],"clinicSigni":["pathogenic"],"gwasvalue":[],"r2":[],"gtexvalue":[],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
-
-
-{"name":"rs121912658","conseq":"stop_gained","maf":null,"minor":null,"location":"17:7676011-7676011","location2":"17:7579329-7579329","start":7676011,"end":7676011,"seq":"17","allele":"T/A/C","ancestral":"T","variant":[],"clinicSigni":["uncertain significance","pathogenic"],"gwasvalue":[],"r2":[],"gtexvalue":[],"pop":"1000GENOMES:phase_3:ACB","size":"500","link":""}
+------------------------------------------------------------------------------------------------------------------------
 
 

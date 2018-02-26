@@ -45,9 +45,9 @@ router.post('/fileup', (req, res) => {
       encoding: 'utf-8'
     })
     // OS UBUNTU
-    let listId = data.split('\n')
-    // OS WINDOWS 
-    // let listId = data.split('\r\n')
+    // let listId = data.split('\n')
+    // OS WINDOWS
+    let listId = data.split('\r\n')
     jsonFunc.APIEnsembl(listId, fields.population, fields.size).then(result => {
       if (typeof result === 'string') {
         console.log(result)
@@ -56,13 +56,15 @@ router.post('/fileup', (req, res) => {
       let wPath = 'public/SNPInfo.txt'
       // stream
       let wstream = fs.createWriteStream(wPath)
-      for (let i = 0; i < result.length; i++) {
+      jsonFunc.writeFile(wstream, result)
+      /* for (let i = 0; i < result.length; i++) {
+        console.log(result[i].name)
         let json = JSON.stringify(result[i])
         wstream.write(json)
         wstream.write('\r\n')
         wstream.write('\r\n')
         wstream.write('\r\n')
-      }
+      } */
       wstream.end()
       // setTimeout(function () {}, 1000)
       res.render('testAPIEnsembl', {

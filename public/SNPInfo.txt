@@ -199,3 +199,197 @@ rs1042779-A        0.63        2*10^-7         [1.11-1.27]   1.19   bipolar diso
 ------------------------------------------------------------------------------------------------------------------------
 
 
+Ensembl Information : 
+Name : rs7329174,
+Consequence : intron_variant,
+Allele : A/G,
+MAF : 0.107228,
+Ancestral : A,
+Location (38) : 13:40983974-40983974,
+Location (37) : 13:41558110-41558110,
+VCF 
+Start : 40983974,
+End : 40983974,
+Sequence_Region -> Chromosome : 13,
+Clinical Significance : undefined,
+Variant : rs59001334
+GTEX Information : 
+Genecode Id        Gene Symbol     P-Value                      Tissue
+ENSG00000229473        RGS17P1         0.0722313474716855          Artery_Tibial
+ENSG00000176268        CYCSP34         0.0124615546252031          Muscle_Skeletal
+ENSG00000102743        SLC25A15         0.0710932381050007          Cells_Transformed_fibroblasts
+ENSG00000168852        TPTE2P5         0.0271508369242167          Adipose_Subcutaneous
+ENSG00000120690        ELF1         0.0000664773434287096          Whole_Blood
+ENSG00000102738        MRPS31         0.0113116139407946          Lung
+ENSG00000205240        OR7E36P         0.0256173415039981          Skin_Sun_Exposed_Lower_leg
+GWAS Information : 
+Name        RiskFrequency    P-Value          Range           Or   Traits          Study
+rs7329174-G        NR        8*10^-9         [1.17-1.38]   1.27   crohn's disease          23266558
+rs7329174-?        0.211        3*10^-6         [NR]   1.27   systemic lupus erythematosus          27399966
+rs7329174-G        0.22        1*10^-8         [1.16-1.36]   1.26   systemic lupus erythematosus          21044949
+rs7329174-G        0.21        6*10^-6         NR   1.45   systemic lupus erythematosus          23273568
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Ensembl Information : 
+Name : rs78922579,
+Consequence : intergenic_variant,
+Allele : G/A,
+MAF : 0.0351438,
+Ancestral : G,
+Location (38) : 1:1589795-1589795,
+Location (37) : 1:1525175-1525175,
+VCF 
+Start : 1589795,
+End : 1589795,
+Sequence_Region -> Chromosome : 1,
+Clinical Significance : undefined,
+Variant :
+GTEX Information : 
+Genecode Id        Gene Symbol     P-Value                      Tissue
+ENSG00000157911        PEX10         0.00035345388291922          Skin_Not_Sun_Exposed_Suprapubic
+ENSG00000272004        FO704657.1         0.000203210483420632          Breast_Mammary_Tissue
+ENSG00000235098        ANKRD65         0.0000553952046405365          Artery_Tibial
+ENSG00000224870        AL391244.1         0.00615826819134545          Muscle_Skeletal
+ENSG00000205231        TTLL10-AS1         0.000746159269037094          Thyroid
+ENSG00000169972        PUSL1         0.0197948129367449          Nerve_Tibial
+ENSG00000272004        FO704657.1         0.00472434472694054          Whole_Blood
+ENSG00000272004        FO704657.1         0.00769965079849833          Lung
+ENSG00000223764        AL645608.1         0.00129863464768456          Skin_Sun_Exposed_Lower_leg
+GWAS Information : 
+Name        RiskFrequency    P-Value          Range           Or   Traits          Study
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Ensembl Information : 
+Name : rs142557015,
+Consequence : regulatory_region_variant,
+Allele : G/A,
+MAF : 0.0415335,
+Ancestral : G,
+Location (38) : 1:1158089-1158089,
+Location (37) : 1:1093469-1093469,
+VCF 
+Start : 1158089,
+End : 1158089,
+Sequence_Region -> Chromosome : 1,
+Clinical Significance : undefined,
+Variant :
+GTEX Information : 
+Genecode Id        Gene Symbol     P-Value                      Tissue
+ENSG00000186891        TNFRSF18         0.000168686684563844          Skin_Not_Sun_Exposed_Suprapubic
+ENSG00000225972        MTND1P23         0.00102341484198414          Colon_Transverse
+ENSG00000160072        ATAD3B         0.0000293845909214837          Breast_Mammary_Tissue
+ENSG00000160072        ATAD3B         0.0210976746565387          Muscle_Skeletal
+ENSG00000224051        CPTP         0.0137265848506117          Adipose_Visceral_Omentum
+ENSG00000228327        AL669831.1         0.0446438421884381          Artery_Aorta
+ENSG00000160072        ATAD3B         0.00265669688493471          Thyroid
+ENSG00000169885        CALML6         0.00781686530236681          Esophagus_Muscularis
+ENSG00000260179        AL162741.1         0.0151570741228107          Adipose_Subcutaneous
+ENSG00000067606        PRKCZ         0.000153370643781485          Nerve_Tibial
+ENSG00000162576        MXRA8         0.0113544287788827          Whole_Blood
+ENSG00000160072        ATAD3B         0.0283174516342151          Lung
+ENSG00000225905        AL391244.2         0.00992350747696589          Skin_Sun_Exposed_Lower_leg
+GWAS Information : 
+Name        RiskFrequency    P-Value          Range           Or   Traits          Study
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Ensembl Information : 
+Name : rs74045218,
+Consequence : non_coding_transcript_exon_variant,
+Allele : A/G,
+MAF : null,
+Ancestral : A,
+Location (38) : 1:826965-826965,
+Location (37) : 1:762345-762345,
+VCF 
+Start : 826965,
+End : 826965,
+Sequence_Region -> Chromosome : 1,
+Clinical Significance : undefined,
+Variant :
+GTEX Information : 
+Genecode Id        Gene Symbol     P-Value                      Tissue
+ENSG00000224969        AL645608.2         0.00194220599146993          Artery_Tibial
+ENSG00000223764        AL645608.1         0.0102557167582967          Muscle_Skeletal
+ENSG00000184163        C1QTNF12         0.00194684777578445          Cells_Transformed_fibroblasts
+ENSG00000228794        LINC01128         0.0068238243389945          Thyroid
+ENSG00000225880        LINC00115         0.00759755021094726          Adipose_Subcutaneous
+ENSG00000187583        PLEKHN1         0.0123469859586025          Whole_Blood
+ENSG00000223764        AL645608.1         0.00257665007931502          Skin_Sun_Exposed_Lower_leg
+GWAS Information : 
+Name        RiskFrequency    P-Value          Range           Or   Traits          Study
+
+------------------------------------------------------------------------------------------------------------------------
+
+
+Ensembl Information : 
+Name : rs58013264,
+Consequence : downstream_gene_variant,
+Allele : T/C,
+MAF : 0.189497,
+Ancestral : T,
+Location (38) : 1:862060-862060,
+Location (37) : 1:797440-797440,
+VCF 
+Start : 862060,
+End : 862060,
+Sequence_Region -> Chromosome : 1,
+Clinical Significance : undefined,
+Variant : rs61768211
+GTEX Information : 
+Genecode Id        Gene Symbol     P-Value                      Tissue
+ENSG00000240731        AL139287.1         0.000491091947479368          Brain_Anterior_cingulate_cortex_BA24
+ENSG00000237094        AL732372.2         1.70599824243779e-7          Skin_Not_Sun_Exposed_Suprapubic
+ENSG00000237094        AL732372.2         9.52786244196322e-7          Cells_EBV-transformed_lymphocytes
+ENSG00000225880        LINC00115         9.98624634815072e-8          Testis
+ENSG00000225880        LINC00115         0.00000144257987881714          Colon_Transverse
+ENSG00000237094        AL732372.2         0.000441694891599337          Adrenal_Gland
+ENSG00000225880        LINC00115         0.000138721168381079          Spleen
+ENSG00000225880        LINC00115         0.0000485554265555963          Brain_Cerebellar_Hemisphere
+ENSG00000225880        LINC00115         0.00022597018057575          Brain_Frontal_Cortex_BA9
+ENSG00000227232        WASH7P         0.00181275562549682          Brain_Hypothalamus
+ENSG00000237094        AL732372.2         6.41038645615378e-8          Colon_Sigmoid
+ENSG00000188157        AGRN         0.00785171460297688          Brain_Cortex
+ENSG00000264293        RN7SL657P         0.00125615672491594          Breast_Mammary_Tissue
+ENSG00000268903        AL627309.7         0.00200520544234798          Brain_Hippocampus
+ENSG00000228794        LINC01128         0.00222653438446996          Heart_Left_Ventricle
+ENSG00000078808        SDF4         0.0000907864596729456          Esophagus_Gastroesophageal_Junction
+ENSG00000225880        LINC00115         0.0000161094857132777          Brain_Putamen_basal_ganglia
+ENSG00000225880        LINC00115         0.00195397770608981          Esophagus_Mucosa
+ENSG00000225880        LINC00115         5.62794698555157e-12          Artery_Tibial
+ENSG00000228794        LINC01128         8.46638877208527e-11          Muscle_Skeletal
+ENSG00000237094        AL732372.2         4.30624533332953e-8          Adipose_Visceral_Omentum
+ENSG00000237094        AL732372.2         3.86675391819996e-10          Cells_Transformed_fibroblasts
+ENSG00000225880        LINC00115         0.0034582860196225          Uterus
+ENSG00000237094        AL732372.2         0.0000270210445247043          Artery_Aorta
+ENSG00000225880        LINC00115         0.00020221118550618          Pituitary
+ENSG00000225880        LINC00115         8.00355927360795e-10          Thyroid
+ENSG00000237094        AL732372.2         2.3084182779546e-9          Esophagus_Muscularis
+ENSG00000225880        LINC00115         0.00000240614271540633          Brain_Cerebellum
+ENSG00000237094        AL732372.2         0.000154604946185965          Liver
+ENSG00000237094        AL732372.2         3.30230099962127e-9          Adipose_Subcutaneous
+ENSG00000225880        LINC00115         0.0000225041967397062          Prostate
+ENSG00000237094        AL732372.2         9.87368377248038e-8          Nerve_Tibial
+ENSG00000237094        AL732372.2         0.000372098607615283          Heart_Atrial_Appendage
+ENSG00000234711        TUBB8P11         0.001040381534195          Small_Intestine_Terminal_Ileum
+ENSG00000225880        LINC00115         0.000736162090631137          Brain_Nucleus_accumbens_basal_ganglia
+ENSG00000187608        ISG15         0.00902569573241575          Vagina
+ENSG00000225880        LINC00115         6.1223477593239e-7          Brain_Caudate_basal_ganglia
+ENSG00000237973        MTCO1P12         0.00205602844241554          Artery_Coronary
+ENSG00000225880        LINC00115         0.000527293489006959          Whole_Blood
+ENSG00000225880        LINC00115         0.00064393356416625          Lung
+ENSG00000237094        AL732372.2         0.00236679506706699          Ovary
+ENSG00000237094        AL732372.2         0.00284918333432461          Pancreas
+ENSG00000237094        AL732372.2         8.68102769751795e-10          Skin_Sun_Exposed_Lower_leg
+ENSG00000237094        AL732372.2         0.0000193977000329711          Stomach
+GWAS Information : 
+Name        RiskFrequency    P-Value          Range           Or   Traits          Study
+
+------------------------------------------------------------------------------------------------------------------------
+
+

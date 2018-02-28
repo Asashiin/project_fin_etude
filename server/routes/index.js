@@ -51,7 +51,12 @@ router.post('/fileup', (req, res) => {
     jsonFunc.APIEnsembl(listId, fields.population, fields.size).then(result => {
       if (typeof result === 'string') {
         console.log(result)
-        res.render('index')
+        jsonFunc.searchPopu().then(result => {
+          const tab = result
+          res.render('index', {
+            data: tab
+          })
+        })
       }
       let wPath = 'public/SNPInfo.txt'
       // stream
